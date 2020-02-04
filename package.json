@@ -1,0 +1,21 @@
+{
+  "name": "tiplero",
+  "version": "1.0.0",
+  "description": "Templates for Tiplero Web",
+  "main": "index.js",
+  "repository": "git@github.com:Rootre/tiplero.git",
+  "author": "Ondřej Tůma <ondr@centrum.cz>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.3.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-twig": "^1.2.0",
+    "gulp-watch": "^5.0.1"
+  }
+}
