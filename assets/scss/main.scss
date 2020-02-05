@@ -5,3 +5,6 @@ body {
     font-family: $font-family-base;
     font-size: $font-size-base;
 }
+
+@import "commons/all";
+@import "components/all";

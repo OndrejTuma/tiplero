@@ -1,0 +1,27 @@
+.input {
+    &--error &__input {
+        border-color: $guardsman-red;
+    }
+
+    &__error {
+        color: $guardsman-red;
+        font-size: $font-size-base-tiny;
+        display: block;
+        margin-top: 4px;
+        padding: 0 20px;
+    }
+    &__input {
+        border: 1px solid $nobel;
+        border-radius: 4px;
+        font-family: $font-family-base;
+        font-size: $font-size-base-small;
+        height: 42px;
+        min-width: 270px;
+        padding: 0 20px;
+        transition: border-color .5s;
+
+        &:hover {
+            border-color: $tiber;
+        }
+    }
+}

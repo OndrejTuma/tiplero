@@ -5,4 +5,6 @@
     <h1>{{title}}</h1>
     <span class="text-secondary">{{description}}</span>
 
+    {% include "components/forms/input.twig" with {'type': 'text', 'label': 'Jméno', 'error': 'Zadejte jméno'} only %}
+
 {% endblock %}
