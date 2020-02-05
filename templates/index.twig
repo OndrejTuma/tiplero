@@ -5,9 +5,22 @@
     <h1>{{title}}</h1>
     <span class="text-secondary">{{description}}</span>
 
+    <h2>Inputs:</h2>
     {% include "components/forms/input.twig" with {'type': 'text', 'label': 'Jméno', 'error': 'Zadejte jméno'} only %}
+    {% include "components/forms/input.twig" with {'type': 'email', 'label': 'Email'} only %}
+
     <h2>Buttons:</h2>
     {% include "components/buttons/regular.twig" with {'label': 'Založit účet', 'href': '#'} only %}
     {% include "components/buttons/outline.twig" with {'label': 'FAQ', 'href': '#'} only %}
+
+    <h2>Icons:</h2>
+    {% include "../assets/svg/card.svg" %}
+    {% include "../assets/svg/logout.svg" %}
+    {% include "../assets/svg/search.svg" %}
+    {% include "../assets/svg/settings.svg" %}
+    {% include "../assets/svg/star.svg" %}
+    {% include "../assets/svg/time.svg" %}
+    {% include "../assets/svg/user.svg" %}
+    {% include "../assets/svg/wallet.svg" %}
 
 {% endblock %}
