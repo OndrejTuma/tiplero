@@ -6,5 +6,8 @@
     <span class="text-secondary">{{description}}</span>
 
     {% include "components/forms/input.twig" with {'type': 'text', 'label': 'Jméno', 'error': 'Zadejte jméno'} only %}
+    <h2>Buttons:</h2>
+    {% include "components/buttons/regular.twig" with {'label': 'Založit účet', 'href': '#'} only %}
+    {% include "components/buttons/outline.twig" with {'label': 'FAQ', 'href': '#'} only %}
 
 {% endblock %}
