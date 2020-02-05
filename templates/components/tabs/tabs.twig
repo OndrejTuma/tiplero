@@ -1,0 +1,5 @@
+<div class="tabs {{ class }}">
+    {% for item in items %}
+        <button data-target="{{ item.targetId }}" class="tabs__tab{{ item.active ? ' tabs__tab--active' }}">{{ item.label }}</button>
+    {% endfor %}
+</div>

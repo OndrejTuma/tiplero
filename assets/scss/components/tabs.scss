@@ -1,0 +1,38 @@
+.tabs {
+    display: flex;
+
+    &__tab + &__tab {
+        margin-left: 40px;
+    }
+
+    &__tab {
+        background: none;
+        border: none;
+        color: $rolling-stone;
+        cursor: pointer;
+        font-size: $font-size-base-tiny;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 0 0 10px;
+        position: relative;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $tiber;
+        }
+
+        &--active {
+            color: $green-haze;
+
+            &:after {
+                background-color: $mountain-meadow;
+                bottom: 0;
+                height: 1px;
+                content: '';
+                left: 10px;
+                position: absolute;
+                right: 10px;
+            }
+        }
+    }
+}

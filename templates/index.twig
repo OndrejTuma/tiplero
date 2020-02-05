@@ -13,6 +13,15 @@
     {% include "components/buttons/regular.twig" with {'label': 'Založit účet', 'href': '#'} only %}
     {% include "components/buttons/outline.twig" with {'label': 'FAQ', 'href': '#'} only %}
 
+    <h2>Tabs</h2>
+    {% include "components/tabs/tabs.twig" with {'class': 'tabs--left', 'items': [
+        {label: 'text 1', active: true, targetId: 'container1'},
+        {label: 'text 2', targetId: 'container2'},
+        {label: 'text 3'},
+    ]} only %}
+    <div id="container1">Container 1</div>
+    <div id="container2" style="display: none;">Container 2</div>
+
     <h2>Icons:</h2>
     {% include "../assets/svg/card.svg" %}
     {% include "../assets/svg/logout.svg" %}
