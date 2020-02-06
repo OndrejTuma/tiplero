@@ -4,6 +4,13 @@
     {% include "../fragments/head.twig" %}
 </head>
 <body>
+<!-- HEADER -->
+{% if isLogged %}
+    {% include "../fragments/header.twig" %}
+{% else %}
+    {% include "../fragments/header.twig" %}
+{% endif %}
+
 <!-- MAIN -->
 <main>
     {% block content %}
@@ -16,6 +23,5 @@
 
 <!-- SCRIPTS -->
 {% include "../fragments/scripts.twig" %}
-
 </body>
 </html>
