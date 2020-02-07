@@ -1,0 +1,24 @@
+.footer {
+    background-color: $tiber;
+    font-size: $font-size-base-small;
+    line-height: 24px;
+    padding: 50px 20px;
+
+    .logo path {
+        fill: $white;
+
+        &:last-of-type {
+            fill: $mountain-meadow;
+        }
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+    ul {
+        list-style: none;
+        margin: 30px 0 10px;
+        padding: 0;
+    }
+}

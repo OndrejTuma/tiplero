@@ -10,7 +10,10 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync'),
-    fs = require('fs');
+    fs = require('fs'),
+    svgo = require('gulp-svgo'),
+    svgSymbols = require('gulp-svg-symbols'),
+    imagemin = require('gulp-imagemin');
 /*
  * Directories here
  */
@@ -22,7 +25,48 @@ var paths = {
     jsSrc: './assets/js/',
     data: './data/',
     templates: './templates/',
+    svgSrc: './assets/svg/',
+    svgDest: './build/svg/',
+    imgSrc: './assets/images/',
+    imgDest: './build/images/',
 };
+
+
+
+/**
+ * minify images with imagemin
+ */
+gulp.task('images', () => {
+    return gulp.src(paths.imgSrc + '**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.imgDest))
+});
+/**
+ * minify svgs's with svgo
+ */
+gulp.task('svgs', () => {
+    return gulp.src(paths.svgSrc + '*.svg')
+        .pipe(svgo({
+            plugins: [
+                {
+                    removeViewBox: false,
+                }, {
+                    addClassesToSVGElement: {
+                        classNames: ['svgo'],
+                    },
+                },
+            ],
+        }))
+        .pipe(gulp.dest(paths.svgDest));
+});
+/**
+ * minify svgs's with svgo
+ */
+gulp.task('svg-symbols', () => {
+    return gulp.src(paths.svgSrc + 'to-symbol-map/' + '*.svg')
+        .pipe(svgSymbols())
+        .pipe(gulp.dest(paths.svgDest));
+});
 /**
  * Compile .twig files and pass data from json file
  * matching file name. index.twig - index.twig.json into HTMLs
@@ -57,7 +101,7 @@ gulp.task('rebuild', ['twig'], function () {
 /**
  * Wait for twig, js and sass tasks, then launch the browser-sync Server
  */
-gulp.task('browser-sync', ['sass', 'twig', 'js'], function () {
+gulp.task('browser-sync', ['sass', 'js', 'svgs', 'svg-symbols', 'images', 'twig'], function () {
     browserSync({
         server: {
             baseDir: paths.build
@@ -116,6 +160,8 @@ gulp.task('js', function(){
 gulp.task('watch', function () {
     gulp.watch(paths.jsSrc + 'index.js', ['js', browserSync.reload]);
     gulp.watch(paths.sass + '**/*.scss', ['sass', browserSync.reload]);
+    gulp.watch(paths.svgSrc + '**/*.svg', ['svgs', 'svg-symbols', browserSync.reload]);
+    gulp.watch(paths.imgSrc + '**/*', ['images', browserSync.reload]);
     gulp.watch([
             paths.templates + '**/*.twig',
             paths.data + '**/*.twig.json'
@@ -124,7 +170,7 @@ gulp.task('watch', function () {
         ['rebuild']);
 });
 // Build task compile sass and twig.
-gulp.task('build', ['sass', 'twig']);
+gulp.task('build', ['sass', 'svgs', 'svg-symbols', 'images', 'twig']);
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the project site, launch BrowserSync then watch

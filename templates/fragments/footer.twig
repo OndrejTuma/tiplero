@@ -1,3 +1,12 @@
-<footer>
-    Footer menu!
+<footer class="footer">
+    <div class="container">
+        {% include "../components/logo.twig" %}
+        <ul>
+            {% for link in footer.links %}
+                <li>
+                    <a href="{{ link.url }}">{{ link.label }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </footer>

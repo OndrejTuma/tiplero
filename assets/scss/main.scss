@@ -1,9 +1,11 @@
 @import "variables/_variables";
+@import "mixins/_responsive";
 
 body {
     color: $color-base;
     font-family: $font-family-base;
     font-size: $font-size-base;
+    margin: 0;
 }
 
 @import "commons/all";
