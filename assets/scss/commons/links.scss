@@ -1,0 +1,8 @@
+a {
+    color: $tiber;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

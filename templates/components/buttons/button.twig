@@ -1,0 +1,15 @@
+{% if href %}
+    <a class="button{{ outline ? " button--outline" }}{{ class ? " " ~ class }}" href="{{ href }}">
+        {% if icon %}
+            {% include "../../../build/svg/" ~ icon ~ ".svg" %}
+        {% endif %}
+        {{ label }}
+    </a>
+{% else %}
+    <button class="button{{ outline ? " button--outline" }}{{ class ? " " ~ class }}" type="submit">
+        {% if icon %}
+            {% include "../../../build/svg/" ~ icon ~ ".svg" %}
+        {% endif %}
+        {{ label }}
+    </button>
+{% endif %}

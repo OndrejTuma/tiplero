@@ -1,10 +1,12 @@
 @import "variables/_variables";
 @import "mixins/_responsive";
+@import "mixins/_background";
 
 body {
     color: $color-base;
     font-family: $font-family-base;
     font-size: $font-size-base;
+    line-height: 1.5;
     margin: 0;
 }
 

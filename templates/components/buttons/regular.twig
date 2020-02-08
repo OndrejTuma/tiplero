@@ -1,1 +1,5 @@
-<a class="button" href="{{ href }}">{{ label }}</a>
+{% if href %}
+    <a class="button" href="{{ href }}">{{ label }}</a>
+{% else %}
+    <button class="button" type="submit">{{ label }}</button>
+{% endif %}

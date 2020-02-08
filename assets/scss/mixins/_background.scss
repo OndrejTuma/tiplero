@@ -1,0 +1,13 @@
+$images-url: '../images/';
+
+@mixin background($image, $props: 0 0 no-repeat) {
+    background: url("#{$images-url}#{$image}") #{$props};
+}
+@mixin background-image($image, $important: false) {
+    @if $important {
+        background-image: url("#{$images-url}#{$image}") !important;
+    }
+    @else {
+        background-image: url("#{$images-url}#{$image}");
+    }
+}

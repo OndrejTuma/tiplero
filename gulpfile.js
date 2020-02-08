@@ -167,7 +167,8 @@ gulp.task('watch', function () {
             paths.data + '**/*.twig.json'
         ],
         {cwd:'./'},
-        ['rebuild']);
+        ['rebuild']
+    );
 });
 // Build task compile sass and twig.
 gulp.task('build', ['sass', 'svgs', 'svg-symbols', 'images', 'twig']);

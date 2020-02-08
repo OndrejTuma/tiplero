@@ -1,19 +1,24 @@
 .button {
     background-color: $green-haze;
+    border-radius: 100px;
     color: $white;
+    cursor: pointer;
+    display: block;
+    font-size: $font-size-base-tiny;
+    font-weight: 700;
+    line-height: 18px;
     padding: 13px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
     transition: background-color .5s;
+    width: 100%;
 
-    &, &--outline {
-        border-radius: 100px;
-        display: inline-block;
-        font-size: $font-size-base-tiny;
-        font-weight: 700;
-        line-height: 18px;
-        min-width: 270px;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
+    svg {
+        float: left;
+        height: 18px;
+        margin-top: -1px;
+        width: 18px;
     }
 
     &:hover {
@@ -21,12 +26,14 @@
     }
 
     &--outline {
+        background-color: transparent;
         border: 1px solid $regent-gray;
         color: $tiber;
         padding: 12px 20px;
         transition: border-color .5s;
 
         &:hover {
+            background-color: transparent;
             border-color: $tiber;
         }
     }
