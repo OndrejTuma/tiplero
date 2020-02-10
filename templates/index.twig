@@ -2,6 +2,13 @@
 
 {% block content %}
 
-
+<div class="container inner">
+    <h2 class="tac">Peníze zpět získáte již v 235 e-shopech</h2>
+    <div class="grid">
+        {% for tile in shops %}
+            {% include "./components/tile.twig" with {'tile': tile} only %}
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}

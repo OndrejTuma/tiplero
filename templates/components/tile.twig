@@ -1,0 +1,15 @@
+{% if tile.type == "logo" %}
+    <a href="{{ tile.url }}">
+        <div class="tile">
+            <img src="{{ tile.img }}" alt="{{ tile.alt }}">
+        </div>
+    </a>
+{% elseif tile.type == "info" %}
+    <div class="tile tile--info">
+        <p>
+            <span>{{ tile.who }} získal/a zpět</span>
+            v obchodě {{ tile.where }}
+        </p>
+        <strong>{{ tile.amount }}</strong>
+    </div>
+{% endif %}
