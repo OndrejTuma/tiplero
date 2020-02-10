@@ -4,7 +4,18 @@
   "shops": [
     {"type": "logo", "img": "./images/dummy/logo_zezula.png", "alt": "Zezula", "url": "#"},
     {"type": "logo", "img": "./images/dummy/logo_lindex.png", "alt": "Lindex", "url": "#"},
-    {"type": "info", "who": "Jiří K.", "where": "AliExpress", "amount": "156 Kč"}
+    {"type": "info", "who": "Jiří K.", "where": "AliExpress", "amount": "12 Kč"},
+    {"type": "logo", "img": "./images/dummy/logo_notino.png", "alt": "Notino", "url": "#"},
+    {"type": "logo", "img": "./images/dummy/logo_drmax.png", "alt": "DrMax", "url": "#"},
+    {"type": "logo", "img": "./images/dummy/logo_expert.png", "alt": "Expert", "url": "#"},
+    {"type": "logo", "img": "./images/dummy/logo_booking.png", "alt": "Booking", "url": "#"},
+    {"type": "info", "who": "Jiří K.", "where": "AliExpress", "amount": "156 Kč"},
+    {"type": "logo", "img": "./images/dummy/logo_footshop.png", "alt": "Footshop", "url": "#"},
+    {"type": "info", "who": "Jiří K.", "where": "AliExpress", "amount": "156 Kč"},
+    {"type": "logo", "img": "./images/dummy/logo_aliexpress.png", "alt": "AliExpress", "url": "#"},
+    {"type": "logo", "img": "./images/dummy/logo_notino.png", "alt": "Notino", "url": "#"},
+    {"type": "logo", "img": "./images/dummy/logo_drmax.png", "alt": "DrMax", "url": "#"},
+    {"type": "logo", "img": "./images/dummy/logo_datart.png", "alt": "Datart", "url": "#"}
   ],
   "footer": {
     "links": [

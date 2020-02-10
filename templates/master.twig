@@ -1,40 +1,53 @@
 {% extends "layouts/default.twig" %}
 
+{% block header %}
+{% endblock %}
+
 {% block content %}
 
-    <h1>h1</h1>
-    <h2>h2</h2>
-    <h3>h3</h3>
-    <h4>h4</h4>
-    <h5>h5</h5>
-    <h6>h6</h6>
-    <p>{{description}}</p>
+    <div class="container inner">
 
-    <h2>Inputs:</h2>
-    {% include "components/forms/input.twig" with {'type': 'text', 'label': 'Jméno', 'error': 'Zadejte jméno'} only %}
-    {% include "components/forms/input.twig" with {'type': 'email', 'label': 'Email'} only %}
+        <h1>Masterpage</h1>
 
-    <h2>Buttons:</h2>
-    {% include "components/buttons/regular.twig" with {'label': 'Založit účet', 'href': '#'} only %}
-    {% include "components/buttons/outline.twig" with {'label': 'FAQ', 'href': '#'} only %}
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+        <p>{{description}}</p>
 
-    <h2>Tabs</h2>
-    {% include "components/tabs/tabs.twig" with {'class': 'tabs--left', 'items': [
-        {label: 'text 1', active: true, targetId: 'container1'},
-        {label: 'text 2', targetId: 'container2'},
-        {label: 'text 3'},
-    ]} only %}
-    <div id="container1">Container 1</div>
-    <div id="container2" style="display: none;">Container 2</div>
+        <h2>Inputs:</h2>
+        {% include "components/forms/input.twig" with {'type': 'text', 'label': 'Jméno', 'error': 'Zadejte jméno'} only %}
+        {% include "components/forms/input.twig" with {'type': 'email', 'label': 'Email'} only %}
 
-    <h2>Icons:</h2>
-    {% include "../assets/svg/card.svg" %}
-    {% include "../assets/svg/logout.svg" %}
-    {% include "../assets/svg/search.svg" %}
-    {% include "../assets/svg/settings.svg" %}
-    {% include "../assets/svg/star.svg" %}
-    {% include "../assets/svg/time.svg" %}
-    {% include "../assets/svg/user.svg" %}
-    {% include "../assets/svg/wallet.svg" %}
+        <h2>Buttons:</h2>
+        {% include "./components/buttons/button.twig" with {'label': 'Založit účet', 'url': '#'} only %}
+        {% include "./components/buttons/button.twig" with {'label': 'FAQ', 'url': '#', outline: true} only %}
+        {% include "./components/buttons/button.twig" with {'label': 'Přihlásit přes Google', 'url': '#', outline: true, 'icon': 'google'} only %}
 
+        <h2>Tabs</h2>
+        {% include "components/tabs/tabs.twig" with {'class': 'tabs--left', 'items': [
+            {label: 'text 1', active: true, targetId: 'container1'},
+            {label: 'text 2', targetId: 'container2'},
+            {label: 'text 3'},
+        ]} only %}
+        <div id="container1">Container 1</div>
+        <div id="container2" style="display: none;">Container 2</div>
+
+        <h2>Icons:</h2>
+        {% include "../assets/svg/card.svg" %}
+        {% include "../assets/svg/logout.svg" %}
+        {% include "../assets/svg/search.svg" %}
+        {% include "../assets/svg/settings.svg" %}
+        {% include "../assets/svg/star.svg" %}
+        {% include "../assets/svg/time.svg" %}
+        {% include "../assets/svg/user.svg" %}
+        {% include "../assets/svg/wallet.svg" %}
+
+    </div>
+
+{% endblock %}
+
+{% block footer %}
 {% endblock %}

@@ -3,7 +3,7 @@
     border-radius: 100px;
     color: $white;
     cursor: pointer;
-    display: block;
+    display: inline-block;
     font-size: $font-size-base-tiny;
     font-weight: 700;
     line-height: 18px;
@@ -12,12 +12,11 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: background-color .5s;
-    width: 100%;
 
     svg {
         float: left;
         height: 18px;
-        margin-top: -1px;
+        margin: -1px 5px 0 0;
         width: 18px;
     }
 

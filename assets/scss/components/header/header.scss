@@ -18,6 +18,9 @@
     &__login {
         text-align: center;
 
+        .button {
+            width: 100%;
+        }
         h2 {
             font-size: 28px;
             margin: 0 0 20px;

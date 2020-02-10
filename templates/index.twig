@@ -9,6 +9,9 @@
             {% include "./components/tile.twig" with {'tile': tile} only %}
         {% endfor %}
     </div>
+    <div class="tac">
+        {% include "./components/buttons/button.twig" with {'label': 'A spousta dalších obchodů', 'url': '#'} only %}
+    </div>
 </div>
 
 {% endblock %}

@@ -4,18 +4,20 @@
     {% include "../fragments/head.twig" %}
 </head>
 <body>
-<!-- SVG MAP -->
-<span style="display: none">
-    {#
-    {% include "../../build/svg/svg-symbols.svg" %}
-    #}
-</span>
-<!-- HEADER -->
-{% if isLogged %}
-    {% include "../fragments/header_logged.twig" %}
-{% else %}
-    {% include "../fragments/header.twig" %}
-{% endif %}
+{% block header %}
+    <!-- SVG MAP -->
+    <span style="display: none">
+        {#
+        {% include "../../build/svg/svg-symbols.svg" %}
+        #}
+    </span>
+    <!-- HEADER -->
+    {% if isLogged %}
+        {% include "../fragments/header_logged.twig" %}
+    {% else %}
+        {% include "../fragments/header.twig" %}
+    {% endif %}
+{% endblock %}
 
 <!-- MAIN -->
 <main>
@@ -24,8 +26,10 @@
     {% endblock %}
 </main>
 
-<!-- FOOTER -->
-{% include "../fragments/footer.twig" %}
+{% block footer %}
+    <!-- FOOTER -->
+    {% include "../fragments/footer.twig" %}
+{% endblock %}
 
 <!-- SCRIPTS -->
 {% include "../fragments/scripts.twig" %}

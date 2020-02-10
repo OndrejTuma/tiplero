@@ -1,5 +1,5 @@
-{% if href %}
-    <a class="button{{ outline ? " button--outline" }}{{ class ? " " ~ class }}" href="{{ href }}">
+{% if url %}
+    <a class="button{{ outline ? " button--outline" }}{{ class ? " " ~ class }}" href="{{ url }}">
         {% if icon %}
             {% include "../../../build/svg/" ~ icon ~ ".svg" %}
         {% endif %}
