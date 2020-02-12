@@ -1,0 +1,33 @@
+.additional-info {
+    text-align: center;
+    color: $white;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    &__buttons {
+        margin-top: 35px;
+
+        .button {
+            display: block;
+            margin: auto;
+
+            & + .button {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    @include media(desktop) {
+        max-width: 450px;
+
+        &__buttons {
+            margin-top: 60px;
+
+            .button + .button {
+                margin-top: 30px;
+            }
+        }
+    }
+}

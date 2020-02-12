@@ -1,6 +1,8 @@
 .button {
     background-color: $green-haze;
+    border: none;
     border-radius: 100px;
+    box-sizing: border-box;
     color: $white;
     cursor: pointer;
     display: inline-block;
@@ -12,18 +14,21 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: background-color .5s;
-
-    svg {
-        float: left;
-        height: 18px;
-        margin: -1px 5px 0 0;
-        width: 18px;
-    }
+    width: 100%;
 
     &:hover {
         background-color: $salem;
     }
 
+    &--white {
+        background-color: $white;
+        color: $tiber;
+
+        &:hover {
+            background-color: $porcelain;
+            color: $tiber;
+        }
+    }
     &--outline {
         background-color: transparent;
         border: 1px solid $regent-gray;
@@ -37,7 +42,15 @@
         }
     }
 
+    svg {
+        float: left;
+        height: 18px;
+        margin: -1px 5px 0 0;
+        width: 18px;
+    }
+
     @include media(desktop) {
         min-width: 280px;
+        width: auto;
     }
 }

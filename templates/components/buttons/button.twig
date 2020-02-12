@@ -1,12 +1,12 @@
 {% if url %}
-    <a class="button{{ outline ? " button--outline" }}{{ class ? " " ~ class }}" href="{{ url }}">
+    <a class="button{{ outline ? " button--outline" }}{{ white ? " button--white" }}{{ class ? " " ~ class }}" href="{{ url }}">
         {% if icon %}
             {% include "../../../build/svg/" ~ icon ~ ".svg" %}
         {% endif %}
         {{ label }}
     </a>
 {% else %}
-    <button class="button{{ outline ? " button--outline" }}{{ class ? " " ~ class }}" type="submit">
+    <button class="button{{ outline ? " button--outline" }}{{ white ? " button--white" }}{{ class ? " " ~ class }}" type="{{ type ? type : "submit" }}">
         {% if icon %}
             {% include "../../../build/svg/" ~ icon ~ ".svg" %}
         {% endif %}
