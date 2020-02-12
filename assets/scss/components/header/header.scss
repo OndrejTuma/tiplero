@@ -62,10 +62,63 @@
             }
         }
     }
+    &__menu {
+        display: none;
+        list-style: none;
+        margin: 0;
+
+        a {
+            text-decoration: none;
+        }
+        svg {
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        @include media(desktop) {
+            display: block;
+            float: right;
+            font-size: $font-size-base-small;
+            font-weight: 700;
+
+            li {
+                display: inline-block;
+
+                & + li {
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
     &__stripe {
         padding: 20px 20px 0;
+        position: relative;
     }
 
+    &--menu-open &__stripe {
+        background-color: $white;
+    }
+    &--menu-open &__menu {
+        background-color: $white;
+        border-radius: 0 0 20px 20px;
+        display: block;
+        left: 0;
+        padding: 20px;
+        position: absolute;
+        right: 0;
+
+        li + li {
+            margin-top: 25px;
+        }
+    }
+    &--menu-open {
+        .hamburger {
+            display: none;
+        }
+        .cross {
+            display: block !important;
+        }
+    }
     &--not-logged {
         @include background('claim_mobile.jpg', 50% 50% / cover no-repeat);
         padding-bottom: 40px;

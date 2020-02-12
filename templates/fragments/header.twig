@@ -1,10 +1,22 @@
-<header class="header header--not-logged">
+<header id="header" class="header header--not-logged">
     <div class="container header__stripe">
         {% include "../components/logo.twig" %}
 
         <div id="hamburger" class="header__hamburger">
-            {% include "../../build/svg/hamburger.svg" %}
+            <span class="hamburger">{% include "../../build/svg/hamburger.svg" %}</span>
+            <span class="cross" style="display: none">{% include "../../build/svg/cross.svg" %}</span>
         </div>
+        <ul class="header__menu">
+            <li>
+                {% include "../../build/svg/search.svg" %}
+            </li>
+            <li>
+                <a href="#">Registrovat</a>
+            </li>
+            <li>
+                <a href="#">Přihlásit se</a>
+            </li>
+        </ul>
     </div>
     <div class="inner container header__container">
         <div class="header__info">
