@@ -1,7 +1,4 @@
 .process-list {
-    h4 {
-        margin-bottom: 10px;
-    }
     li {
         margin-bottom: 0;
         padding-bottom: 50px;
@@ -48,6 +45,7 @@
     @include media(desktop) {
         li {
             flex-grow: 1;
+            padding-bottom: 0;
         }
         ol {
             display: flex;

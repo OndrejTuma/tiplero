@@ -50,6 +50,18 @@
     <div class="wrapper--green">
         <div class="container inner">
             <h2 class="tac cw">Co říkají zákazníci</h2>
+            <div class="grid--stripe">
+                {% for bubble in stories %}
+                    {% include "./components/bubble.twig" with {'bubble': bubble} only %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper--blue">
+        <div class="container inner tac cw">
+            <h2>Ještě chcete něco vědět?</h2>
+            <p>Podívejte se na co se ptají ostatní a nebo se rovnou zaregistrujte a začněte získávat své odměny!</p>
 
         </div>
     </div>

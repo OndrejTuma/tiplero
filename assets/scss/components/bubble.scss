@@ -1,0 +1,48 @@
+.bubble {
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 25px 30px;
+    position: relative;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    &:before {
+        @include square(20px);
+        border-radius: 6px;
+        background-color: $white;
+        content: '';
+        left: 40px;
+        position: absolute;
+        transform: rotate(45deg);
+        bottom: -8px;
+    }
+    &--left:before {
+        bottom: 40px;
+        left: -8px;
+        right: auto;
+        top: auto;
+    }
+    &--right:before {
+        bottom: auto;
+        left: auto;
+        right: -8px;
+        top: 40px;
+    }
+    &--top:before {
+        bottom: auto;
+        left: auto;
+        top: -8px;
+        right: 40px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    @include media(desktop) {
+        margin-bottom: 0;
+    }
+}

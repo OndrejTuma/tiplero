@@ -1,4 +1,7 @@
 .wrapper {
+    &--blue {
+        background-color: $tiber;
+    }
     &--gray {
         background-color: $porcelain;
     }

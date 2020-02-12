@@ -17,6 +17,11 @@
     {"type": "logo", "img": "./images/dummy/logo_drmax.png", "alt": "DrMax", "url": "#"},
     {"type": "logo", "img": "./images/dummy/logo_datart.png", "alt": "Datart", "url": "#"}
   ],
+  "stories": [
+    {"arrow": "bottom", "name": "Petr R.", "text": "Zaregistroval jsem se před 2 roky v květnu. Získal jsem celkem něco přes <strong>9 300 Kč</strong>. Prostě Tipli miluju."},
+    {"arrow": "top", "name": "Alena R.", "text": "Díky Tipli jsem získala <strong>7 700 Kč</strong> za letošní rok. Peníze využiji na naší dovolenou."},
+    {"arrow": "right", "name": "Josef R.", "text": "Tipli používám k nákupům v mnoha oblíbených obchodech jako jsou <strong>Aliexpress, Booking, BonPrix</strong> a mnoho dalších"}
+  ],
   "footer": {
     "links": [
       {"label": "Obchody", "url": "#"},

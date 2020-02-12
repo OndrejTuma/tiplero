@@ -1,0 +1,7 @@
+@mixin dim($width: auto, $height: auto) {
+    height: $height;
+    width: $width;
+}
+@mixin square($size) {
+    @include dim($size, $size);
+}
