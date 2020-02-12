@@ -36,4 +36,8 @@
             border-color: $tiber;
         }
     }
+
+    @include media(desktop) {
+        min-width: 280px;
+    }
 }

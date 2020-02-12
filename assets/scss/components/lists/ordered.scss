@@ -1,0 +1,32 @@
+.ordered-list {
+    padding-left: 0;
+    counter-reset: orderedlist;
+    list-style: none;
+
+    li {
+        counter-increment: orderedlist;
+        margin-bottom: 20px;
+        padding-left: 55px;
+        position: relative;
+
+        &:after {
+            content: '';
+        }
+        &:before {
+            background-color: $tiber;
+            border-radius: 50%;
+            color: $wild-sand;
+            content: counter(orderedlist);
+            display: block;
+            font-size: $font-size-base;
+            font-weight: 700;
+            height: 40px;
+            left: 0;
+            line-height: 40px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 40px;
+        }
+    }
+}

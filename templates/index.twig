@@ -2,16 +2,57 @@
 
 {% block content %}
 
-<div class="container inner">
-    <h2 class="tac">Peníze zpět získáte již v 235 e-shopech</h2>
-    <div class="grid">
-        {% for tile in shops %}
-            {% include "./components/tile.twig" with {'tile': tile} only %}
-        {% endfor %}
+    <div class="container inner">
+        <h2 class="tac">Peníze zpět získáte již v 235 e-shopech</h2>
+        <div class="grid">
+            {% for tile in shops %}
+                {% include "./components/tile.twig" with {'tile': tile} only %}
+            {% endfor %}
+        </div>
+        <div class="tac">
+            {% include "./components/buttons/button.twig" with {'label': 'A spousta dalších obchodů', 'url': '#'} only %}
+        </div>
     </div>
-    <div class="tac">
-        {% include "./components/buttons/button.twig" with {'label': 'A spousta dalších obchodů', 'url': '#'} only %}
+
+    <div class="wrapper--gray">
+        <div class="container inner">
+            <h2 class="tac">Jak to funguje?</h2>
+            <div class="process-list">
+                <ol class="ordered-list">
+                    <li>
+                        <h4>Najděte e-shop</h4>
+                        <p>Najděte oblíbený obchod na tiplero.com</p>
+                        <div class="process-list__img process-list__img--first">
+                            <img src="./svg/process_shop.svg" alt="Najděte e-shop"/>
+                            <span class="process-list__line"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Přejděte a nakupte</h4>
+                        <p>Přejděte do obchodu a nakupte</p>
+                        <div class="process-list__img process-list__img--second">
+                            <img src="./svg/process_basket.svg" alt="Přejděte a nakupte"/>
+                            <span class="process-list__line"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Peníze jsou doma</h4>
+                        <p>Na účet vám pošleme odměnu</p>
+                        <div class="process-list__img process-list__img--third">
+                            <img src="./svg/process_wallet.svg" alt="Peníze jsou doma"/>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
     </div>
-</div>
+
+    <div class="wrapper--green">
+        <div class="container inner">
+            <h2 class="tac cw">Co říkají zákazníci</h2>
+
+        </div>
+    </div>
+
 
 {% endblock %}
