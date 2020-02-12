@@ -63,8 +63,9 @@
             <h2>Ještě chcete něco vědět?</h2>
             <p>Podívejte se na co se ptají ostatní a nebo se rovnou zaregistrujte a začněte získávat své odměny!</p>
             <div class="additional-info__buttons">
-                {% include "./components/buttons/button.twig" with {'label': 'Často kladené dotazy', white: true, class: "mb"} only %}
-                {% include "./components/buttons/button.twig" with {'label': 'Chci odměny za nákupy'} only %}
+                {% include "./components/buttons/button.twig" with {label: 'Často kladené dotazy', white: true, url: '#'} only %}
+                <br/>
+                {% include "./components/buttons/button.twig" with {label: 'Chci odměny za nákupy', url: '#'} only %}
             </div>
         </div>
     </div>
