@@ -1,5 +1,5 @@
 <div class="input{{ error ? ' input--error'}}">
-    <input class="input__input" type="{{ type }}" placeholder="{{ label }}">
+    <input class="input__input" type="{{ type }}" placeholder="{{ label }}" name="{{ name }}">
     {% if error %}
         <span class="input__error">{{ error }}</span>
     {% endif %}

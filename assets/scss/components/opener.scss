@@ -1,0 +1,25 @@
+.opener {
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+        @include square(100%);
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    &__target {
+        left: -9999px;
+        opacity: 0;
+        position: absolute;
+        transition: opacity .5s;
+
+        &--active {
+            left: 0;
+            opacity: 1;
+            position: relative;
+        }
+    }
+}
