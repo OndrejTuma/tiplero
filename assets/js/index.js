@@ -43,29 +43,6 @@ Tabs.prototype.displayContainer = function (elm, display) {
 };
 
 
-const Header = function (header, classes) {
-    this.classes = classes;
-    this.headerElm = header;
-    this.isOpen = false;
-};
-Header.prototype._click = function (e) {
-    e.preventDefault();
-
-    this.isOpen ? this._closeMenu() : this._openMenu();
-};
-Header.prototype._openMenu = function () {
-    this.isOpen = true;
-    this.headerElm.classList.add(this.classes.active);
-};
-Header.prototype._closeMenu = function () {
-    this.isOpen = false;
-    this.headerElm.classList.remove(this.classes.active);
-};
-Header.prototype.registerListener = function (hamburger) {
-    hamburger.addEventListener('click', this._click.bind(this));
-};
-
-
 const Openers = function (classes) {
     this.classes = classes;
     this.targetDatasetAttr = 'target';
@@ -107,7 +84,4 @@ Openers.prototype.close = function (opener, target) {
     // init openers on page
     const openers = new Openers(classes.openers);
     openers.registerListeners(d);
-
-    const header = new Header(d.getElementById('header'), classes.header);
-    header.registerListener(d.getElementById('hamburger'));
 })(window, document);

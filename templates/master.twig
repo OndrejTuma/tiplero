@@ -18,16 +18,16 @@
         <p>{{description}}</p>
 
         <h2>Inputs:</h2>
-        {% include "components/forms/input.twig" with {'type': 'text', 'label': 'Jméno', 'error': 'Zadejte jméno'} only %}
-        {% include "components/forms/input.twig" with {'type': 'email', 'label': 'Email'} only %}
+        {% include "components/forms/input.twig" with {type: 'text', label: 'Jméno', error: 'Zadejte jméno'} only %}
+        {% include "components/forms/input.twig" with {type: 'email', label: 'Email'} only %}
 
         <h2>Buttons:</h2>
-        {% include "./components/buttons/button.twig" with {'label': 'Založit účet', 'url': '#'} only %}
-        {% include "./components/buttons/button.twig" with {'label': 'FAQ', 'url': '#', outline: true} only %}
-        {% include "./components/buttons/button.twig" with {'label': 'Přihlásit přes Google', 'url': '#', outline: true, 'icon': 'google'} only %}
+        {% include "./components/buttons/button.twig" with {label: 'Založit účet', url: '#'} only %}
+        {% include "./components/buttons/button.twig" with {label: 'FAQ', 'url': '#', outline: true} only %}
+        {% include "./components/buttons/button.twig" with {label: 'Přihlásit přes Google', url: '#', outline: true, icon: 'google'} only %}
 
         <h2>Tabs</h2>
-        {% include "components/tabs/tabs.twig" with {'class': 'tabs--left', 'items': [
+        {% include "components/tabs/tabs.twig" with {class: 'tabs--left', items: [
             {label: 'text 1', active: true, targetId: 'container1'},
             {label: 'text 2', targetId: 'container2'},
             {label: 'text 3'},

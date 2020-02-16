@@ -1,3 +1,27 @@
-<header class="header header--logged">
+<header id="header" class="header header--logged">
+    <div class="container header__stripe">
+        {% include "../components/logo.twig" %}
 
+        {% include "../components/hamburger.twig" %}
+        <div class="header__menu">
+            <ul class="primary">
+                <li>
+                    {% include "../components/search.twig" %}
+                </li>
+                <li>
+                    Moje odměna: 00 nic
+                </li>
+                <li>
+                    <span class="opener" data-target="my_account">
+                        Můj účet
+                        .
+                    </span>
+                    <ul id="my_account">
+
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
 </header>

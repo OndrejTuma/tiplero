@@ -4,12 +4,6 @@
     &__container {
         clear: both;
     }
-    &__hamburger {
-        cursor: pointer;
-        float: right;
-        height: 15px;
-        width: 20px;
-    }
     &__info {
         margin-bottom: 30px;
 
@@ -67,8 +61,6 @@
     }
     &__menu {
         display: none;
-        list-style: none;
-        margin: 0;
 
         a {
             text-decoration: none;
@@ -76,6 +68,11 @@
         svg {
             cursor: pointer;
             vertical-align: middle;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
         }
 
         @include media(desktop) {
@@ -93,49 +90,6 @@
             }
         }
     }
-    &__search {
-        align-items: center;
-        white-space: nowrap;
-
-        &[class] {
-            display: flex;
-        }
-
-        .opener {
-            .close {
-                display: none;
-                padding: 8px 0 8px 8px;
-            }
-
-            &--active {
-                .close {
-                    display: inline-block;
-                }
-                .open {
-                    display: none;
-                }
-            }
-            &__target {
-                flex-grow: 1;
-            }
-        }
-
-        @include media(desktop) {
-            &[class] {
-                display: inline-block;
-            }
-
-            .opener {
-                .close {
-                    padding: 0;
-                }
-                &__target {
-                    display: inline-block;
-                    margin: -11px 10px -10px 0;
-                }
-            }
-        }
-    }
     &__stripe {
         padding: 20px 20px 0;
         position: relative;
@@ -147,10 +101,15 @@
         }
     }
 
-    &--menu-open &__stripe {
+    &--not-logged {
+        @include background('claim_mobile.jpg', 50% 50% / cover no-repeat);
+        padding-bottom: 40px;
+    }
+
+    &.opener__target--active &__stripe {
         background-color: $white;
     }
-    &--menu-open &__menu {
+    &.opener__target--active &__menu {
         background-color: $white;
         border-radius: 0 0 20px 20px;
         display: block;
@@ -163,25 +122,14 @@
             margin-top: 25px;
         }
     }
-    &--menu-open {
-        .hamburger {
-            display: none;
-        }
-        .cross {
-            display: block !important;
-        }
-    }
-    &--not-logged {
-        @include background('claim_mobile.jpg', 50% 50% / cover no-repeat);
-        padding-bottom: 40px;
+
+    .hamburger {
+        float: right;
     }
 
     @include media(desktop) {
         &__container {
             display: flex;
-        }
-        &__hamburger {
-            display: none;
         }
         &__info {
             margin-right: 20%;

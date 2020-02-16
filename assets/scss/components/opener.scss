@@ -22,4 +22,17 @@
             position: relative;
         }
     }
+
+    .close {
+        display: none;
+    }
+
+    &--active {
+        .close {
+            display: block;
+        }
+        .open {
+            display: none;
+        }
+    }
 }
