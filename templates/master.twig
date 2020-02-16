@@ -5,46 +5,111 @@
 
 {% block content %}
 
-    <div class="container inner">
+    <div class="wrapper--gray">
+        <div class="container inner">
 
-        <h1>Masterpage</h1>
+            <h1>Masterpage</h1>
 
-        <h1>h1</h1>
-        <h2>h2</h2>
-        <h3>h3</h3>
-        <h4>h4</h4>
-        <h5>h5</h5>
-        <h6>h6</h6>
-        <p>{{description}}</p>
+            <div class="inner">
+                <h1>h1</h1>
+                <h2>h2</h2>
+                <h3>h3</h3>
+                <h4>h4</h4>
+                <h5>h5</h5>
+                <h6>h6</h6>
+            </div>
 
-        <h2>Inputs:</h2>
-        {% include "components/forms/input.twig" with {type: 'text', label: 'Jméno', error: 'Zadejte jméno'} only %}
-        {% include "components/forms/input.twig" with {type: 'email', label: 'Email'} only %}
+            <div class="inner">
+                <h2>Inputs:</h2>
+                {% include "components/forms/input.twig" with {type: 'text', label: 'Jméno', error: 'Zadejte jméno'} only %}
+                {% include "components/forms/input.twig" with {type: 'email', label: 'Email'} only %}
+            </div>
 
-        <h2>Buttons:</h2>
-        {% include "./components/buttons/button.twig" with {label: 'Založit účet', url: '#'} only %}
-        {% include "./components/buttons/button.twig" with {label: 'FAQ', 'url': '#', outline: true} only %}
-        {% include "./components/buttons/button.twig" with {label: 'Přihlásit přes Google', url: '#', outline: true, icon: 'google'} only %}
+            <div class="inner">
+                <h2>Tiles:</h2>
+                <div class="grid">
+                    {% include "components/tile.twig" with {tile: {type: "logo", img: "./images/dummy/logo_zezula.png", alt: "Zezula", url: "#"}} only %}
+                    {% include "components/tile.twig" with {tile: {type: "info", who: "Jiří K.", where: "AliExpress", amount: "156 Kč"}} only %}
+                </div>
+            </div>
 
-        <h2>Tabs</h2>
-        {% include "components/tabs/tabs.twig" with {class: 'tabs--left', items: [
-            {label: 'text 1', active: true, targetId: 'container1'},
-            {label: 'text 2', targetId: 'container2'},
-            {label: 'text 3'},
-        ]} only %}
-        <div id="container1">Container 1</div>
-        <div id="container2" style="display: none;">Container 2</div>
+            <div class="inner">
+                <h2>Bubbles:</h2>
+                <div class="grid--stripe">
+                    {% include "./components/bubble.twig" with {bubble: {arrow: "bottom", name: "Petr R.", text: "Zaregistroval jsem se před 2 roky v květnu. Získal jsem celkem něco přes <strong>9 300 Kč</strong>. Prostě Tipli miluju."}} only %}
+                    {% include "./components/bubble.twig" with {bubble: {arrow: "top", name: "Petr R.", text: "Zaregistroval jsem se před 2 roky v květnu. Získal jsem celkem něco přes <strong>9 300 Kč</strong>. Prostě Tipli miluju."}} only %}
+                </div>
+            </div>
 
-        <h2>Icons:</h2>
-        {% include "../assets/svg/card.svg" %}
-        {% include "../assets/svg/logout.svg" %}
-        {% include "../assets/svg/search.svg" %}
-        {% include "../assets/svg/settings.svg" %}
-        {% include "../assets/svg/star.svg" %}
-        {% include "../assets/svg/time.svg" %}
-        {% include "../assets/svg/user.svg" %}
-        {% include "../assets/svg/wallet.svg" %}
+            <div class="inner">
+                <h2>Buttons:</h2>
+                {% include "./components/buttons/button.twig" with {label: 'Založit účet', url: '#'} only %}
+                {% include "./components/buttons/button.twig" with {label: 'FAQ', 'url': '#', outline: true} only %}
+                {% include "./components/buttons/button.twig" with {label: 'Přihlásit přes Google', url: '#', outline: true, icon: 'google'} only %}
+                {% include "./components/buttons/button.twig" with {label: 'Bílý button', url: '#', white: true} only %}
+            </div>
 
+            <div class="inner">
+                <h2>Tabs</h2>
+                {% include "components/tabs/tabs.twig" with {class: 'tabs--left', items: [
+                    {label: 'text 1', active: true, targetId: 'container1'},
+                    {label: 'text 2', targetId: 'container2'},
+                    {label: 'text 3'},
+                ]} only %}
+                <div id="container1">Container 1</div>
+                <div id="container2" style="display: none;">Container 2</div>
+            </div>
+
+            <div class="inner">
+                <h2>Links:</h2>
+                <ul class="list--plain">
+                    <li>{% include "components/link.twig" with {url: '#', label: 'Obchody', icon: 'basket'} only %}</li>
+                    <li>{% include "components/link.twig" with {url: '#', label: 'Akce', icon: 'note'} only %}</li>
+                    <li>{% include "components/link.twig" with {url: '#', label: 'Letáky', icon: 'file'} only %}</li>
+                    <li>{% include "components/link.twig" with {url: '#', label: 'Odhlásit se', icon: 'logout'} only %}</li>
+                    <li>{% include "components/link.twig" with {url: '#', label: 'Můj účet'} only %}</li>
+                </ul>
+            </div>
+
+            <div class="inner">
+                <h2>Discounts:</h2>
+                <div class="grid">
+                    {% include "components/discount.twig" with {discount: {
+                        img: 'https://picsum.photos/300/200',
+                        logo: './images/dummy/logo_footshop.png',
+                        amount: 66,
+                        title: 'Sleva až 90 % na pánskou obuv na Footshop.cz',
+                        bonus: '1,5 % zpět z nákupu',
+                        until: 'do 19. 1. 2020'
+                    }} only %}
+                </div>
+                <div class="grid">
+                    {% include "components/discount.twig" with {discount: {
+                        logo: './images/dummy/logo_footshop.png',
+                        amount: 66,
+                        title: 'Sleva až 90 % na pánskou obuv na Footshop.cz',
+                        bonus: '1,5 % zpět z nákupu',
+                        until: 'do 19. 1. 2020'
+                    }} only %}
+                </div>
+            </div>
+
+            <div class="inner">
+                <h2>Icons:</h2>
+                {% include "../assets/svg/card.svg" %}
+                {% include "../assets/svg/logout.svg" %}
+                {% include "../assets/svg/search.svg" %}
+                {% include "../assets/svg/settings.svg" %}
+                {% include "../assets/svg/star.svg" %}
+                {% include "../assets/svg/time.svg" %}
+                {% include "../assets/svg/user.svg" %}
+                {% include "../assets/svg/wallet.svg" %}
+                {% include "../assets/svg/basket.svg" %}
+                {% include "../assets/svg/file.svg" %}
+                {% include "../assets/svg/note.svg" %}
+            </div>
+
+        </div>
     </div>
 
 {% endblock %}

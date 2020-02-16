@@ -1,0 +1,16 @@
+.link {
+    color: $tiber;
+    text-decoration: none;
+
+    &:hover {
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    svg {
+        @include square(16px);
+        fill: $tiber;
+        margin-right: 14px;
+    }
+}

@@ -6,11 +6,11 @@
         <h2 class="tac">Peníze zpět získáte již v 235 e-shopech</h2>
         <div class="grid">
             {% for tile in shops %}
-                {% include "./components/tile.twig" with {'tile': tile} only %}
+                {% include "./components/tile.twig" with {tile: tile} only %}
             {% endfor %}
         </div>
         <div class="tac">
-            {% include "./components/buttons/button.twig" with {'label': 'A spousta dalších obchodů', 'url': '#'} only %}
+            {% include "./components/buttons/button.twig" with {label: 'A spousta dalších obchodů', url: '#'} only %}
         </div>
     </div>
 
@@ -18,7 +18,7 @@
         <div class="container inner">
             <h2 class="tac">Jak to funguje?</h2>
             <div class="process-list">
-                <ol class="ordered-list">
+                <ol class="list--ordered">
                     <li>
                         <h4>Najděte e-shop</h4>
                         <p>Najděte oblíbený obchod na tiplero.com</p>
@@ -52,7 +52,7 @@
             <h2 class="tac cw">Co říkají zákazníci</h2>
             <div class="grid--stripe">
                 {% for bubble in stories %}
-                    {% include "./components/bubble.twig" with {'bubble': bubble} only %}
+                    {% include "./components/bubble.twig" with {bubble: bubble} only %}
                 {% endfor %}
             </div>
         </div>

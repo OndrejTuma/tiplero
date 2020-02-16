@@ -1,0 +1,70 @@
+.discount {
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 270px;
+
+    &__amount {
+        flex-grow: 1;
+        font-size: $font-size-base;
+        font-weight: 700;
+
+        span {
+            font-size: 28px;
+        }
+    }
+    &__content {
+        padding: 0 30px 40px;
+    }
+    &__logo {
+        @include dim(60%, 90px);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        &:after {
+            @include background('dot.png', 0 0 repeat-y);
+            bottom: 11px;
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 7px;
+        }
+
+        img {
+            @include square(auto);
+            max-height: 60%;
+            max-width: 60%;
+        }
+    }
+    &__header {
+        @include background('dot.png', 0 100% repeat-x);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    &__img {
+        background: 50% 50% / cover no-repeat;
+        border-radius: 20px 20px 0 0;
+        height: 140px;
+    }
+    &__title {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        min-width: auto;
+        width: 100%;
+    }
+    ul {
+        margin: 0 0 25px;
+    }
+    li:first-child {
+        color: $green-haze;
+    }
+}

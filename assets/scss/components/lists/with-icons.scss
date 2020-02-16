@@ -1,0 +1,17 @@
+.list--with-icons {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        margin-bottom: 5px;
+        padding-left: 25px;
+        position: relative;
+
+        svg {
+            @include square(16px);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+    }
+}

@@ -21,20 +21,20 @@ Tabs.prototype.registerListeners = function (ctx) {
     ctx.querySelectorAll(`.${this.classes.tabs}`).forEach(tabs => {
         tabs.addEventListener('click', e => {
             if (e.target.classList.contains(this.classes.tab)) {
-                tabs.querySelectorAll(`.${this.classes.tab}`).forEach(elm => this.setTabInactive(elm));
+                tabs.querySelectorAll(`.${this.classes.tab}`).forEach(elm => this.setTabInactive(elm, ctx));
 
-                this.setTabActive(e.target);
+                this.setTabActive(e.target, ctx);
             }
         });
     });
 };
-Tabs.prototype.setTabActive = function (elm) {
+Tabs.prototype.setTabActive = function (elm, ctx) {
     elm.classList.add(this.classes.active);
-    this.displayContainer(d.getElementById(elm.getAttribute('data-target')), 'block');
+    this.displayContainer(ctx.getElementById(elm.getAttribute('data-target')), 'block');
 };
-Tabs.prototype.setTabInactive = function (elm) {
+Tabs.prototype.setTabInactive = function (elm, ctx) {
     elm.classList.remove(this.classes.active);
-    this.displayContainer(d.getElementById(elm.getAttribute('data-target')), 'none');
+    this.displayContainer(ctx.getElementById(elm.getAttribute('data-target')), 'none');
 };
 Tabs.prototype.displayContainer = function (elm, display) {
     if (elm) {
