@@ -1,11 +1,20 @@
+.aife {
+    align-items: flex-end;
+}
 .cw {
     color: $white;
+}
+.fgn {
+    flex-grow: 0;
 }
 .mb {
     margin-bottom: 1em;
 }
 .mbb {
     margin-bottom: 2em;
+}
+.mbn {
+    margin-bottom: 0;
 }
 .mt {
     margin-top: 1em;
@@ -15,4 +24,7 @@
 }
 .tac {
     text-align: center;
+}
+.tar {
+    text-align: right;
 }

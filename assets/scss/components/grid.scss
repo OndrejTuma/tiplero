@@ -9,6 +9,7 @@
             align-items: stretch;
             display: flex;
             flex-flow: row nowrap;
+            justify-content: space-between;
 
             & > div {
                 flex-grow: 1;

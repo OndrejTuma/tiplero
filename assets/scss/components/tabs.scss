@@ -38,6 +38,9 @@
             }
         }
     }
+    &__target {
+        display: none;
+    }
 
     @include media(desktop) {
         display: flex;

@@ -2,8 +2,62 @@
 
 {% block content %}
 
-    <div class="inner">
-        <h2>content</h2>
+    <div class="container inner">
+        <div class="slider">
+            {% for item in slides %}
+                {% include "components/slide.twig" with {slide: item} only %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="inner">
+            {% include "components/heading-with-tabs.twig" with {title: 'Slevy a výprodeje', items: [
+                {label: 'Top akce', active: true, targetId: 'tab_top'},
+                {label: 'Slevové kupóny', targetId: 'tab_coupons'},
+                {label: 'Od největší slevy', targetId: 'tab_highest_discount'},
+                {label: 'Doprava zdarma', targetId: 'tab_free_delivery'},
+            ]} only %}
+            <div id="tab_top" class="tabs__target">
+                <div class="grid">
+                    {% for discount in discounts.top.items %}
+                        {% include "components/discount.twig" with {discount: discount} only %}
+                    {% endfor %}
+                </div>
+                <p class="tac">
+                    {% include "components/buttons/button.twig" with {url: discounts.top.url, label: 'Načíst další položky', outline: true} only %}
+                </p>
+            </div>
+            <div id="tab_coupons" class="tabs__target">
+                <div class="grid">
+                    {% for discount in discounts.coupons.items %}
+                        {% include "components/discount.twig" with {discount: discount} only %}
+                    {% endfor %}
+                </div>
+                <p class="tac">
+                    {% include "components/buttons/button.twig" with {url: discounts.coupons.url, label: 'Načíst další položky', outline: true} only %}
+                </p>
+            </div>
+            <div id="tab_highest_discount" class="tabs__target">
+                <div class="grid">
+                    {% for discount in discounts.highest_discount.items %}
+                        {% include "components/discount.twig" with {discount: discount} only %}
+                    {% endfor %}
+                </div>
+                <p class="tac">
+                    {% include "components/buttons/button.twig" with {url: discounts.highest_discount.url, label: 'Načíst další položky', outline: true} only %}
+                </p>
+            </div>
+            <div id="tab_free_delivery" class="tabs__target">
+                <div class="grid">
+                    {% for discount in discounts.free_delivery.items %}
+                        {% include "components/discount.twig" with {discount: discount} only %}
+                    {% endfor %}
+                </div>
+                <p class="tac">
+                    {% include "components/buttons/button.twig" with {url: discounts.free_delivery.url, label: 'Načíst další položky', outline: true} only %}
+                </p>
+            </div>
+        </div>
     </div>
 
 {% endblock %}

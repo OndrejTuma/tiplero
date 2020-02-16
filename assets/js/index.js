@@ -9,6 +9,7 @@ const classes = {
     },
     tabs: {
         active: 'tabs__tab--active',
+        targetActive: 'tabs__target--active',
         tab: 'tabs__tab',
         tabs: 'tabs',
     },
@@ -18,23 +19,32 @@ const Tabs = function (classes) {
     this.classes = classes;
 };
 Tabs.prototype.registerListeners = function (ctx) {
-    ctx.querySelectorAll(`.${this.classes.tabs}`).forEach(tabs => {
+    this.ctx = ctx;
+    this.tabsGroups = ctx.querySelectorAll(`.${this.classes.tabs}`);
+
+    this.tabsGroups.forEach(tabs => {
         tabs.addEventListener('click', e => {
             if (e.target.classList.contains(this.classes.tab)) {
-                tabs.querySelectorAll(`.${this.classes.tab}`).forEach(elm => this.setTabInactive(elm, ctx));
+                tabs.querySelectorAll(`.${this.classes.tab}`).forEach(elm => this.setTabInactive(elm));
 
-                this.setTabActive(e.target, ctx);
+                this.setTabActive(e.target);
             }
         });
+
+        const activeTab = tabs.querySelector(`.${this.classes.tab}.${this.classes.active}`);
+
+        if (activeTab) {
+            this.setTabActive(activeTab);
+        }
     });
 };
-Tabs.prototype.setTabActive = function (elm, ctx) {
+Tabs.prototype.setTabActive = function (elm) {
     elm.classList.add(this.classes.active);
-    this.displayContainer(ctx.getElementById(elm.getAttribute('data-target')), 'block');
+    this.displayContainer(this.ctx.getElementById(elm.getAttribute('data-target')), 'block');
 };
-Tabs.prototype.setTabInactive = function (elm, ctx) {
+Tabs.prototype.setTabInactive = function (elm) {
     elm.classList.remove(this.classes.active);
-    this.displayContainer(ctx.getElementById(elm.getAttribute('data-target')), 'none');
+    this.displayContainer(this.ctx.getElementById(elm.getAttribute('data-target')), 'none');
 };
 Tabs.prototype.displayContainer = function (elm, display) {
     if (elm) {

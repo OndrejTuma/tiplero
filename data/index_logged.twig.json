@@ -31,6 +31,55 @@
       {"url": "#", "icon": "file", "label": "Letáky"}
     ]
   },
+  "slides": [
+    {"img": "https://picsum.photos/1200/300", "logo": "./images/dummy/logo_booking.png", "title": "Víkendové lyžování. Až 15 % zpět ", "text": "Exkluzivně, jen přes Tiplero.com", "url": "#"}
+  ],
+  "discounts": {
+    "top": {
+      "items": [
+        {"img": "https://picsum.photos/300/200", "logo": "./images/dummy/logo_footshop.png", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"img": "https://picsum.photos/300/200", "logo": "./images/dummy/logo_booking.png", "amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"img": "https://picsum.photos/300/200", "logo": "./images/dummy/logo_zezula.png", "amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"img": "https://picsum.photos/300/200", "logo": "./images/dummy/logo_aliexpress.png", "amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_footshop.png", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_booking.png", "amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_zezula.png", "amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_aliexpress.png", "amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"}
+      ],
+      "url": "#"
+    },
+    "coupons": {
+      "items": [
+        {"img": "https://picsum.photos/200/200", "logo": "./images/dummy/logo_footshop.png", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"img": "https://picsum.photos/200/200", "logo": "./images/dummy/logo_booking.png", "amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"img": "https://picsum.photos/200/200", "logo": "./images/dummy/logo_zezula.png", "amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"img": "https://picsum.photos/200/200", "logo": "./images/dummy/logo_aliexpress.png", "amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_footshop.png", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_booking.png", "amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_zezula.png", "amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_aliexpress.png", "amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"}
+      ],
+      "url": "#"
+    },
+    "highest_discount": {
+      "items": [
+        {"img": "https://picsum.photos/300/300", "logo": "./images/dummy/logo_footshop.png", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"img": "https://picsum.photos/300/300", "logo": "./images/dummy/logo_booking.png", "amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"img": "https://picsum.photos/300/300", "logo": "./images/dummy/logo_zezula.png", "amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"img": "https://picsum.photos/300/300", "logo": "./images/dummy/logo_aliexpress.png", "amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"}
+      ],
+      "url": "#"
+    },
+    "free_delivery": {
+      "items": [
+        {"logo": "./images/dummy/logo_footshop.png", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_booking.png", "amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_zezula.png", "amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+        {"logo": "./images/dummy/logo_aliexpress.png", "amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"}
+      ],
+      "url": "#"
+    }
+  },
   "footer": {
     "links": [
       {"label": "Obchody", "url": "#"},

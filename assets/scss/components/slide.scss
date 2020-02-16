@@ -1,0 +1,30 @@
+.slide {
+    background: 50% 50% / cover no-repeat;
+    border-radius: 20px;
+    padding: 30px 20px;
+
+    &__logo {
+        display: block;
+        margin-bottom: 18px;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    p {
+        margin: 0 0 25px;
+    }
+
+    @include media(desktop) {
+        padding: 40px 100px;
+
+        &__logo {
+            margin-bottom: 36px;
+        }
+
+        h3 {
+            font-size: 28px;
+        }
+    }
+}

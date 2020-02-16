@@ -1,0 +1,16 @@
+.heading-with-tabs {
+    margin-bottom: 40px;
+
+    .tabs {
+        align-items: flex-end;
+        flex-grow: 0;
+    }
+
+    @include media(desktop) {
+        margin-bottom: 60px;
+
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+}

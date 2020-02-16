@@ -1,0 +1,8 @@
+<div class="slide" style="background-image: url({{ slide.img }})">
+    <span class="slide__logo">
+        <img src="{{ slide.logo }}" alt="{{ slide.title }}">
+    </span>
+    <h3>{{ slide.title }}</h3>
+    <p>{{ slide.text }}</p>
+    {% include "buttons/button.twig" with {url: slide.url, label: 'Získat peníze zpět', white: true} only %}
+</div>
