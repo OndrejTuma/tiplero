@@ -1,7 +1,15 @@
 .inner {
     padding: 45px 20px;
 
+    &--narrow {
+        padding: 20px;
+    }
+
     @include media(desktop) {
         padding: 70px 0 100px;
+
+        &--narrow {
+            padding: 0;
+        }
     }
 }
