@@ -70,9 +70,20 @@
             vertical-align: middle;
         }
         ul {
-            list-style: none;
-            margin: 0;
-            padding-left: 0;
+            @extend .list--plain;
+        }
+
+        .user {
+            .opener {
+                &--active svg:last-of-type {
+                    transform: rotate(180deg);
+                }
+
+                svg:last-of-type {
+                    left: auto;
+                    right: 0;
+                }
+            }
         }
 
         @include media(desktop) {
@@ -119,7 +130,7 @@
         right: 0;
 
         li + li {
-            margin-top: 25px;
+            margin-top: 20px;
         }
     }
 

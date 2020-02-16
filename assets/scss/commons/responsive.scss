@@ -1,0 +1,12 @@
+.desktop-only {
+    display: none;
+
+    @include media(desktop) {
+        display: block;
+    }
+}
+.mobile-only {
+    @include media(desktop) {
+        display: none;
+    }
+}

@@ -4,24 +4,54 @@
 
         {% include "../components/hamburger.twig" %}
         <div class="header__menu">
+            <ul class="list--with-icons list--with-border">
+                <li>
+                    {% include "../../build/svg/wallet.svg" %}
+                    Moje odměna: <strong class="highlight">{{ user.reward }}</strong>
+                </li>
+            </ul>
+            <div class="user">
+                <ul class="list--with-icons">
+                    <li class="opener opener--active" data-target="my_account">
+                        {% include "../../build/svg/user.svg" %}
+                        <span class="mobile-only">Můj účet</span>
+                        {% include "../../build/svg/arrow_down.svg" %}
+                    </li>
+                </ul>
+                <ul id="my_account" class="opener__target list--with-icons list--with-border">
+                    <li>
+                        {% include "../components/link.twig" with {url: '#', icon: 'wallet', label: 'Odměny a výhody'} %}
+                    </li>
+                    <li>
+                        {% include "../components/link.twig" with {url: '#', icon: 'card', label: 'Výplaty odměn'} %}
+                    </li>
+                    <li>
+                        {% include "../components/link.twig" with {url: '#', icon: 'settings', label: 'Nastavení účtu'} %}
+                    </li>
+                    <li>
+                        {% include "../components/link.twig" with {url: '#', icon: 'star', label: 'Moje hodnocení'} %}
+                    </li>
+                    <li>
+                        {% include "../components/link.twig" with {url: '#', icon: 'logout', label: 'Odhlásit se'} %}
+                    </li>
+                </ul>
+            </div>
+            <ul class="list--with-icons list--with-border">
+                <li>
+                    {% include "../components/link.twig" with {url: '#', icon: 'basket', label: 'Obchody'} %}
+                </li>
+                <li>
+                    {% include "../components/link.twig" with {url: '#', icon: 'note', label: 'Akce'} %}
+                </li>
+                <li>
+                    {% include "../components/link.twig" with {url: '#', icon: 'file', label: 'Letáky'} %}
+                </li>
+            </ul>
             <ul class="primary">
                 <li>
                     {% include "../components/search.twig" %}
                 </li>
-                <li>
-                    Moje odměna: 00 nic
-                </li>
-                <li>
-                    <span class="opener" data-target="my_account">
-                        Můj účet
-                        .
-                    </span>
-                    <ul id="my_account">
-
-                    </ul>
-                </li>
             </ul>
-
         </div>
     </div>
 </header>

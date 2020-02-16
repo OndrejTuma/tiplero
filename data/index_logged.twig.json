@@ -1,6 +1,9 @@
 {
   "title":"Homepage | Tiplero",
   "isLogged": true,
+  "user": {
+    "reward": "72,50 Kč"
+  },
   "footer": {
     "links": [
       {"label": "Obchody", "url": "#"},
