@@ -59,56 +59,13 @@
             }
         }
     }
-    &__menu {
-        display: none;
 
-        a {
-            text-decoration: none;
-        }
-        svg {
-            cursor: pointer;
-            vertical-align: middle;
-        }
-        ul {
-            @extend .list--plain;
-        }
-
-        .user {
-            .opener {
-                &--active svg:last-of-type {
-                    transform: rotate(180deg);
-                }
-
-                svg:last-of-type {
-                    left: auto;
-                    right: 0;
-                }
-            }
-        }
-
-        @include media(desktop) {
-            display: block;
-            float: right;
-            font-size: $font-size-base-small;
-            font-weight: 700;
-
-            li {
-                display: inline-block;
-
-                & + li {
-                    margin-left: 25px;
-                }
-            }
-        }
-    }
     &__stripe {
         padding: 20px 20px 0;
-        position: relative;
+        // position: relative;
 
-        a {
-            &:hover {
-                text-decoration: underline;
-            }
+        a:hover {
+            text-decoration: underline;
         }
     }
 
@@ -153,10 +110,18 @@
             flex-shrink: 0;
             width: 370px;
         }
+        &__stripe {
+            align-items: center;
+            display: flex;
+            padding-bottom: 20px;
+        }
 
         &--not-logged {
             @include background-image('claim.jpg');
             padding-bottom: 70px;
+        }
+        &--not-logged &__stripe {
+            justify-content: space-between;
         }
     }
 }

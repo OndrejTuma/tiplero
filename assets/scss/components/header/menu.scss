@@ -1,0 +1,116 @@
+.header__menu {
+    display: none;
+
+    a {
+        text-decoration: none;
+    }
+    ul {
+        @extend .list--plain;
+    }
+
+    .user {
+        .opener {
+            &--active svg:last-of-type {
+                transform: rotate(180deg);
+            }
+            &__target svg {
+                visibility: hidden;
+            }
+
+            svg:last-of-type {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+
+    @include media(desktop) {
+        display: block;
+        font-size: $font-size-base-small;
+        font-weight: 700;
+
+        .header--logged & {
+            width: 100%;
+        }
+
+        .secondary {
+            float: left;
+            margin-left: 50px;
+
+            .opener {
+                &--active:after {
+                    transform: rotate(180deg);
+                }
+                &:after {
+                    @include background('../svg/arrow_down.svg', 50% 50% no-repeat);
+                    @include dim(13px, 9px);
+                    content: '';
+                    display: inline-block;
+                }
+            }
+            svg {
+                display: none;
+            }
+        }
+        .primary {
+            float: right;
+        }
+        .submenu {
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+            font-weight: 400;
+            left: 0;
+            padding-bottom: $font-size-base;
+            padding-top: $font-size-base;
+            position: absolute;
+            right: 0;
+            top: 100%;
+
+            li + li {
+                margin-left: 10px;
+            }
+            ul {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+            }
+        }
+        .user-menu {
+            font-weight: 400;
+            position: relative;
+
+            li {
+                display: block;
+                margin: 0;
+
+                & + li {
+                    margin-top: 15px;
+                }
+            }
+            ul {
+                $width: 150px;
+
+                background-color: $white;
+                border-radius: 20px;
+                box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+                left: -$width;
+                margin-top: 15px;
+                padding: 20px 30px;
+                position: absolute;
+                top: 100%;
+                width: $width;
+            }
+        }
+
+        li {
+            display: inline-block;
+
+            & + li {
+                margin-left: 25px;
+            }
+        }
+        ul {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+}

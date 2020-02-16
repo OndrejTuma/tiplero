@@ -4,54 +4,90 @@
 
         {% include "../components/hamburger.twig" %}
         <div class="header__menu">
-            <ul class="list--with-icons list--with-border">
-                <li>
-                    {% include "../../build/svg/wallet.svg" %}
-                    Moje odměna: <strong class="highlight">{{ user.reward }}</strong>
-                </li>
-            </ul>
-            <div class="user">
-                <ul class="list--with-icons">
-                    <li class="opener opener--active" data-target="my_account">
-                        {% include "../../build/svg/user.svg" %}
-                        <span class="mobile-only">Můj účet</span>
-                        {% include "../../build/svg/arrow_down.svg" %}
+            {# I had no other choice but to make two menus, because of vastly different structure #}
+            <div class="mobile-only">
+                <ul class="list--with-icons list--with-border">
+                    <li>
+                        {% include "../../build/svg/wallet.svg" %}
+                        Moje odměna: <strong class="highlight">{{ user.reward }}</strong>
                     </li>
                 </ul>
-                <ul id="my_account" class="opener__target list--with-icons list--with-border">
+                <div class="user">
+                    <ul class="list--with-icons">
+                        <li class="opener" data-target="my_account">
+                            {% include "../../build/svg/user.svg" %}
+                            Můj účet
+                            {% include "../../build/svg/arrow_down.svg" %}
+                        </li>
+                    </ul>
+                    <ul id="my_account" class="opener__target list--with-icons list--with-border">
+                        {% for item in menu.user %}
+                            <li>
+                                {% include "../components/link.twig" with item %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <ul class="list--with-icons list--with-border">
+                    {% for item in menu.secondary %}
+                        <li>
+                            {% include "../components/link.twig" with item %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                <ul class="primary">
                     <li>
-                        {% include "../components/link.twig" with {url: '#', icon: 'wallet', label: 'Odměny a výhody'} %}
-                    </li>
-                    <li>
-                        {% include "../components/link.twig" with {url: '#', icon: 'card', label: 'Výplaty odměn'} %}
-                    </li>
-                    <li>
-                        {% include "../components/link.twig" with {url: '#', icon: 'settings', label: 'Nastavení účtu'} %}
-                    </li>
-                    <li>
-                        {% include "../components/link.twig" with {url: '#', icon: 'star', label: 'Moje hodnocení'} %}
-                    </li>
-                    <li>
-                        {% include "../components/link.twig" with {url: '#', icon: 'logout', label: 'Odhlásit se'} %}
+                        {% include "../components/search.twig" %}
                     </li>
                 </ul>
             </div>
-            <ul class="list--with-icons list--with-border">
-                <li>
-                    {% include "../components/link.twig" with {url: '#', icon: 'basket', label: 'Obchody'} %}
-                </li>
-                <li>
-                    {% include "../components/link.twig" with {url: '#', icon: 'note', label: 'Akce'} %}
-                </li>
-                <li>
-                    {% include "../components/link.twig" with {url: '#', icon: 'file', label: 'Letáky'} %}
-                </li>
-            </ul>
-            <ul class="primary">
-                <li>
-                    {% include "../components/search.twig" %}
-                </li>
-            </ul>
+
+            <div class="desktop-only">
+                <ul class="secondary">
+                    {% for item in menu.secondary %}
+                        <li>
+                            {% if item.submenu %}
+                                <span class="opener" data-target="submenu_{{ item.label }}">{% include "../components/link.twig" with item %}</span>
+                                <div class="submenu opener__target" id="submenu_{{ item.label }}">
+                                    <ul class="container">
+                                        {% for subitem in item.submenu %}
+                                            <li>
+                                                {% include "../components/link.twig" with subitem %}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            {% else %}
+                                {% include "../components/link.twig" with item %}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div class="primary">
+                    <ul>
+                        <li>
+                            {% include "../components/search.twig" with {id: 'search-input-desktop'} only %}
+                        </li>
+                        <li class="item--with-icon">
+                            {% include "../../build/svg/wallet.svg" %}
+                            Moje odměna: <strong class="highlight">{{ user.reward }}</strong>
+                        </li>
+                        <li class="user-menu">
+                            <span class="opener" data-target="my_account_desktop">
+                                {% include "../../build/svg/user.svg" %}
+                                <span class="arrow">{% include "../../build/svg/arrow_down.svg" %}</span>
+                            </span>
+                            <ul id="my_account_desktop" class="opener__target list--with-icons">
+                                {% for item in menu.user %}
+                                    <li>
+                                        {% include "../components/link.twig" with item %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </header>

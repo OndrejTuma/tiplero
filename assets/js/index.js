@@ -53,7 +53,6 @@ Openers.prototype.registerListeners = function (ctx) {
     ctx.addEventListener('click', this._click.bind(this));
 
     ctx.querySelectorAll(`.${this.classes.opener}`).forEach(opener => {
-        console.log(opener, opener.classList.contains(this.classes.active));
         opener.classList.contains(this.classes.active) && this.open(opener, this._getTarget(opener));
     });
 };

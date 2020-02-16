@@ -1,5 +1,5 @@
 .hamburger {
-    @include dim(20px, 15px);
+    @include square(20px);
 
     @include media(desktop) {
         display: none;

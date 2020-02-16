@@ -1,10 +1,10 @@
 <div class="search">
-    <div id="search-input" class="opener__target">
+    <div id="{{ id is defined ? id : 'search-input' }}" class="opener__target">
         <form action="">
             {% include "../components/forms/input.twig" with {type: 'text', label: 'Hledat', name: 'search_query'} only %}
         </form>
     </div>
-    <span class="opener" data-target="search-input">
+    <span class="opener" data-target="{{ id is defined ? id : 'search-input' }}">
         <span class="open">{% include "../../build/svg/search.svg" %}</span>
         <span class="close">{% include "../../build/svg/cross.svg" %}</span>
     </span>

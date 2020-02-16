@@ -4,6 +4,33 @@
   "user": {
     "reward": "72,50 Kč"
   },
+  "menu": {
+    "user": [
+      {"url": "#", "icon": "wallet", "label": "Odměny a výhody"},
+      {"url": "#", "icon": "card", "label": "Výplaty odměn"},
+      {"url": "#", "icon": "settings", "label": "Nastavení účtu"},
+      {"url": "#", "icon": "star", "label": "Moje hodnocení"},
+      {"url": "#", "icon": "logout", "label": "Odhlásit se"}
+    ],
+    "secondary": [
+      {"url": "#", "icon": "basket", "label": "Obchody",
+        "submenu": [
+          {"url": "#", "label": "Všechny obchody"},
+          {"url": "#", "label": "Art/Photo/Music"},
+          {"url": "#", "label": "Beauty"},
+          {"url": "#", "label": "Clothing/Apparel"},
+          {"url": "#", "label": "Computer & Electronics"},
+          {"url": "#", "label": "Education"},
+          {"url": "#", "label": "Entertainment"},
+          {"url": "#", "label": "Health and Wellness"},
+          {"url": "#", "label": "Home & Garden"},
+          {"url": "#", "label": "Insurance"}
+        ]
+      },
+      {"url": "#", "icon": "note", "label": "Akce"},
+      {"url": "#", "icon": "file", "label": "Letáky"}
+    ]
+  },
   "footer": {
     "links": [
       {"label": "Obchody", "url": "#"},
