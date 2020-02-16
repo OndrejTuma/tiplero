@@ -52,9 +52,9 @@
             <div class="inner">
                 <h2>Tabs</h2>
                 {% include "components/tabs/tabs.twig" with {class: 'tabs--left', items: [
-                    {label: 'text 1', active: true, targetId: 'container1'},
-                    {label: 'text 2', targetId: 'container2'},
-                    {label: 'text 3'},
+                    {label: 'První tab', active: true, targetId: 'container1'},
+                    {label: 'Druhý tab', targetId: 'container2'},
+                    {label: 'Třetí tab co neotvírá nic'}
                 ]} only %}
                 <div id="container1">Container 1</div>
                 <div id="container2" style="display: none;">Container 2</div>

@@ -1,8 +1,9 @@
 .tabs {
-    display: flex;
+    white-space: nowrap;
+    overflow: auto;
 
     &__tab + &__tab {
-        margin-left: 40px;
+        margin-left: 20px;
     }
 
     &__tab {
@@ -28,12 +29,22 @@
             &:after {
                 background-color: $mountain-meadow;
                 bottom: 0;
-                height: 1px;
                 content: '';
-                left: 10px;
+                height: 1px;
+                left: 50%;
+                margin-left: -20px;
                 position: absolute;
-                right: 10px;
+                width: 40px;
             }
+        }
+    }
+
+    @include media(desktop) {
+        display: flex;
+        overflow: visible;
+
+        &__tab + &__tab {
+            margin-left: 40px;
         }
     }
 }
