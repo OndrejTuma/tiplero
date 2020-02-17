@@ -11,6 +11,10 @@ const classes = {
         targetActive: 'opener__target--active',
         opener: 'opener',
     },
+    rating: {
+        rating: 'rating',
+        stars: 'stars',
+    },
     tabs: {
         active: 'tabs__tab--active',
         targetActive: 'tabs__target--active',
@@ -18,6 +22,12 @@ const classes = {
         tabs: 'tabs',
     },
 };
+
+
+
+/*
+ * =========== TABS PROTOTYPE ===========
+ */
 
 const Tabs = function (classes) {
     this.classes = classes;
@@ -56,6 +66,11 @@ Tabs.prototype.displayContainer = function (elm, display) {
     }
 };
 
+
+
+/*
+ * =========== OPENERS PROTOTYPE ===========
+ */
 
 const Openers = function (classes) {
     this.classes = classes;
@@ -102,6 +117,11 @@ Openers.prototype.close = function (opener, target) {
 };
 
 
+
+/*
+ * =========== FETCH PROTOTYPE ===========
+ */
+
 const Fetch = function (url) {
     this.url = url;
     this.request = new XMLHttpRequest();
@@ -125,6 +145,11 @@ Fetch.prototype.send = function (method, success, error, final) {
     this.request.send();
 };
 
+
+
+/*
+ * =========== FAVORITE BUTTON PROTOTYPE ===========
+ */
 
 const FavoriteButton = function (elm, url, classes) {
     this.button = elm;
@@ -159,6 +184,59 @@ FavoriteButton.prototype._final = function () {
 };
 
 
+
+/*
+ * =========== RATING CONTROLLER PROTOTYPE ===========
+ */
+
+const Rating = function (classes, stars) {
+    this.classes = classes;
+    this.stars = stars;
+};
+Rating.prototype.connect = function (ctx) {
+    ctx.querySelectorAll(`.${this.classes.rating}`).forEach((rating, i) => {
+        this._connectRating(rating, i);
+    });
+};
+Rating.prototype._connectRating = function (rating, index) {
+    const percents = parseInt(rating.dataset.rating);
+    const percentsArray = this._getStarsPercentsArray(percents, this.stars);
+    const svgMaxWidth = 12;
+
+    rating.querySelectorAll('svg').forEach((star, i) => {
+        const maskElm = star.querySelector('mask');
+        const maskPathElm = maskElm.querySelector('path');
+        const pathWithMaskElm = star.querySelector('path[mask]');
+        const id = `rating_${index}_mask_${i}`;
+
+        maskElm.setAttribute('id', id);
+        pathWithMaskElm.setAttribute('mask', `url(#${id})`);
+        maskPathElm.setAttribute(
+            'd',
+            maskPathElm.getAttribute('d').replace(/h[0-9]+/, `h${Math.round(percentsArray[i] / 100 * svgMaxWidth)}`)
+        );
+    });
+};
+Rating.prototype._getStarsPercentsArray = function (percents) {
+    const fullStars = Math.floor(percents / 100 * this.stars);
+
+    return new Array(this.stars).fill(0).map((__, i) => {
+        if (i < fullStars) {
+            return 100;
+        }
+        if (i === fullStars) {
+            return Math.round(percents - 100 / this.stars * fullStars) / (100 / this.stars) * 100;
+        }
+
+        return 0;
+    });
+};
+
+
+/*
+ * =========== INITIALIZATION ===========
+ */
+
 (function (w, d) {
     // init of tabs on page
     const tabs = new Tabs(classes.tabs);
@@ -174,4 +252,7 @@ FavoriteButton.prototype._final = function () {
         classes.favBtn,
     );
     favButton.register();
+
+    const ratings = new Rating(classes.rating, 5);
+    ratings.connect(d);
 })(window, document);

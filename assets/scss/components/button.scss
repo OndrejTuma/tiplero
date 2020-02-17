@@ -10,6 +10,7 @@
     font-weight: 700;
     line-height: 18px;
     padding: 13px 20px;
+    position: relative;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -43,14 +44,22 @@
     }
 
     svg {
+        @include square(18px);
         float: left;
-        height: 18px;
         margin: -1px 5px 0 0;
-        width: 18px;
     }
 
     @include media(desktop) {
+        padding-left: 40px;
+        padding-right: 40px;
         min-width: 280px;
         width: auto;
+
+        svg {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            margin: -9px 0 0;
+        }
     }
 }

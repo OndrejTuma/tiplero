@@ -8,11 +8,22 @@
     {"url": "#", "label": "Obchody"},
     {"url": "#", "label": "Aliexpress"}
   ],
-  "claim": {
+  "shop": {
     "favorite": false,
     "logo": "./images/dummy/logo_aliexpress.png",
     "title": "AliExpress",
-    "url": "#"
+    "url": "#",
+    "range": "0-10",
+    "rating": {
+
+      "amount": 4.1,
+      "count": 781
+    },
+    "links": [
+      {"label": "Slevy", "url": "#"},
+      {"label": "O obchodu", "url": "#"},
+      {"label": "Články", "url": "#"}
+    ]
   },
   "menu": {
     "user": [

@@ -9,8 +9,19 @@
         </div>
     </div>
     <div class="claim__content claim__top">
-        <img class="claim__logo" src="{{ claim.logo }}" alt="{{ claim.title }}"/>
-        <h2>{{ claim.title }}</h2>
-        {% include "../buttons/button.twig" with {url: claim.url, label: 'Nakoupit zde'} only %}
+        <img src="{{ claim.logo }}" alt="{{ claim.title }}"/>
+        <div class="claim__top__intro">
+            <h2>{{ claim.title }}</h2>
+            {% include "../buttons/button.twig" with {url: claim.url, label: 'Nakoupit zde'} only %}
+        </div>
+    </div>
+    <div class="claim__content claim__bottom">
+        <p><strong class="highlight">{{ claim.range }} %</strong> z každého nákupu</p>
+        {% include "../rating/rating.twig" with {rating: claim.rating} only %}
+        <ul class="claim__bottom__links">
+            {% for item in claim.links %}
+                <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
 </div>

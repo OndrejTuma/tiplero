@@ -1,0 +1,6 @@
+{% set stars = 5 %}
+
+<div class="rating" data-rating="{{ (rating.amount / stars * 100)|round }}">
+    {% include "stars.twig" with {count: rating.count, stars: stars} only %}
+    <p><strong>{{ rating.amount }}</strong> ({{ rating.count }}x)</p>
+</div>

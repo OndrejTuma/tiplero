@@ -1,0 +1,10 @@
+.stars {
+    @extend .list--plain;
+    display: inline-block;
+    vertical-align: middle;
+
+    li {
+        float: left;
+        margin-right: 5px;
+    }
+}
