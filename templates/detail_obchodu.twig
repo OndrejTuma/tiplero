@@ -3,10 +3,10 @@
 {% block content %}
 
     <div class="container inner--narrow">
-        {% include "components/shop-detail/claim.twig" with {claim: shop} only %}
+        {% include "components/shop-detail/claim.twig" with {claim: claim} only %}
     </div>
     <div class="container inner">
-        <h2>Slevy a slevové kupóny na {{shop.title}}</h2>
+        <h2>Slevy a slevové kupóny na {{claim.title}}</h2>
         <div class="grid">
             {% for discount in discounts %}
                 {% include "components/discount.twig" with {discount: discount} only %}
@@ -24,6 +24,25 @@
         <hr/>
         <div class="container inner">
             <h2>Podobné obchody</h2>
+            <ul class="list--stripe list--stripe--inner">
+                {% for shop in related_shops %}
+                    <li>
+                        {% include "components/shop-tile.twig" with {tile: shop} only %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <hr/>
+        <div class="container inner">
+            <h2>O obchodu</h2>
+            <div class="white-board">
+                {% for item in shop_intro %}
+                    <div class="mbb">
+                        <h5>{{ item.title }}</h5>
+                        {{ item.text }}
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 

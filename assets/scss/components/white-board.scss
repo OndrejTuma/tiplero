@@ -1,0 +1,9 @@
+.white-board {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 25px 20px;
+
+    @include media(desktop) {
+        padding: 40px 45px;
+    }
+}
