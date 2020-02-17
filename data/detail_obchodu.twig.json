@@ -67,5 +67,16 @@
     {"label": "Ostatní", "amount": 8},
     {"label": "Mobilní telefony, počítačové doplňky, monitory, tablety, notebooky, počítače, domácí audio a video zařízení, externí a interní úložiště až 1,5 %", "amount": 10},
     {"label": "Standardní nabídka", "amount": 8}
-  ]
+  ],
+  "footer": {
+    "links": [
+      {"label": "Obchody", "url": "#"},
+      {"label": "Jak to funguje?", "url": "#"},
+      {"label": "Pravidla cashbacku", "url": "#"},
+      {"label": "Nejčastějsí otázky", "url": "#"},
+      {"label": "Novinky", "url": "#"},
+      {"label": "Akce", "url": "#"},
+      {"label": "Kontakt", "url": "#"}
+    ]
+  }
 }

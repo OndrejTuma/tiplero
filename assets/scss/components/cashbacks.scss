@@ -7,14 +7,14 @@
         margin: 0;
     }
 
+    li {
+        display: flex;
+        justify-content: space-between;
+    }
     strong {
         font-weight: 400;
         margin: -5px 0 0 20px;
         white-space: nowrap;
-    }
-    li {
-        display: flex;
-        justify-content: space-between;
     }
 
     @include media(desktop) {
