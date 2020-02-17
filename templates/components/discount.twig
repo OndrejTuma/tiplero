@@ -1,9 +1,11 @@
-<div class="discount">
+<div class="discount{{ discount.logo is defined ?: ' discount--no-logo' }}">
     {% if discount.img %}
         <div class="discount__img" style="background-image: url({{ discount.img }})"></div>
     {% endif %}
     <div class="discount__header">
-        <div class="discount__logo"><img src="{{ discount.logo }}" alt="{{ discount.title }}"></div>
+        {% if discount.logo is defined %}
+            <div class="discount__logo"><img src="{{ discount.logo }}" alt="{{ discount.title }}"></div>
+        {% endif %}
         <div class="discount__amount">-<span>{{ discount.amount }}</span>%</div>
     </div>
     <div class="discount__content">

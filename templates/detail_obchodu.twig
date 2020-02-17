@@ -5,5 +5,22 @@
     <div class="container inner--narrow">
         {% include "components/shop-detail/claim.twig" with {claim: shop} only %}
     </div>
+    <div class="container inner">
+        <h2>Slevy a slevové kupóny na {{shop.title}}</h2>
+        <div class="grid">
+            {% for discount in discounts %}
+                {% include "components/discount.twig" with {discount: discount} only %}
+            {% endfor %}
+        </div>
+        <p class="tac">
+            {% include "components/buttons/button.twig" with {url: '#', label: 'Další slevy', outline: true} only %}
+        </p>
+    </div>
+    <div class="wrapper--gray">
+        <div class="container inner">
+            <h2>Cashback nabídky</h2>
+            {% include "components/cashbacks.twig" with {cashbacks: cashbacks} only %}
+        </div>
+    </div>
 
 {% endblock %}

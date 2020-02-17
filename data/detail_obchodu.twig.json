@@ -15,7 +15,6 @@
     "url": "#",
     "range": "0-10",
     "rating": {
-
       "amount": 4.1,
       "count": 781
     },
@@ -25,6 +24,16 @@
       {"label": "Články", "url": "#"}
     ]
   },
+  "discounts": [
+    {"img": "https://picsum.photos/300/200", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+    {"img": "https://picsum.photos/300/200", "amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+    {"img": "https://picsum.photos/300/200", "amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+    {"img": "https://picsum.photos/300/200", "amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+    {"amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+    {"amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+    {"amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
+    {"amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"}
+  ],
   "menu": {
     "user": [
       {"url": "#", "icon": "wallet", "label": "Odměny a výhody"},
@@ -51,5 +60,12 @@
       {"url": "#", "icon": "note", "label": "Akce"},
       {"url": "#", "icon": "file", "label": "Letáky"}
     ]
-  }
+  },
+  "cashbacks": [
+    {"label": "Peníze zpět z nákupu", "amount": 10},
+    {"label": "Příslušenství k mobilům, móda, zahrada, domácnost", "amount": 5},
+    {"label": "Ostatní", "amount": 8},
+    {"label": "Mobilní telefony, počítačové doplňky, monitory, tablety, notebooky, počítače, domácí audio a video zařízení, externí a interní úložiště až 1,5 %", "amount": 10},
+    {"label": "Standardní nabídka", "amount": 8}
+  ]
 }

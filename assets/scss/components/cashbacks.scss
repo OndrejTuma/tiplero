@@ -1,0 +1,29 @@
+.cashbacks {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 10px 20px;
+
+    p, ul {
+        margin: 0;
+    }
+
+    strong {
+        font-weight: 400;
+        margin: -5px 0 0 20px;
+        white-space: nowrap;
+    }
+    li {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include media(desktop) {
+        max-width: 870px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        strong {
+            margin-left: 90px;
+        }
+    }
+}

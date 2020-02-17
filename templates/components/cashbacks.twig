@@ -1,0 +1,10 @@
+<div class="cashbacks">
+    <ul class="list--bordered">
+        {% for item in cashbacks %}
+            <li>
+                <p>{{ item.label }}</p>
+                <strong>až <span class="highlight">{{ item.amount }} %</span></strong>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

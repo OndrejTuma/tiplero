@@ -1,0 +1,11 @@
+.list--bordered {
+    @extend .list--plain;
+
+    li {
+        padding: 15px 0;
+
+        & + li {
+            border-top: 1px solid $gallery;
+        }
+    }
+}

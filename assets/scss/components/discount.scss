@@ -17,6 +17,20 @@
     &__content {
         padding: 0 30px 40px;
     }
+    &__header {
+        @include background('dot.png', 0 100% repeat-x);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        position: relative;
+        text-align: center;
+    }
+    &__img {
+        background: 50% 50% / cover no-repeat;
+        border-radius: 20px 20px 0 0;
+        height: 140px;
+    }
     &__logo {
         @include dim(60%, 90px);
         align-items: center;
@@ -40,22 +54,34 @@
             max-width: 60%;
         }
     }
-    &__header {
-        @include background('dot.png', 0 100% repeat-x);
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    &__img {
-        background: 50% 50% / cover no-repeat;
-        border-radius: 20px 20px 0 0;
-        height: 140px;
-    }
     &__title {
         display: block;
         margin-bottom: 20px;
+    }
+
+    &--no-logo &__amount {
+        position: absolute;
+        right: $font-size-base;
+        text-align: right;
+        top: $font-size-base;
+        width: 50px;
+
+        &:after {
+            @include dim(145px, 10px);
+            @include background('dot.png', 0 0 repeat-x);
+            content: '';
+            left: -63px;
+            position: absolute;
+            transform: rotate(45deg);
+            top: 38px;
+        }
+
+        span {
+            font-size: 22px;
+        }
+    }
+    &--no-logo &__title {
+        width: 70%;
     }
 
     .button {
