@@ -1,4 +1,5 @@
 .header__menu {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
     display: none;
 
     a {
@@ -25,16 +26,20 @@
     }
 
     @include media(desktop) {
+        box-shadow: none;
         display: block;
         font-size: $font-size-base-small;
-        font-weight: 700;
 
+        &__desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
         .header--logged & {
             width: 100%;
         }
 
         .secondary {
-            float: left;
             margin-left: 50px;
 
             .opener {
@@ -52,20 +57,19 @@
                 display: none;
             }
         }
-        .primary {
-            float: right;
-        }
         .submenu {
             background-color: $white;
             box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
-            font-weight: 400;
             left: 0;
             padding-bottom: $font-size-base;
             padding-top: $font-size-base;
             position: absolute;
             right: 0;
-            top: 100%;
+            top: 80%;
 
+            a {
+                font-weight: 400;
+            }
             li + li {
                 margin-left: 10px;
             }
@@ -76,9 +80,19 @@
             }
         }
         .user-menu {
-            font-weight: 400;
             position: relative;
 
+            .opener {
+                display: block;
+
+                .arrow {
+                    vertical-align: text-bottom;
+                }
+            }
+
+            a {
+                font-weight: 400;
+            }
             li {
                 display: block;
                 margin: 0;
@@ -102,6 +116,9 @@
             }
         }
 
+        a {
+            font-weight: 700;
+        }
         li {
             display: inline-block;
 

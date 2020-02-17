@@ -42,7 +42,7 @@
                 </ul>
             </div>
 
-            <div class="desktop-only">
+            <div class="desktop-only header__menu__desktop">
                 <ul class="secondary">
                     {% for item in menu.secondary %}
                         <li>
@@ -63,30 +63,28 @@
                         </li>
                     {% endfor %}
                 </ul>
-                <div class="primary">
-                    <ul>
-                        <li>
-                            {% include "../components/search.twig" with {id: 'search-input-desktop'} only %}
-                        </li>
-                        <li class="item--with-icon">
-                            {% include "../../build/svg/wallet.svg" %}
-                            Moje odměna: <strong class="highlight">{{ user.reward }}</strong>
-                        </li>
-                        <li class="user-menu">
+                <ul>
+                    <li>
+                        {% include "../components/search.twig" with {id: 'search-input-desktop'} only %}
+                    </li>
+                    <li class="item--with-icon">
+                        {% include "../../build/svg/wallet.svg" %}
+                        Moje odměna: <strong class="highlight">{{ user.reward }}</strong>
+                    </li>
+                    <li class="user-menu">
                             <span class="opener" data-target="my_account_desktop">
                                 {% include "../../build/svg/user.svg" %}
                                 <span class="arrow">{% include "../../build/svg/arrow_down.svg" %}</span>
                             </span>
-                            <ul id="my_account_desktop" class="opener__target list--with-icons">
-                                {% for item in menu.user %}
-                                    <li>
-                                        {% include "../components/link.twig" with item %}
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                        <ul id="my_account_desktop" class="opener__target list--with-icons">
+                            {% for item in menu.user %}
+                                <li>
+                                    {% include "../components/link.twig" with item %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
