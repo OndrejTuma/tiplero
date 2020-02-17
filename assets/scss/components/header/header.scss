@@ -2,81 +2,11 @@
     position: relative;
     z-index: 2;
 
-    &__container {
-        clear: both;
-        padding-bottom: 40px;
-        padding-top: 10px;
-    }
-    &__info {
-        margin-bottom: 30px;
-
-        p {
-            font-size: 20px;
-            line-height: 28px;
-        }
-    }
-    &__login {
-        text-align: center;
-
-        .button {
-            width: 100%;
-        }
-        h2 {
-            font-size: 28px;
-            margin: 0 0 20px;
-        }
-        p {
-            font-size: $font-size-base-tiny;
-        }
-        &__signup {
-            background-color: $white;
-            border-radius: 10px 10px 0 0;
-            box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 8.76%;
-            padding: 30px 20px;
-            position: relative;
-
-            &:after {
-                @include background('login_divider.png', 50% 50% / cover no-repeat);
-                content: '';
-                left: 0;
-                right: 0;
-                padding-top: 8.76%;
-                position: absolute;
-                top: 100%;
-            }
-
-            .fb {
-                background-color: #4267b2;
-                margin-bottom: 10px;
-            }
-        }
-        &__register {
-            background-color: $white;
-            border-radius: 0 0 10px 10px;
-            box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-
-            .button {
-                margin: 20px 0 10px;
-            }
-        }
-    }
-
     &__stripe {
         padding: 20px;
-        // position: relative;
 
         a:hover {
             text-decoration: underline;
-        }
-    }
-
-    &--not-logged {
-        @include background('claim_mobile.jpg', 50% 50% / cover no-repeat);
-
-        @include media(desktop) {
-            @include background-image('claim.jpg');
         }
     }
 
@@ -102,22 +32,6 @@
     }
 
     @include media(desktop) {
-        &__container {
-            display: flex;
-            padding-bottom: 70px;
-            padding-top: 20px;
-        }
-        &__info {
-            margin-right: 20%;
-
-            p {
-                width: 80%;
-            }
-        }
-        &__login {
-            flex-shrink: 0;
-            width: 370px;
-        }
         &__stripe {
             align-items: center;
             display: flex;

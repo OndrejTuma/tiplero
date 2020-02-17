@@ -1,0 +1,17 @@
+{
+  "title":"Text page | Tiplero",
+  "user": {
+    "isLogged": false
+  },
+  "footer": {
+    "links": [
+      {"label": "Obchody", "url": "#"},
+      {"label": "Jak to funguje?", "url": "#"},
+      {"label": "Pravidla cashbacku", "url": "#"},
+      {"label": "Nejčastějsí otázky", "url": "#"},
+      {"label": "Novinky", "url": "#"},
+      {"label": "Akce", "url": "#"},
+      {"label": "Kontakt", "url": "#"}
+    ]
+  }
+}

@@ -17,22 +17,4 @@
             </ul>
         </div>
     </div>
-    <div class="inner--narrow container header__container">
-        <div class="header__info">
-            <h1>Jak si nechat platit za nákupy v oblíbeném e-shopu?</h1>
-            <p>Navštivte známé obchody přes <strong>Tiplero</strong>, nakupujte jako vždy a část peněz za své nákupy získáte zpět!</p>
-        </div>
-        <div class="header__login">
-            <div class="header__login__signup">
-                <h2>Pojďme na to</h2>
-                {% include "../components/buttons/button.twig" with {url: './index_logged.html', label: 'Přihlásit přes Facebook', icon: 'facebook', class: 'fb'} only %}
-                {% include "../components/buttons/button.twig" with {url: './index_logged.html', label: 'Přihlásit přes Google', outline: true, icon: 'google'} only %}
-            </div>
-            <div class="header__login__register">
-                {% include "../components/forms/input.twig" with {type: 'email', label: 'Zadejte Váš e-mail'} only %}
-                {% include "../components/buttons/button.twig" with {label: 'Založit účet zdarma'} only %}
-                <p>Registrací souhlasíte s <a href="#">podmínkami užití a zpracováním osobních údajů</a>.</p>
-            </div>
-        </div>
-    </div>
 </header>
