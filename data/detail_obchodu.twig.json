@@ -8,6 +8,12 @@
     {"url": "#", "label": "Obchody"},
     {"url": "#", "label": "Aliexpress"}
   ],
+  "claim": {
+    "favorite": false,
+    "logo": "./images/dummy/logo_aliexpress.png",
+    "title": "AliExpress",
+    "url": "#"
+  },
   "menu": {
     "user": [
       {"url": "#", "icon": "wallet", "label": "Odměny a výhody"},

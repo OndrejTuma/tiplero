@@ -1,0 +1,60 @@
+.claim {
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    &__content {
+        padding: 30px;
+    }
+    &__favorite {
+        cursor: pointer;
+        font-size: 0;
+        padding: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &:before {
+            @include square(100%);
+            content: '';
+            left: 0;
+            position: absolute;
+            right: 0;
+        }
+
+        &--busy {
+            cursor: not-allowed;
+            opacity: .3;
+        }
+        &--is-favorite &--active {
+            display: block;
+        }
+        &--is-favorite &--inctive {
+            display: none;
+        }
+        &--active {
+            display: none;
+            position: relative;
+        }
+        &--active {
+            svg {
+                fill: $green-haze;
+
+                & + svg {
+                    fill: $white;
+                    left: 50%;
+                    position: absolute;
+                    top: 25%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+    &__logo {
+        margin-bottom: $font-size-base;
+    }
+    &__top {
+
+    }
+}

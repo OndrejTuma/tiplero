@@ -2,6 +2,10 @@ const classes = {
     header: {
         active: 'header--menu-open',
     },
+    favBtn: {
+        active: 'claim__favorite--is-favorite',
+        busy: 'claim__favorite--busy',
+    },
     openers: {
         active: 'opener--active',
         targetActive: 'opener__target--active',
@@ -81,7 +85,7 @@ Openers.prototype._click = function (e) {
         ? this.close(e.target, target)
         : this.open(e.target, target);
 };
-Openers.prototype._getTarget = function(opener) {
+Openers.prototype._getTarget = function (opener) {
     if (!opener) {
         return;
     }
@@ -98,6 +102,63 @@ Openers.prototype.close = function (opener, target) {
 };
 
 
+const Fetch = function (url) {
+    this.url = url;
+    this.request = new XMLHttpRequest();
+};
+Fetch.prototype.send = function (method, success, error, final) {
+    this.request.onreadystatechange = function () {
+        if (this.request.readyState == XMLHttpRequest.DONE) {
+            const response = JSON.parse(this.request.responseText);
+
+            if (this.request.status == 200) {
+                typeof success === 'function' && success(response);
+            } else {
+                typeof error === 'function' && error(response);
+            }
+
+            typeof final === 'function' && final(response);
+        }
+    }.bind(this);
+
+    this.request.open(method, this.url, true);
+    this.request.send();
+};
+
+
+const FavoriteButton = function (elm, url, classes) {
+    this.button = elm;
+    this.url = url;
+    this.classes = classes;
+    this.req = new Fetch(url);
+};
+FavoriteButton.prototype.register = function () {
+    if (!this.button) {
+        return;
+    }
+
+    this.button.addEventListener('click', this._click.bind(this));
+};
+FavoriteButton.prototype._click = function () {
+    this.button.classList.add(this.classes.busy);
+    this.req.send('POST', this._success.bind(this), this._error.bind(this), this._final.bind(this));
+};
+FavoriteButton.prototype._isActive = function () {
+    return this.button.classList.contains(this.classes.active);
+};
+FavoriteButton.prototype._success = function (data) {
+    this._isActive()
+        ? this.button.classList.remove(this.classes.active)
+        : this.button.classList.add(this.classes.active);
+};
+FavoriteButton.prototype._error = function (data) {
+    console.error('request failed', data);
+};
+FavoriteButton.prototype._final = function () {
+    this.button.classList.remove(this.classes.busy);
+};
+
+
 (function (w, d) {
     // init of tabs on page
     const tabs = new Tabs(classes.tabs);
@@ -105,4 +166,12 @@ Openers.prototype.close = function (opener, target) {
     // init openers on page
     const openers = new Openers(classes.openers);
     openers.registerListeners(d);
+
+
+    const favButton = new FavoriteButton(
+        d.getElementById('claim_favorite_click'),
+        'https://private-ecdfec-promo6.apiary-mock.com/tiplero',
+        classes.favBtn,
+    );
+    favButton.register();
 })(window, document);

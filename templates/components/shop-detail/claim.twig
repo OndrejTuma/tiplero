@@ -1,0 +1,16 @@
+<div class="claim">
+    <div class="claim__favorite{{ claim.favorite ? ' claim__favorite--is-favorite' }}" id="claim_favorite_click">
+        <div class="claim__favorite--active">
+            {% include "../../../build/svg/hearth.svg" %}
+            {% include "../../../build/svg/checkmark.svg" %}
+        </div>
+        <div class="claim__favorite--inctive">
+            {% include "../../../build/svg/hearth_outline.svg" %}
+        </div>
+    </div>
+    <div class="claim__content claim__top">
+        <img class="claim__logo" src="{{ claim.logo }}" alt="{{ claim.title }}"/>
+        <h2>{{ claim.title }}</h2>
+        {% include "../buttons/button.twig" with {url: claim.url, label: 'Nakoupit zde'} only %}
+    </div>
+</div>

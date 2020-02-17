@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="container inner--narrow">
-        <h2>detail obchodu</h2>
+        {% include "components/shop-detail/claim.twig" with {claim: claim} only %}
     </div>
 
 {% endblock %}
