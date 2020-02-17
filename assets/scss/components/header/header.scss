@@ -4,6 +4,8 @@
 
     &__container {
         clear: both;
+        padding-bottom: 40px;
+        padding-top: 10px;
     }
     &__info {
         margin-bottom: 30px;
@@ -62,7 +64,7 @@
     }
 
     &__stripe {
-        padding: 20px 20px 0;
+        padding: 20px;
         // position: relative;
 
         a:hover {
@@ -72,7 +74,10 @@
 
     &--not-logged {
         @include background('claim_mobile.jpg', 50% 50% / cover no-repeat);
-        padding-bottom: 40px;
+
+        @include media(desktop) {
+            @include background-image('claim.jpg');
+        }
     }
 
     &.opener__target--active &__stripe {
@@ -99,6 +104,8 @@
     @include media(desktop) {
         &__container {
             display: flex;
+            padding-bottom: 70px;
+            padding-top: 20px;
         }
         &__info {
             margin-right: 20%;
@@ -114,13 +121,9 @@
         &__stripe {
             align-items: center;
             display: flex;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
         }
 
-        &--not-logged {
-            @include background-image('claim.jpg');
-            padding-bottom: 70px;
-        }
         &--not-logged &__stripe {
             justify-content: space-between;
         }
