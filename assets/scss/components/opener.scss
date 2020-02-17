@@ -16,11 +16,13 @@
         opacity: 0;
         position: absolute;
         transition: opacity .5s;
+        visibility: hidden;
 
         &--active {
             left: 0;
             opacity: 1;
             position: relative;
+            visibility: visible;
         }
     }
 

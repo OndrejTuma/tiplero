@@ -1,7 +1,7 @@
 {
   "title":"Homepage | Tiplero",
-  "isLogged": true,
   "user": {
+    "isLogged": true,
     "reward": "72,50 Kč"
   },
   "menu": {

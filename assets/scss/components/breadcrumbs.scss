@@ -1,0 +1,23 @@
+.breadcrumbs {
+    margin-bottom: 10px;
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    li {
+        display: inline-block;
+
+        & + li:before {
+            content: '/';
+            display: inline-block;
+        }
+    }
+    ul {
+        @extend .list--plain;
+        margin: 0;
+    }
+}

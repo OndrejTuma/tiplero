@@ -1,6 +1,8 @@
 {
   "title":"Homepage | Tiplero",
-  "isLogged": false,
+  "user": {
+    "isLogged": false
+  },
   "shops": [
     {"type": "logo", "img": "./images/dummy/logo_zezula.png", "alt": "Zezula", "url": "#"},
     {"type": "logo", "img": "./images/dummy/logo_lindex.png", "alt": "Lindex", "url": "#"},
