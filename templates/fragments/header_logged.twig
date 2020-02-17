@@ -6,7 +6,7 @@
         <div class="header__menu">
             {# I had no other choice but to make two menus, because of vastly different structure #}
             <div class="mobile-only">
-                <ul class="list--with-icons list--with-border">
+                <ul class="list--with-icons list--with-border reward">
                     <li>
                         {% include "../../build/svg/wallet.svg" %}
                         Moje odměna: <strong class="highlight">{{ user.reward }}</strong>
@@ -35,11 +35,7 @@
                         </li>
                     {% endfor %}
                 </ul>
-                <ul class="primary">
-                    <li>
-                        {% include "../components/search.twig" %}
-                    </li>
-                </ul>
+                {% include "../components/search.twig" %}
             </div>
 
             <div class="desktop-only header__menu__desktop">
@@ -67,7 +63,7 @@
                     <li>
                         {% include "../components/search.twig" with {id: 'search-input-desktop'} only %}
                     </li>
-                    <li class="item--with-icon">
+                    <li class="item--with-icon reward">
                         {% include "../../build/svg/wallet.svg" %}
                         Moje odměna: <strong class="highlight">{{ user.reward }}</strong>
                     </li>

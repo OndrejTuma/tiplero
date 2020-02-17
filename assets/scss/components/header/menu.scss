@@ -9,6 +9,9 @@
         @extend .list--plain;
     }
 
+    .reward .highlight {
+        margin-left: 5px;
+    }
     .user {
         .opener {
             &--active svg:last-of-type {
