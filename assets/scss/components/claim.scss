@@ -94,12 +94,32 @@
         &__content {
             padding: 40px 70px 40px 40px;
         }
+        &__bottom {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            padding-top: 15px;
+
+            &__info {
+                align-items: center;
+                display: flex;
+            }
+            &__links {
+                li + li {
+                    margin-left: 40px;
+                }
+            }
+            .rating {
+                margin: 0 0 0 30px;
+            }
+        }
         &__top {
             align-items: center;
             display: flex;
             justify-content: space-between;
 
-            &__intro {
+            &__info {
                 display: flex;
                 order: 1;
             }
