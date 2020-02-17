@@ -1,4 +1,4 @@
-<div class="discount{{ discount.logo is defined ?: ' discount--no-logo' }}">
+<div class="discount{{ discount.logo is defined ? '' : ' discount--no-logo' }}">
     {% if discount.img %}
         <div class="discount__img" style="background-image: url({{ discount.img }})"></div>
     {% endif %}
