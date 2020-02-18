@@ -1,42 +1,36 @@
 .search {
     align-items: center;
-    white-space: nowrap;
-
-    &[class] {
-        display: flex;
-    }
+    display: flex;
 
     .opener {
         .close {
             display: none;
-            padding: 8px 0 8px 8px;
+            padding-left: 8px;
+        }
+
+        svg {
+            display: block;
+        }
+
+        &__target {
+            flex-grow: 1;
         }
 
         &--active {
             .close {
-                display: inline-block;
+                display: block;
             }
             .open {
                 display: none;
             }
         }
-        &__target {
-            flex-grow: 1;
-        }
     }
 
     @include media(desktop) {
-        &[class] {
-            display: inline-block;
-        }
-
         .opener {
-            .close {
-                padding: 0;
-            }
             &__target {
-                display: inline-block;
-                margin: -11px 10px -10px 0;
+                margin-bottom: -10px;
+                margin-top: -10px;
             }
         }
     }

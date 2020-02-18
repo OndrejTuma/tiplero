@@ -35,11 +35,8 @@
         &__stripe {
             align-items: center;
             display: flex;
-            padding-bottom: 30px;
-        }
-
-        &--not-logged &__stripe {
             justify-content: space-between;
+            padding-bottom: 30px;
         }
     }
 }

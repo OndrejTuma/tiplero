@@ -1,18 +1,18 @@
-<header id="header" class="header header--not-logged">
+<header id="header" class="header">
     <div class="container header__stripe">
         {% include "../components/logo.twig" %}
 
         {% include "../components/hamburger.twig" %}
-        <div class="header__menu">
+        <div class="header__menu header__menu--anonym">
             <ul>
-                <li>
-                    {% include "../components/search.twig" %}
-                </li>
                 <li>
                     <a href="#">Registrovat</a>
                 </li>
                 <li>
                     <a href="./index_logged.html">Přihlásit se</a>
+                </li>
+                <li class="header__menu--anonym__search">
+                    {% include "../components/search.twig" %}
                 </li>
             </ul>
         </div>
