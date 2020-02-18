@@ -1,0 +1,40 @@
+.rewards-list {
+    background-color: $white;
+    border-radius: 20px;
+
+    &__item {
+        &__status {
+            @include square(16px);
+            background-color: $green-haze;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                fill: $white;
+                @include square(13px);
+            }
+        }
+
+        &--error &__status {
+            background-color: $guardsman-red;
+
+            svg {
+                @include square(8px);
+            }
+        }
+    }
+
+    li {
+        padding: 10px 20px 15px;
+
+        & + li {
+            @include background('dot.png', 0 0 repeat-x);
+        }
+    }
+    ul {
+        @extend .list--plain;
+        margin: 0;
+    }
+}

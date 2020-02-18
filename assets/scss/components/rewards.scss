@@ -1,0 +1,28 @@
+.rewards {
+    background-color: $white;
+    border-radius: 20px;
+    font-size: $font-size-base-small;
+    margin: 20px 0 40px;
+    padding: 10px 0;
+    text-align: center;
+
+    li {
+        padding: 10px 20px 15px;
+
+        & + li {
+            @include background('dot.png', 0 0 repeat-x);
+        }
+    }
+    p {
+        margin: 0;
+    }
+    strong {
+        color: $green-haze;
+        display: block;
+        font-size: 32px;
+    }
+    ul {
+        @extend .list--plain;
+        margin: 0;
+    }
+}

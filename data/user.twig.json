@@ -1,0 +1,79 @@
+{
+  "title":"Homepage | Tiplero",
+  "user": {
+    "isLogged": true,
+    "name": "Tomáš Hlaváček",
+    "image": "",
+    "rewards": {
+      "to_pay": "72,50 Kč",
+      "registered": "12,50 Kč",
+      "bonus": "0,50 Kč",
+      "total_gain": "3740,61 Kč",
+      "overview": {
+        "all": [
+          {"logo": "./images/dummy/logo_notino.png", "reward": "0 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": false, "tooltip": "Něco nevyšlo"},
+          {"logo": "./images/dummy/logo_aliexpress.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
+          {"logo": "./images/dummy/logo_drmax.png", "reward": "3740,61 Kč", "info": "Bonus za doporučení (Jakub Hlaváček)", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
+          {"logo": "./images/dummy/logo_footshop.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
+          {"logo": "./images/dummy/logo_zezula.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
+          {"logo": "./images/dummy/logo_booking.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true}
+        ],
+        "waiting": [
+          {"logo": "./images/dummy/logo_notino.png", "reward": "0 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": false, "tooltip": "Něco nevyšlo"},
+          {"logo": "./images/dummy/logo_drmax.png", "reward": "3740,61 Kč", "info": "Bonus za doporučení (Jakub Hlaváček)", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true}
+        ],
+        "confirmed": [
+          {"logo": "./images/dummy/logo_aliexpress.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
+          {"logo": "./images/dummy/logo_footshop.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
+          {"logo": "./images/dummy/logo_zezula.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
+          {"logo": "./images/dummy/logo_booking.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true}
+        ]
+      }
+    },
+    "menu": [
+      {"url": "#", "icon": "wallet", "label": "Odměny a výhody", "active": true},
+      {"url": "#", "icon": "card", "label": "Výplaty odměn"},
+      {"url": "#", "icon": "settings", "label": "Nastavení účtu"},
+      {"url": "#", "icon": "star", "label": "Moje hodnocení"},
+      {"url": "#", "icon": "logout", "label": "Odhlásit se"}
+    ]
+  },
+  "menu": {
+    "user": [
+      {"url": "#", "icon": "wallet", "label": "Odměny a výhody"},
+      {"url": "#", "icon": "card", "label": "Výplaty odměn"},
+      {"url": "#", "icon": "settings", "label": "Nastavení účtu"},
+      {"url": "#", "icon": "star", "label": "Moje hodnocení"},
+      {"url": "#", "icon": "logout", "label": "Odhlásit se"}
+    ],
+    "secondary": [
+      {"url": "#", "icon": "basket", "label": "Obchody",
+        "submenu": [
+          {"url": "#", "label": "Všechny obchody"},
+          {"url": "#", "label": "Art/Photo/Music"},
+          {"url": "#", "label": "Beauty"},
+          {"url": "#", "label": "Clothing/Apparel"},
+          {"url": "#", "label": "Computer & Electronics"},
+          {"url": "#", "label": "Education"},
+          {"url": "#", "label": "Entertainment"},
+          {"url": "#", "label": "Health and Wellness"},
+          {"url": "#", "label": "Home & Garden"},
+          {"url": "#", "label": "Insurance"}
+        ]
+      },
+      {"url": "#", "icon": "note", "label": "Akce"},
+      {"url": "#", "icon": "file", "label": "Letáky"}
+    ]
+  },
+  "footer": {
+    "links": [
+      {"label": "Obchody", "url": "#"},
+      {"label": "Jak to funguje?", "url": "#"},
+      {"label": "Pravidla cashbacku", "url": "#"},
+      {"label": "Nejčastějsí otázky", "url": "#"},
+      {"label": "Novinky", "url": "#"},
+      {"label": "Akce", "url": "#"},
+      {"label": "Kontakt", "url": "#"}
+    ]
+  }
+}

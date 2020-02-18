@@ -1,0 +1,25 @@
+{% extends "layouts/default.twig" %}
+
+{% block content %}
+
+    <div class="wrapper--gray">
+        <div class="container inner--narrow">
+            <h2>Odměny a výhody</h2>
+            {% include "components/rewards.twig" with {rewards: user.rewards} only %}
+        </div>
+        <hr/>
+        <div class="container inner">
+            <div class="grid--stripe">
+                {% include "components/heading-with-tabs.twig" with {title: 'Přehled odměn', items: [
+                    {label: 'Všechny odměny', active: true, targetId: 'tab_all_rewards'},
+                    {label: 'Čekající odměny', targetId: 'tab_waiting_rewards'},
+                    {label: 'Potvrzené odměny', targetId: 'tab_confirmed_rewards'},
+                ]} only %}
+            </div>
+            <div id="tab_all_rewards">
+                {% include "components/rewards-list.twig" with {rewards: user.rewards.overview.all} only %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

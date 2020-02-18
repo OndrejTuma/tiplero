@@ -1,0 +1,20 @@
+<div class="rewards-list">
+    <ul>
+        {% for reward in rewards %}
+            <li class="rewards-list__item{{ reward.success ? '' : ' rewards-list__item--error' }}">
+                <img src="{{ reward.logo }}" alt="">
+                <strong>{{ reward.reward }}</strong>
+                <span>{{ reward.info }}</span>
+                <span>{{ reward.registered }}</span>
+                <span>{{ reward.confirmed }}</span>
+                <span class="rewards-list__item__status" title="{{ reward.tooltip }}">
+                    {% if reward.success %}
+                        {% include "../../build/svg/checkmark.svg" %}
+                    {% else %}
+                        {% include "../../build/svg/cross.svg" %}
+                    {% endif %}
+                </span>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

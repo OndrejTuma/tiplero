@@ -9,7 +9,7 @@
                 <ul class="list--with-icons list--with-border reward">
                     <li>
                         {% include "../../build/svg/wallet.svg" %}
-                        Moje odměna: <strong class="highlight">{{ user.reward }}</strong>
+                        Moje odměna: <strong class="highlight">{{ user.rewards.to_pay }}</strong>
                     </li>
                 </ul>
                 <div class="user">
@@ -65,7 +65,7 @@
                     </li>
                     <li class="item--with-icon reward">
                         {% include "../../build/svg/wallet.svg" %}
-                        Moje odměna: <strong class="highlight">{{ user.reward }}</strong>
+                        Moje odměna: <strong class="highlight">{{ user.rewards.to_pay }}</strong>
                     </li>
                     <li class="user-menu">
                             <span class="opener" data-target="my_account_desktop">
