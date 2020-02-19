@@ -1,0 +1,8 @@
+.user {
+    @include media(desktop) {
+        &__container {
+            box-sizing: border-box;
+            padding-left: 300px;
+        }
+    }
+}

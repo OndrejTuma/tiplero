@@ -4,7 +4,9 @@
     overflow: auto;
 
     &--inner {
+        margin-left: -20px;
         margin-right: -20px;
+        padding-left: 20px;
     }
 
     li {
@@ -20,7 +22,9 @@
         overflow: visible;
 
         &--inner {
+            margin-left: 0;
             margin-right: 0;
+            padding-left: 0;
         }
     }
 }

@@ -1,0 +1,16 @@
+.buttons {
+    margin: 25px 0;
+
+    .button + .button {
+        margin-top: 20px;
+    }
+
+    @include media(desktop) {
+        margin: 35px 0;
+
+        .button + .button {
+            margin-top: 0;
+            margin-left: 40px;
+        }
+    }
+}
