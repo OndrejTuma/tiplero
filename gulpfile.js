@@ -13,7 +13,9 @@ var gulp = require('gulp'),
     fs = require('fs'),
     svgo = require('gulp-svgo'),
     svgSymbols = require('gulp-svg-symbols'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    babel = require('gulp-babel'),
+    uglify = require('gulp-uglify');
 /*
  * Directories here
  */
@@ -143,8 +145,10 @@ gulp.task('sass', function () {
  * Compile .js files into build js directory With app.min.js
  */
 gulp.task('js', function(){
-    return gulp.src(paths.jsSrc + 'index.js')
+    return gulp.src(paths.jsSrc + '**/*.js')
         .pipe(sourcemaps.init())
+        .pipe(babel({ presets: ['@babel/env'] }))
+        .pipe(uglify())
         .pipe(concat('script.min.js'))
         .on('error', function (err) {
             console.log(err.toString());
