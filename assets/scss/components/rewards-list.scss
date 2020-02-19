@@ -1,7 +1,11 @@
 .rewards-list {
     background-color: $white;
     border-radius: 20px;
+    font-size: $font-size-base-small;
 
+    &__header {
+        color: $rolling-stone;
+    }
     &__item {
         &__status {
             @include square(16px);
@@ -17,6 +21,9 @@
             }
         }
 
+        &--error .highlight {
+            color: $guardsman-red;
+        }
         &--error &__status {
             background-color: $guardsman-red;
 
@@ -25,16 +32,34 @@
             }
         }
     }
+    &__logo {
+        text-align: center;
+        width: 1px;
+
+        img {
+            vertical-align: middle;
+        }
+    }
 
     li {
-        padding: 10px 20px 15px;
+        display: table-row;
+        height: 60px;
 
         & + li {
             @include background('dot.png', 0 0 repeat-x);
         }
+        & > div {
+            display: table-cell;
+            padding: 15px 20px;
+            vertical-align: middle;
+        }
     }
     ul {
         @extend .list--plain;
+        box-sizing: border-box;
+        display: table;
         margin: 0;
+        padding: 0 30px 25px;
+        width: 100%;
     }
 }

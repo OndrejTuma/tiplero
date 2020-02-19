@@ -19,6 +19,12 @@
             <div id="tab_all_rewards">
                 {% include "components/rewards-list.twig" with {rewards: user.rewards.overview.all} only %}
             </div>
+            <div id="tab_waiting_rewards">
+                {% include "components/rewards-list.twig" with {rewards: user.rewards.overview.waiting} only %}
+            </div>
+            <div id="tab_confirmed_rewards">
+                {% include "components/rewards-list.twig" with {rewards: user.rewards.overview.confirmed} only %}
+            </div>
         </div>
     </div>
 
