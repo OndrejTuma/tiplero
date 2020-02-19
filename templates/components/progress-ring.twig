@@ -1,0 +1,29 @@
+{% set size = 44 %}
+{% set strokeWidth = 2 %}
+
+{% set radius = size / 2 - strokeWidth / 2 %}
+{% set circumference = radius * 2 * 3.1415 %}
+
+<div class="progress-ring" style="width: {{ size }}px;">
+    <svg width="{{ size }}" height="{{ size }}">
+        <circle
+            class="progress-ring__ring"
+            stroke-width="{{ strokeWidth }}"
+            fill="transparent"
+            r="{{ radius }}"
+            cx="{{ size / 2 }}"
+            cy="{{ size / 2 }}"
+            style="stroke-dasharray: {{ circumference }}, {{ circumference }}; stroke-dashoffset: 0;"
+        />
+        <circle
+            class="progress-ring__circle"
+            stroke-width="{{ strokeWidth }}"
+            fill="transparent"
+            r="{{ radius }}"
+            cx="{{ size / 2 }}"
+            cy="{{ size / 2 }}"
+            style="stroke-dasharray: {{ circumference }}, {{ circumference }}; stroke-dashoffset: {{ circumference - percents / 100 * circumference }};"
+        />
+    </svg>
+    <strong>{{ percents }}<span>%</span></strong>
+</div>
