@@ -62,8 +62,7 @@
                 }
             }
             &__main {
-                @include background('dot.png', 0 100% repeat-x);
-                padding-bottom: 30px;
+                padding-bottom: 20px;
                 padding-top: 30px;
 
                 &__item--active {
@@ -83,8 +82,9 @@
                 }
             }
             &__profile-completion {
+                @include background('dot.png', 0 0 repeat-x);
                 font-size: $font-size-base-small;
-                padding: 30px 0;
+                padding: 30px 0 20px;
 
                 header {
                     align-items: center;
