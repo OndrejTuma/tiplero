@@ -22,10 +22,20 @@
     }
 
     &--fb {
-        background-color: #4267b2;
+        $color: #4267b2;
+        background-color: $color;
+
+        &:hover {
+            background-color: darken($color, 10);
+        }
     }
     &--twitter {
-        background-color: #1da1f2;
+        $color: #1da1f2;
+        background-color: $color;
+
+        &:hover {
+            background-color: darken($color, 10);
+        }
     }
     &--white {
         background-color: $white;

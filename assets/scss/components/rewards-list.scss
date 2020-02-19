@@ -4,6 +4,10 @@
     font-size: $font-size-base-small;
     flex-grow: 1;
 
+    &__empty {
+        margin: 0;
+        padding: 30px 40px;
+    }
     &__header {
         color: $rolling-stone;
 

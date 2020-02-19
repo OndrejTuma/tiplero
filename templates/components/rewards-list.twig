@@ -1,25 +1,26 @@
 <div class="rewards-list">
-    <ul>
-        <li class="rewards-list__header">
-            <div class="tac">Obchod</div>
-            <div>Výše odměny</div>
-            <div>Info o odměně</div>
-            <div>Datum registrace</div>
-            <div>Datum potvrzení</div>
-            <div>Stav</div>
-        </li>
-        {% for reward in rewards %}
-            <li class="rewards-list__item{{ reward.success ? '' : ' rewards-list__item--error' }}">
-                <div class="rewards-list__logo">
-                    <img src="{{ reward.logo }}" alt="">
-                </div>
-                <div>
-                    <strong class="highlight">{{ reward.reward }}</strong>
-                </div>
-                <div>{{ reward.info }}</div>
-                <div>{{ reward.registered }}</div>
-                <div>{{ reward.confirmed }}</div>
-                <div>
+    {% if rewards is defined and rewards %}
+        <ul>
+            <li class="rewards-list__header">
+                <div class="tac">Obchod</div>
+                <div>Výše odměny</div>
+                <div>Info o odměně</div>
+                <div>Datum registrace</div>
+                <div>Datum potvrzení</div>
+                <div>Stav</div>
+            </li>
+            {% for reward in rewards %}
+                <li class="rewards-list__item{{ reward.success ? '' : ' rewards-list__item--error' }}">
+                    <div class="rewards-list__logo">
+                        <img src="{{ reward.logo }}" alt="">
+                    </div>
+                    <div>
+                        <strong class="highlight">{{ reward.reward }}</strong>
+                    </div>
+                    <div>{{ reward.info }}</div>
+                    <div>{{ reward.registered }}</div>
+                    <div>{{ reward.confirmed }}</div>
+                    <div>
                     <span class="rewards-list__item__status" title="{{ reward.tooltip }}">
                         {% if reward.success %}
                             {% include "../../build/svg/checkmark.svg" %}
@@ -27,8 +28,11 @@
                             {% include "../../build/svg/cross.svg" %}
                         {% endif %}
                     </span>
-                </div>
-            </li>
-        {% endfor %}
-    </ul>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="rewards-list__empty">Zatím neevidujeme žádnou odměnu.</p>
+    {% endif %}
 </div>

@@ -1,10 +1,5 @@
-$header-height-mobile: 77px;
-$header-height-desktop: 80px;
-
 .sign-board {
     @include background('claim_mobile.jpg', 50% 50% / cover no-repeat);
-    padding-top: $header-height-mobile;
-    margin-top: -$header-height-mobile;
 
     &__container {
         clear: both;
@@ -68,8 +63,6 @@ $header-height-desktop: 80px;
 
     @include media(desktop) {
         @include background-image('claim.jpg');
-        padding-top: $header-height-desktop;
-        margin-top: -$header-height-desktop;
 
         &__container {
             display: flex;

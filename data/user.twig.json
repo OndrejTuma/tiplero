@@ -22,12 +22,7 @@
           {"logo": "./images/dummy/logo_notino.png", "reward": "0 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": false, "tooltip": "Něco nevyšlo"},
           {"logo": "./images/dummy/logo_drmax.png", "reward": "3740,61 Kč", "info": "Bonus za doporučení (Jakub Hlaváček)", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true}
         ],
-        "confirmed": [
-          {"logo": "./images/dummy/logo_aliexpress.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
-          {"logo": "./images/dummy/logo_footshop.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
-          {"logo": "./images/dummy/logo_zezula.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
-          {"logo": "./images/dummy/logo_booking.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true}
-        ]
+        "confirmed": []
       }
     },
     "menu": [
@@ -36,6 +31,12 @@
       {"url": "#", "icon": "settings", "label": "Nastavení účtu"},
       {"url": "#", "icon": "star", "label": "Moje hodnocení"},
       {"url": "#", "icon": "logout", "label": "Odhlásit se"}
+    ],
+    "profile_completion": [
+      {"label": "Osobní údaje", "done": true},
+      {"label": "Bankovní spojení", "done": false},
+      {"label": "Doporučte známému", "done": false},
+      {"label": "Proveďte první nákup", "done": false}
     ]
   },
   "menu": {

@@ -23,7 +23,7 @@
                     <ul id="my_account" class="opener__target list--with-icons list--with-border">
                         {% for item in menu.user %}
                             <li>
-                                {% include "../components/link.twig" with item %}
+                                {% include "../components/item.twig" with item %}
                             </li>
                         {% endfor %}
                     </ul>
@@ -31,7 +31,7 @@
                 <ul class="list--with-icons list--with-border">
                     {% for item in menu.secondary %}
                         <li>
-                            {% include "../components/link.twig" with item %}
+                            {% include "../components/item.twig" with item %}
                         </li>
                     {% endfor %}
                 </ul>
@@ -43,18 +43,18 @@
                     {% for item in menu.secondary %}
                         <li>
                             {% if item.submenu %}
-                                <span class="opener" data-target="submenu_{{ item.label }}">{% include "../components/link.twig" with item %}</span>
+                                <span class="opener" data-target="submenu_{{ item.label }}">{% include "../components/item.twig" with item %}</span>
                                 <div class="submenu opener__target" id="submenu_{{ item.label }}">
                                     <ul class="container">
                                         {% for subitem in item.submenu %}
                                             <li>
-                                                {% include "../components/link.twig" with subitem %}
+                                                {% include "../components/item.twig" with subitem %}
                                             </li>
                                         {% endfor %}
                                     </ul>
                                 </div>
                             {% else %}
-                                {% include "../components/link.twig" with item %}
+                                {% include "../components/item.twig" with item %}
                             {% endif %}
                         </li>
                     {% endfor %}
@@ -75,7 +75,7 @@
                         <ul id="my_account_desktop" class="opener__target list--with-icons">
                             {% for item in menu.user %}
                                 <li>
-                                    {% include "../components/link.twig" with item %}
+                                    {% include "../components/item.twig" with item %}
                                 </li>
                             {% endfor %}
                         </ul>

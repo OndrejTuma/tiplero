@@ -61,13 +61,14 @@
             </div>
 
             <div class="inner">
-                <h2>Links:</h2>
+                <h2>Items:</h2>
                 <ul class="list--plain">
-                    <li>{% include "components/link.twig" with {url: '#', label: 'Obchody', icon: 'basket'} only %}</li>
-                    <li>{% include "components/link.twig" with {url: '#', label: 'Akce', icon: 'note'} only %}</li>
-                    <li>{% include "components/link.twig" with {url: '#', label: 'Letáky', icon: 'file'} only %}</li>
-                    <li>{% include "components/link.twig" with {url: '#', label: 'Odhlásit se', icon: 'logout'} only %}</li>
-                    <li>{% include "components/link.twig" with {url: '#', label: 'Můj účet'} only %}</li>
+                    <li>{% include "components/item.twig" with {url: '#', label: 'Obchody', icon: 'basket'} only %}</li>
+                    <li>{% include "components/item.twig" with {url: '#', label: 'Akce', icon: 'note'} only %}</li>
+                    <li>{% include "components/item.twig" with {url: '#', label: 'Letáky', icon: 'file'} only %}</li>
+                    <li>{% include "components/item.twig" with {url: '#', label: 'Odhlásit se', icon: 'logout'} only %}</li>
+                    <li>{% include "components/item.twig" with {url: '#', label: 'Můj účet'} only %}</li>
+                    <li>{% include "components/item.twig" with {label: 'Jen text'} only %}</li>
                 </ul>
             </div>
 

@@ -2,7 +2,50 @@
 
 {% block content %}
 
-    <div class="wrapper--gray">
+    <div class="wrapper--gray hit-top user">
+        <div class="user__menu">
+            <header class="user__menu__header">
+                <strong>{{ user.name }}</strong>
+                <figure>
+                    {% if user.image is defined and user.image %}
+                        <img src="{{ user.image }}" alt="{{ user.name }}"/>
+                    {% else %}
+                        {% include "../build/svg/user-anonymous.svg" %}
+                    {% endif %}
+                </figure>
+                {% if user.rewards.total_gain %}
+                    <p><strong class="highlight">{{ user.rewards.total_gain }}</strong> Celkem získáno</p>
+                {% endif %}
+            </header>
+            <ul>
+                {% for item in user.menu %}
+                    <li>
+                        {% include "components/item.twig" with item %}
+                    </li>
+                {% endfor %}
+            </ul>
+            {% if user.profile_completion is defined and user.profile_completion %}
+                {% set filledItems = 0 %}
+                {% for item in user.profile_completion %}
+                    {% if item.done %}
+                        {% set filledItems = filledItems + 1 %}
+                    {% endif %}
+                {% endfor %}
+                <div class="user__profile-completion">
+                    <header>
+                        <strong>Váš profil je vyplněn z</strong>
+                        {% include "components/percentage-circle.twig" with {percents: (filledItems / user.profile_completion|length * 100)|round} only %}
+                    </header>
+                    <ul>
+                        {% for item in user.profile_completion %}
+                            <li>
+                                {% include "components/item.twig" with {label: item.label, icon: item.done ? 'circle-check' : 'circle', inactive: not item.done} only %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
         <div class="container inner--narrow user__container">
             <h2>Odměny a výhody</h2>
             {% include "components/rewards.twig" with {rewards: user.rewards} only %}

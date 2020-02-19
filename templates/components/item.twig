@@ -1,0 +1,15 @@
+{% if url is defined %}
+    <a href="{{ url }}" class="item{{ class ? ' ' ~ class }}{{ inactive ? ' item--inactive' }}">
+        {% if icon %}
+            {% include "../../build/svg/" ~ icon ~ ".svg" %}
+        {% endif %}
+        <span>{{ label }}</span>
+    </a>
+{% else %}
+    <span class="item{{ class ? ' ' ~ class }}{{ inactive ? ' item--inactive' }}">
+        {% if icon %}
+            {% include "../../build/svg/" ~ icon ~ ".svg" %}
+        {% endif %}
+        <span>{{ label }}</span>
+    </span>
+{% endif %}

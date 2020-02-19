@@ -1,0 +1,10 @@
+// drag first wrapper/container under header to hit the top
+.hit-top {
+    padding-top: $header-height-mobile;
+    margin-top: -$header-height-mobile;
+
+    @include media(desktop) {
+        padding-top: $header-height-desktop;
+        margin-top: -$header-height-desktop;
+    }
+}

@@ -1,0 +1,24 @@
+a.item {
+    text-decoration: none;
+
+    &:hover span {
+        text-decoration: underline;
+    }
+}
+.item {
+    color: $tiber;
+
+    svg {
+        @include square(16px);
+        fill: $tiber;
+        margin-right: 14px;
+    }
+
+    &--inactive {
+        color: $rolling-stone;
+
+        svg {
+            fill: $silver;
+        }
+    }
+}

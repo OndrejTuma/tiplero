@@ -1,4 +1,6 @@
 .header {
+    box-sizing: border-box;
+    height: $header-height-mobile;
     position: relative;
     z-index: 2;
 
@@ -32,6 +34,8 @@
     }
 
     @include media(desktop) {
+        height: $header-height-desktop;
+
         &__stripe {
             align-items: center;
             display: flex;

@@ -5,12 +5,11 @@
         {% include "../components/hamburger.twig" %}
         <div class="header__menu header__menu--anonym">
             <ul>
-                <li>
-                    <a href="#">Registrovat</a>
-                </li>
-                <li>
-                    <a href="./index_logged.html">Přihlásit se</a>
-                </li>
+                {% for item in menu %}
+                    <li>
+                        {% include "../components/item.twig" with item %}
+                    </li>
+                {% endfor %}
                 <li class="header__menu--anonym__search">
                     {% include "../components/search.twig" %}
                 </li>

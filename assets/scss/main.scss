@@ -1,4 +1,4 @@
-@import "variables/_variables";
+@import "variables/all";
 @import "mixins/_basics";
 @import "mixins/_responsive";
 @import "mixins/_background";
@@ -14,3 +14,4 @@ body {
 @import "commons/all";
 @import "components/all";
 @import "sections/all";
+@import "snippets/all";

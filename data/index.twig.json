@@ -3,6 +3,10 @@
   "user": {
     "isLogged": false
   },
+  "menu": [
+    {"url": "#", "label": "Registrovat"},
+    {"url": "./index_logged.html", "label": "Přihlásit se"}
+  ],
   "shops": [
     {"type": "logo", "img": "./images/dummy/logo_zezula.png", "alt": "Zezula", "url": "#"},
     {"type": "logo", "img": "./images/dummy/logo_lindex.png", "alt": "Lindex", "url": "#"},
