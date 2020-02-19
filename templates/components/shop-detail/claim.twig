@@ -1,5 +1,5 @@
 <div class="claim">
-    <div class="claim__favorite{{ claim.favorite ? ' claim__favorite--is-favorite' }}" id="claim_favorite_click">
+    <div class="claim__favorite{{ claim.favorite ? ' claim__favorite--is-favorite' }}" id="claim_favorite_click" data-id="{{ claim.id }}">
         <div class="claim__favorite--active">
             {% include "../../../build/svg/hearth.svg" %}
             {% include "../../../build/svg/checkmark.svg" %}

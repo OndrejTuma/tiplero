@@ -3,10 +3,6 @@
   "user": {
     "isLogged": false
   },
-  "menu": [
-    {"url": "#", "label": "Registrovat"},
-    {"url": "./index_logged.html", "label": "Přihlásit se"}
-  ],
   "shops": [
     {"type": "logo", "img": "./images/dummy/logo_zezula.png", "alt": "Zezula", "url": "#"},
     {"type": "logo", "img": "./images/dummy/logo_lindex.png", "alt": "Lindex", "url": "#"},
@@ -28,15 +24,19 @@
     {"arrow": "top", "name": "Alena R.", "text": "Díky Tipli jsem získala <strong>7 700 Kč</strong> za letošní rok. Peníze využiji na naší dovolenou."},
     {"arrow": "right", "name": "Josef R.", "text": "Tipli používám k nákupům v mnoha oblíbených obchodech jako jsou <strong>Aliexpress, Booking, BonPrix</strong> a mnoho dalších"}
   ],
+  "menu": [
+    {"url": "./index_logged.html", "label": "Registrovat"},
+    {"url": "./index_logged.html", "label": "Přihlásit se"}
+  ],
   "footer": {
     "links": [
-      {"label": "Obchody", "url": "#"},
-      {"label": "Jak to funguje?", "url": "#"},
-      {"label": "Pravidla cashbacku", "url": "#"},
-      {"label": "Nejčastějsí otázky", "url": "#"},
-      {"label": "Novinky", "url": "#"},
-      {"label": "Akce", "url": "#"},
-      {"label": "Kontakt", "url": "#"}
+      {"label": "Obchody", "url": "./text.html"},
+      {"label": "Jak to funguje?", "url": "./text.html"},
+      {"label": "Pravidla cashbacku", "url": "./text.html"},
+      {"label": "Nejčastějsí otázky", "url": "./text.html"},
+      {"label": "Novinky", "url": "./text.html"},
+      {"label": "Akce", "url": "./text.html"},
+      {"label": "Kontakt", "url": "./text.html"}
     ]
   }
 }

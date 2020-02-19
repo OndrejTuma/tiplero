@@ -41,11 +41,11 @@
   },
   "menu": {
     "user": [
-      {"url": "#", "icon": "wallet", "label": "Odměny a výhody"},
-      {"url": "#", "icon": "card", "label": "Výplaty odměn"},
-      {"url": "#", "icon": "settings", "label": "Nastavení účtu"},
-      {"url": "#", "icon": "star", "label": "Moje hodnocení"},
-      {"url": "#", "icon": "logout", "label": "Odhlásit se"}
+      {"url": "./user.html", "icon": "wallet", "label": "Odměny a výhody"},
+      {"url": "./user.html", "icon": "card", "label": "Výplaty odměn"},
+      {"url": "./user.html", "icon": "settings", "label": "Nastavení účtu"},
+      {"url": "./user.html", "icon": "star", "label": "Moje hodnocení"},
+      {"url": "./user.html", "icon": "logout", "label": "Odhlásit se"}
     ],
     "secondary": [
       {"url": "#", "icon": "basket", "label": "Obchody",
@@ -68,13 +68,13 @@
   },
   "footer": {
     "links": [
-      {"label": "Obchody", "url": "#"},
-      {"label": "Jak to funguje?", "url": "#"},
-      {"label": "Pravidla cashbacku", "url": "#"},
-      {"label": "Nejčastějsí otázky", "url": "#"},
-      {"label": "Novinky", "url": "#"},
-      {"label": "Akce", "url": "#"},
-      {"label": "Kontakt", "url": "#"}
+      {"label": "Obchody", "url": "./text.html"},
+      {"label": "Jak to funguje?", "url": "./text.html"},
+      {"label": "Pravidla cashbacku", "url": "./text.html"},
+      {"label": "Nejčastějsí otázky", "url": "./text.html"},
+      {"label": "Novinky", "url": "./text.html"},
+      {"label": "Akce", "url": "./text.html"},
+      {"label": "Kontakt", "url": "./text.html"}
     ]
   }
 }

@@ -20,6 +20,6 @@
                 {{ discount.until }}
             </li>
         </ul>
-        {% include "buttons/button.twig" with {label: 'Získat slevu ' ~ discount.amount ~ '%'} %}
+        {% include "buttons/button.twig" with {url: discount.url, label: 'Získat slevu ' ~ discount.amount ~ '%'} %}
     </div>
 </div>

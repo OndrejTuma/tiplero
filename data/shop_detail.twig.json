@@ -10,7 +10,8 @@
     {"url": "#", "label": "Obchody"},
     {"url": "#", "label": "Aliexpress"}
   ],
-  "claim": {
+  "shop": {
+    "id": "1234",
     "favorite": false,
     "logo": "./images/dummy/logo_aliexpress.png",
     "title": "AliExpress",
@@ -27,22 +28,39 @@
     ]
   },
   "discounts": [
-    {"img": "https://picsum.photos/300/200", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
-    {"img": "https://picsum.photos/300/200", "amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
-    {"img": "https://picsum.photos/300/200", "amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
-    {"img": "https://picsum.photos/300/200", "amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
-    {"amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
-    {"amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
-    {"amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"},
-    {"amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020"}
+    {"img": "https://picsum.photos/300/200", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"},
+    {"img": "https://picsum.photos/300/200", "amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"},
+    {"img": "https://picsum.photos/300/200", "amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"},
+    {"img": "https://picsum.photos/300/200", "amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"},
+    {"amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"},
+    {"amount": 8, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"},
+    {"amount": 52, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"},
+    {"amount": 18, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"}
+  ],
+  "cashbacks": [
+    {"label": "Peníze zpět z nákupu", "amount": 10},
+    {"label": "Příslušenství k mobilům, móda, zahrada, domácnost", "amount": 5},
+    {"label": "Ostatní", "amount": 8},
+    {"label": "Mobilní telefony, počítačové doplňky, monitory, tablety, notebooky, počítače, domácí audio a video zařízení, externí a interní úložiště až 1,5 %", "amount": 10},
+    {"label": "Standardní nabídka", "amount": 8}
+  ],
+  "related_shops": [
+    {"logo": "./images/dummy/logo_expert.png", "title": "Expert", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_zezula.png", "title": "Snowboard Zezula", "url": "shop_detail.html", "discount": 1.5}
+  ],
+  "shop_intro": [
+    {"title": "Představení", "text": "Výrobky z celého světa jedním kliknutím jako na dlani – tak by se dal shrnout fenomén AliExpress. Nákupy z Číny přes AliExpress si oblíbily miliony lidí ze všech koutů planety. Na rozdíl od konkurence AliExpress nefunguje jako pouhý prostředník, ale spojuje své zákazníky přímo s konkrétními výrobci. Proto prodává za bezkonkurenční ceny bez přirážek od zprostředkovatelů."},
+    {"title": "Co koupit výhodně", "text": "Čínský obchod AliExpress nabízí vše, na co si vzpomenete – od oblečení, obuvi, šperků a kosmetiky přes elektroniku, odolné telefony a autodíly až k vybavení domácnosti, zahradním doplňkům a hračkám. Jako byste si představili největší obchodní centrum na světě – stojíte uprostřed a nevidíte ani na jeden konec. V tomto online obchodě totiž naleznete přes 100 milionů výrobků. Pokud si nevyberete na AliExpressu, pak pravděpodobně to, co hledáte, bohužel ani neexistuje.AliExpress slouží k propojení čínských prodejců se zahraničními zákazníky. Naleznete zde zboží od velkých výrobců prodávajících výrobky po tisících, ale i od konkrétních lidí, kteří výrobek vyrábí ručně ve svém volném času. Díky tomu, že na AliExpressu může prodávat každý spolehlivý čínský prodejce, tak zde můžete objevit unikátní zboží, které nikde jinde nekoupíte."},
+    {"title": "Shrnutí poplatků", "text": "Objednávka do <strong>22 Euro</strong> (do 560 Kč) - balíček osvobozen od DPH i CLA.<br/> Objednávka v hodnotě <strong>22 až 150 Euro</strong> (do 3.825 Kč) - je potřeba doplatit DPH, tzn. 21 % z celkové částky.<br/> Objednávka nad <strong>150 Euro</strong> (nad 3.825 Kč) - je potřeba doplatit DPH i CLO (CLO je cca od 0-14 %)."},
+    {"title": "Náš seriál o AliExpressu", "text": "Chcete se o nákupech na AliExpressu dozvědět ještě více? Projděte si Tipli seriál o AliExpressu, kde se dozvíte první poslední o tomto čínském fenoménu a získáte tak mnoho rad a tipů na výhodné nákupy na AliExpressu.<br/><br/>Registraci a přihlášení zvládnete za pár vteřin.<br/>Chcete, aby na vás mluvil AliExpress česky?<br/>Zaujalo vás zboží? Přidejte si ho do košíku a zaplaťte. Poradíme vám, jak platba na AliExpressu funguje.<br/>Vyhněte se podvodníkům a nakupujte bezpečně. "}
   ],
   "menu": {
     "user": [
-      {"url": "#", "icon": "wallet", "label": "Odměny a výhody"},
-      {"url": "#", "icon": "card", "label": "Výplaty odměn"},
-      {"url": "#", "icon": "settings", "label": "Nastavení účtu"},
-      {"url": "#", "icon": "star", "label": "Moje hodnocení"},
-      {"url": "#", "icon": "logout", "label": "Odhlásit se"}
+      {"url": "./user.html", "icon": "wallet", "label": "Odměny a výhody"},
+      {"url": "./user.html", "icon": "card", "label": "Výplaty odměn"},
+      {"url": "./user.html", "icon": "settings", "label": "Nastavení účtu"},
+      {"url": "./user.html", "icon": "star", "label": "Moje hodnocení"},
+      {"url": "./user.html", "icon": "logout", "label": "Odhlásit se"}
     ],
     "secondary": [
       {"url": "#", "icon": "basket", "label": "Obchody",
@@ -63,32 +81,15 @@
       {"url": "#", "icon": "file", "label": "Letáky"}
     ]
   },
-  "cashbacks": [
-    {"label": "Peníze zpět z nákupu", "amount": 10},
-    {"label": "Příslušenství k mobilům, móda, zahrada, domácnost", "amount": 5},
-    {"label": "Ostatní", "amount": 8},
-    {"label": "Mobilní telefony, počítačové doplňky, monitory, tablety, notebooky, počítače, domácí audio a video zařízení, externí a interní úložiště až 1,5 %", "amount": 10},
-    {"label": "Standardní nabídka", "amount": 8}
-  ],
-  "related_shops": [
-    {"logo": "./images/dummy/logo_expert.png", "title": "Expert", "url": "shop_detail.html", "discount": 1.5},
-    {"logo": "./images/dummy/logo_zezula.png", "title": "Snowboard Zezula", "url": "shop_detail.html", "discount": 1.5}
-  ],
-  "shop_intro": [
-    {"title": "Představení", "text": "Výrobky z celého světa jedním kliknutím jako na dlani – tak by se dal shrnout fenomén AliExpress. Nákupy z Číny přes AliExpress si oblíbily miliony lidí ze všech koutů planety. Na rozdíl od konkurence AliExpress nefunguje jako pouhý prostředník, ale spojuje své zákazníky přímo s konkrétními výrobci. Proto prodává za bezkonkurenční ceny bez přirážek od zprostředkovatelů."},
-    {"title": "Co koupit výhodně", "text": "Čínský obchod AliExpress nabízí vše, na co si vzpomenete – od oblečení, obuvi, šperků a kosmetiky přes elektroniku, odolné telefony a autodíly až k vybavení domácnosti, zahradním doplňkům a hračkám. Jako byste si představili největší obchodní centrum na světě – stojíte uprostřed a nevidíte ani na jeden konec. V tomto online obchodě totiž naleznete přes 100 milionů výrobků. Pokud si nevyberete na AliExpressu, pak pravděpodobně to, co hledáte, bohužel ani neexistuje.AliExpress slouží k propojení čínských prodejců se zahraničními zákazníky. Naleznete zde zboží od velkých výrobců prodávajících výrobky po tisících, ale i od konkrétních lidí, kteří výrobek vyrábí ručně ve svém volném času. Díky tomu, že na AliExpressu může prodávat každý spolehlivý čínský prodejce, tak zde můžete objevit unikátní zboží, které nikde jinde nekoupíte."},
-    {"title": "Shrnutí poplatků", "text": "Objednávka do <strong>22 Euro</strong> (do 560 Kč) - balíček osvobozen od DPH i CLA.<br/> Objednávka v hodnotě <strong>22 až 150 Euro</strong> (do 3.825 Kč) - je potřeba doplatit DPH, tzn. 21 % z celkové částky.<br/> Objednávka nad <strong>150 Euro</strong> (nad 3.825 Kč) - je potřeba doplatit DPH i CLO (CLO je cca od 0-14 %)."},
-    {"title": "Náš seriál o AliExpressu", "text": "Chcete se o nákupech na AliExpressu dozvědět ještě více? Projděte si Tipli seriál o AliExpressu, kde se dozvíte první poslední o tomto čínském fenoménu a získáte tak mnoho rad a tipů na výhodné nákupy na AliExpressu.<br/><br/>Registraci a přihlášení zvládnete za pár vteřin.<br/>Chcete, aby na vás mluvil AliExpress česky?<br/>Zaujalo vás zboží? Přidejte si ho do košíku a zaplaťte. Poradíme vám, jak platba na AliExpressu funguje.<br/>Vyhněte se podvodníkům a nakupujte bezpečně. "}
-  ],
   "footer": {
     "links": [
-      {"label": "Obchody", "url": "#"},
-      {"label": "Jak to funguje?", "url": "#"},
-      {"label": "Pravidla cashbacku", "url": "#"},
-      {"label": "Nejčastějsí otázky", "url": "#"},
-      {"label": "Novinky", "url": "#"},
-      {"label": "Akce", "url": "#"},
-      {"label": "Kontakt", "url": "#"}
+      {"label": "Obchody", "url": "./text.html"},
+      {"label": "Jak to funguje?", "url": "./text.html"},
+      {"label": "Pravidla cashbacku", "url": "./text.html"},
+      {"label": "Nejčastějsí otázky", "url": "./text.html"},
+      {"label": "Novinky", "url": "./text.html"},
+      {"label": "Akce", "url": "./text.html"},
+      {"label": "Kontakt", "url": "./text.html"}
     ]
   }
 }

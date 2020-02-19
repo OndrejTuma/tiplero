@@ -1,3 +1,4 @@
+const FAVORITE_ENDPOINT_URL = 'https://private-ecdfec-promo6.apiary-mock.com/tiplero';
 const classes = {
     header: {
         active: 'header--menu-open',
@@ -126,7 +127,7 @@ const Fetch = function (url) {
     this.url = url;
     this.request = new XMLHttpRequest();
 };
-Fetch.prototype.send = function (method, success, error, final) {
+Fetch.prototype.send = function (method, params, success, error, final) {
     this.request.onreadystatechange = function () {
         if (this.request.readyState == XMLHttpRequest.DONE) {
             const response = JSON.parse(this.request.responseText);
@@ -142,7 +143,20 @@ Fetch.prototype.send = function (method, success, error, final) {
     }.bind(this);
 
     this.request.open(method, this.url, true);
-    this.request.send();
+    this.request.send(this._stringifyParams(params));
+};
+Fetch.prototype._stringifyParams = function (params) {
+    if (!params || typeof params !== 'object') {
+        return;
+    }
+
+    return new URLSearchParams(params).toString();
+
+    /* obsolete
+    return Object.keys(params).map(k => {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(params[k])
+    }).join('&');
+     */
 };
 
 
@@ -156,6 +170,7 @@ const FavoriteButton = function (elm, url, classes) {
     this.url = url;
     this.classes = classes;
     this.req = new Fetch(url);
+    this.id = elm.dataset.id;
 };
 FavoriteButton.prototype.register = function () {
     if (!this.button) {
@@ -166,12 +181,15 @@ FavoriteButton.prototype.register = function () {
 };
 FavoriteButton.prototype._click = function () {
     this.button.classList.add(this.classes.busy);
-    this.req.send('POST', this._success.bind(this), this._error.bind(this), this._final.bind(this));
+    this.req.send('POST', {
+        id: this.id,
+        favorite: !this._isActive(),
+    }, this._success.bind(this), this._error.bind(this), this._final.bind(this));
 };
 FavoriteButton.prototype._isActive = function () {
     return this.button.classList.contains(this.classes.active);
 };
-FavoriteButton.prototype._success = function (data) {
+FavoriteButton.prototype._success = function () {
     this._isActive()
         ? this.button.classList.remove(this.classes.active)
         : this.button.classList.add(this.classes.active);
@@ -248,7 +266,7 @@ Rating.prototype._getStarsPercentsArray = function (percents) {
 
     const favButton = new FavoriteButton(
         d.getElementById('claim_favorite_click'),
-        'https://private-ecdfec-promo6.apiary-mock.com/tiplero',
+        FAVORITE_ENDPOINT_URL,
         classes.favBtn,
     );
     favButton.register();

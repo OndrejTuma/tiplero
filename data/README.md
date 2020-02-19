@@ -59,6 +59,126 @@ There is optional `icon` parameter which has to resemble name of of `/build/svg/
 
 
 
+## Anonym homepage
+
+### Mandatory data
+
+```json
+{
+  "shops": [
+    {"type": "logo", "img": "./images/dummy/logo_zezula.png", "alt": "Zezula", "url": "#"},
+    {"type": "info", "who": "User name", "where": "Shop name", "amount": "12 Kč"}
+  ],
+  "stories": [
+    {"arrow": "bottom", "name": "User name", "text": "Some <strong>strong</strong> claim"}
+  ]
+}
+```
+
+All texts can contain valid HTML.
+
+`shops[].type` can be either `logo` with mandatory `img`, `alt` and `url` parameters 
+or `info` with mandatory `who`, `where` and `amount` parameters
+
+`stories[].arrow` can be `top`, `right`, `bottom` and `left`
+
+
+
+## Logged in homepage
+
+### Mandatory data
+
+```json
+{
+  "slides": [
+    {"img": "https://picsum.photos/1200/300", "logo": "./images/dummy/logo_booking.png", "title": "Víkendové lyžování. Až 15 % zpět ", "text": "Exkluzivně, jen přes Tiplero.com", "url": "#"}
+  ],
+  "discounts": {
+    "top": {
+      "items": [
+        {"img": "https://picsum.photos/300/200", "logo": "./images/dummy/logo_footshop.png", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"}
+      ],
+      "url": "#"
+    },
+    "coupons": {
+      "items": [
+        {"logo": "./images/dummy/logo_footshop.png", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"}
+      ],
+      "url": "#"
+    },
+    "highest_discount": {
+      "items": [
+        {"img": "https://picsum.photos/300/300", "logo": "./images/dummy/logo_footshop.png", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"}
+      ],
+      "url": "#"
+    },
+    "free_delivery": {
+      "items": [
+        {"logo": "./images/dummy/logo_footshop.png", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"}
+      ],
+      "url": "#"
+    }
+  }
+}
+```
+
+Discount item `discounts[name].items[]` have optional `img` parameter 
+
+`discounts[name].url` is for button that redirects to more discounts
+
+
+
+## Shop detail page
+
+## Mandatory data
+
+```json
+{
+  "breadcrumbs": [
+    {"url": "#", "label": "Breadcrumb items"}
+  ],
+  "shop": {
+    "id": "1234",
+    "favorite": false,
+    "logo": "./images/dummy/logo_aliexpress.png",
+    "title": "AliExpress",
+    "url": "#",
+    "range": "0-10",
+    "rating": {
+      "amount": 4.1,
+      "count": 781
+    },
+    "links": [
+      {"label": "Slevy", "url": "#"},
+      {"label": "O obchodu", "url": "#"},
+      {"label": "Články", "url": "#"}
+    ]
+  },
+  "discounts": [
+    {"img": "https://picsum.photos/300/200", "amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"},
+    {"amount": 66, "title": "Sleva až 90 % na pánskou obuv na Footshop.cz", "bonus": "1,5 % zpět z nákupu", "until": "do 19. 1. 2020", "url": "#"}
+  ],
+  "cashbacks": [
+    {"label": "All cashback offers", "amount": 10}
+  ],
+  "related_shops": [
+    {"logo": "./images/dummy/logo_expert.png", "title": "All related shops", "url": "shop_detail.html", "discount": 1.5}
+  ],
+  "shop_intro": [
+    {"title": "Heading", "text": "Some <strong>interesting</strong> text"}
+  ]
+}
+```
+
+`shop.id` will be send to add-to-favorite endpoint 
+`dicounts[]` item has the same structure as in Logged in homepage `discounts[name].items[]` 
+because it uses the same component `/templates/components/discount.twig`.
+The only difference is that here, it does not have defined `logo` parameter
+
+`shop_intro` has information blocks about current shop. `shop_intro[].text` can also contain valid HTML for additional formatting
+
+
+
 ## User page
 
 ### Mandatory data
