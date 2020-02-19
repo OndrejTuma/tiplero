@@ -21,7 +21,7 @@
                     <div>{{ reward.registered }}</div>
                     <div>{{ reward.confirmed }}</div>
                     <div>
-                    <span class="rewards-list__item__status" title="{{ reward.tooltip }}">
+                    <span class="rewards-list__item__status{{ reward.tooltip is defined ? ' rewards-list__item__status--with-tooltip' }}" data-tooltip="{{ reward.tooltip }}">
                         {% if reward.success %}
                             {% include "../../build/svg/checkmark.svg" %}
                         {% else %}
