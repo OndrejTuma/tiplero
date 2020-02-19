@@ -71,8 +71,8 @@
     {"label": "Standardní nabídka", "amount": 8}
   ],
   "related_shops": [
-    {"logo": "./images/dummy/logo_expert.png", "title": "Expert", "url": "detail_obchodu.html", "discount": 1.5},
-    {"logo": "./images/dummy/logo_zezula.png", "title": "Snowboard Zezula", "url": "detail_obchodu.html", "discount": 1.5}
+    {"logo": "./images/dummy/logo_expert.png", "title": "Expert", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_zezula.png", "title": "Snowboard Zezula", "url": "shop_detail.html", "discount": 1.5}
   ],
   "shop_intro": [
     {"title": "Představení", "text": "Výrobky z celého světa jedním kliknutím jako na dlani – tak by se dal shrnout fenomén AliExpress. Nákupy z Číny přes AliExpress si oblíbily miliony lidí ze všech koutů planety. Na rozdíl od konkurence AliExpress nefunguje jako pouhý prostředník, ale spojuje své zákazníky přímo s konkrétními výrobci. Proto prodává za bezkonkurenční ceny bez přirážek od zprostředkovatelů."},

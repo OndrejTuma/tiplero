@@ -42,7 +42,7 @@
                         <ul>
                             {% for item in user.profile_completion %}
                                 <li>
-                                    {% include "components/item.twig" with {label: item.label, icon: item.done ? 'circle-check' : 'circle', inactive: not item.done} only %}
+                                    {% include "components/item.twig" with {url: item.url, label: item.label, icon: item.done ? 'circle-check' : 'circle', inactive: not item.done} only %}
                                 </li>
                             {% endfor %}
                         </ul>

@@ -2,9 +2,9 @@
     <div class="container">
         {% include "../components/logo.twig" %}
         <ul>
-            {% for link in footer.links %}
+            {% for item in footer.links %}
                 <li>
-                    <a href="{{ link.url }}">{{ link.label }}</a>
+                    {% include "../components/item.twig" with item only %}
                 </li>
             {% endfor %}
         </ul>

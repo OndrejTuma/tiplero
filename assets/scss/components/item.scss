@@ -12,6 +12,7 @@ a.item {
         @include square(16px);
         fill: $tiber;
         margin-right: 14px;
+        vertical-align: text-top;
     }
 
     &--inactive {
