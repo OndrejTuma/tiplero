@@ -1,4 +1,4 @@
-<div class="discount{{ discount.logo is defined ? '' : ' discount--no-logo' }}">
+<a href="{{ discount.url }}" class="discount{{ discount.logo is defined ? '' : ' discount--no-logo' }}">
     {% if discount.img %}
         <div class="discount__img" style="background-image: url({{ discount.img }})"></div>
     {% endif %}
@@ -20,6 +20,6 @@
                 {{ discount.until }}
             </li>
         </ul>
-        {% include "buttons/button.twig" with {url: discount.url, label: 'Získat slevu ' ~ discount.amount ~ '%'} %}
+        {% include "buttons/button.twig" with {label: 'Získat slevu ' ~ discount.amount ~ '%'} %}
     </div>
-</div>
+</a>

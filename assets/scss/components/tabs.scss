@@ -24,13 +24,13 @@
         }
 
         &--active {
-            color: $green-haze;
+            color: $tiber;
 
             &:after {
                 background-color: $mountain-meadow;
                 bottom: 0;
                 content: '';
-                height: 1px;
+                height: 2px;
                 left: 50%;
                 margin-left: -20px;
                 position: absolute;

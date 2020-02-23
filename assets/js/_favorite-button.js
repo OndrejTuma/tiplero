@@ -3,6 +3,10 @@
  */
 
 const FavoriteButton = function (elm, url, classes) {
+    if (!elm) {
+        return;
+    }
+
     this.button = elm;
     this.url = url;
     this.classes = classes;

@@ -162,7 +162,7 @@ gulp.task('js', function(){
  * Watch .twig files run twig-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch(paths.jsSrc + 'index.js', ['js', browserSync.reload]);
+    gulp.watch(paths.jsSrc + '**/*.js', ['js', browserSync.reload]);
     gulp.watch(paths.sass + '**/*.scss', ['sass', browserSync.reload]);
     gulp.watch(paths.svgSrc + '**/*.svg', ['svgs', 'svg-symbols', browserSync.reload]);
     gulp.watch(paths.imgSrc + '**/*', ['images', browserSync.reload]);
