@@ -1,0 +1,53 @@
+.shop-info {
+
+    &[class] {
+        padding: 10px 0;
+    }
+
+    &__item + &__item {
+        border-top: 1px solid $porcelain;
+    }
+    &__item {
+        & > div {
+            padding: 0 20px 20px;
+        }
+
+        h5 {
+            margin: 0;
+            padding: 15px 20px;
+            position: relative;
+
+            .arrow {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    @include media(desktop) {
+        &[class] {
+            padding: 30px 20px;
+        }
+
+        &__item + &__item {
+            border-top: none;
+        }
+
+        &__item {
+            h5 {
+                cursor: default;
+
+                .arrow {
+                    display: none;
+                }
+            }
+            & > div {
+                opacity: 1;
+                position: static;
+                visibility: visible;
+            }
+        }
+    }
+}

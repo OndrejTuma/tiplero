@@ -35,11 +35,19 @@
         <hr/>
         <div class="container inner">
             <h2>O obchodu</h2>
-            <div class="white-board">
+            <div class="white-board shop-info">
                 {% for item in shop_intro %}
-                    <div class="mbb">
-                        <h5>{{ item.title }}</h5>
-                        {{ item.text }}
+                    {% set id = "shop_intro_" ~ loop.index %}
+                    <div class="shop-info__item">
+                        <h5 class="opener" data-target="{{ id }}">
+                            {{ item.title }}
+                            <div class="arrow">
+                                {% include "../build/svg/arrow_down.svg" %}
+                            </div>
+                        </h5>
+                        <div class="opener__target" id="{{ id }}">
+                            {{ item.text }}
+                        </div>
                     </div>
                 {% endfor %}
             </div>
