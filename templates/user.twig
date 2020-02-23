@@ -55,7 +55,7 @@
             {% include "components/rewards.twig" with {rewards: user.rewards} only %}
         </div>
         <hr/>
-        <div class="container inner user__container">
+        <div class="container inner--margin user__container">
             <div class="grid--stripe">
                 {% include "components/heading-with-tabs.twig" with {title: 'Přehled odměn', items: [
                     {label: 'Všechny odměny', active: true, targetId: 'tab_all_rewards'},
@@ -80,7 +80,7 @@
             </div>
         </div>
         <hr/>
-        <div class="container inner user__container">
+        <div class="container inner--margin user__container">
             <h2>Sdílejte nás na sociálních sítích a vydělejte více</h2>
             <p>Pokud přijde na Tipli.cz uživatel přes váš status na sociálních sítích, získáte od nás odměnu za doporučení ve výši 150 Kč. Tu vám připíšeme na váš účet jako bonusové peníze.</p>
             <p class="buttons">
@@ -88,6 +88,7 @@
                 {% include "components/buttons/button.twig" with {url: '#', label: 'Sdílet na Twitteru', icon: 'twitter', class: 'button--twitter'} only %}
             </p>
         </div>
+        <span class="clear"></span>
     </div>
 
 {% endblock %}
