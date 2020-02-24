@@ -1,10 +1,6 @@
 .tabs {
-    white-space: nowrap;
-    overflow: auto;
-
-    &__tab + &__tab {
-        margin-left: 20px;
-    }
+    // white-space: nowrap;
+    // overflow: auto;
 
     &__tab {
         background: none;
@@ -14,6 +10,8 @@
         font-size: $font-size-base-tiny;
         font-weight: 700;
         letter-spacing: 1px;
+        margin-bottom: 10px;
+        margin-right: 20px;
         padding: 0 0 10px;
         position: relative;
         text-transform: uppercase;
@@ -45,7 +43,12 @@
     @include media(desktop) {
         display: flex;
         overflow: visible;
+        white-space: nowrap;
 
+        &__tab {
+            margin-bottom: 0;
+            margin-right: 0;
+        }
         &__tab + &__tab {
             margin-left: 40px;
         }
