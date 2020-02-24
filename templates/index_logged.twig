@@ -3,11 +3,7 @@
 {% block content %}
 
     <div class="container inner--narrow">
-        <div class="slider">
-            {% for item in slides %}
-                {% include "components/slide.twig" with {slide: item} only %}
-            {% endfor %}
-        </div>
+        {% include "components/slider.twig" with {slides: slides} only %}
     </div>
     <div class="container">
         <div class="inner">

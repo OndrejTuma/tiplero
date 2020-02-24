@@ -1,11 +1,17 @@
 const FAVORITE_ENDPOINT_URL = 'https://private-ecdfec-promo6.apiary-mock.com/tiplero';
 const classes = {
-    header: {
-        active: 'header--menu-open',
+    carousel: {
+        active: 'slider__slide--active',
+        slide: 'slider__slide',
+        navigationItem: 'slider__nav__item',
+        navigationItemActive: 'slider__nav__item--active',
     },
     favBtn: {
         active: 'claim__favorite--is-favorite',
         busy: 'claim__favorite--busy',
+    },
+    header: {
+        active: 'header--menu-open',
     },
     openers: {
         active: 'opener--active',
@@ -48,4 +54,9 @@ const classes = {
 
     const ratings = new Rating(classes.rating, 5);
     ratings.connect(d);
+
+    const carousel = new Carousel(d.getElementById('discount_carousel'), d.getElementById('discount_carousel_nav'), classes.carousel);
+    carousel.run({
+        autoplay: false,
+    });
 })(window, document);

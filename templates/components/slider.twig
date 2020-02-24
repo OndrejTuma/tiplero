@@ -1,0 +1,14 @@
+<div class="slider" id="discount_carousel">
+    <div class="slider__container">
+        {% for item in slides %}
+            <div class="slider__slide">
+                {% include "slide.twig" with {slide: item} only %}
+            </div>
+        {% endfor %}
+    </div>
+    <ul class="slider__nav" id="discount_carousel_nav">
+        {% for item in slides %}
+            <li class="slider__nav__item"></li>
+        {% endfor %}
+    </ul>
+</div>

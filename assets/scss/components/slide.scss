@@ -1,11 +1,15 @@
 .slide {
     background: 50% 50% / cover no-repeat $silver;
     border-radius: 20px;
-    padding: 30px 20px;
+    padding: 30px 20px 50px;
 
     &__logo {
         display: block;
         margin-bottom: 18px;
+
+        img {
+            height: 30px;
+        }
     }
 
     h3 {
