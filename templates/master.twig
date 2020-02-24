@@ -20,6 +20,11 @@
             </div>
 
             <div class="inner">
+                <h2>Carousel:</h2>
+                {% include "components/slider.twig" with {slides: slides} only %}
+            </div>
+
+            <div class="inner">
                 <h2>Inputs:</h2>
                 {% include "components/forms/input.twig" with {type: 'text', label: 'Jméno', error: 'Zadejte jméno'} only %}
                 {% include "components/forms/input.twig" with {type: 'email', label: 'Email'} only %}
