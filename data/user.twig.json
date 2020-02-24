@@ -4,6 +4,7 @@
     "isLogged": true,
     "name": "Tomáš Hlaváček",
     "image": "",
+    "rewardsLink": "./user.html",
     "rewards": {
       "to_pay": "72,50 Kč",
       "registered": "12,50 Kč",

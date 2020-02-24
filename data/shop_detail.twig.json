@@ -2,6 +2,7 @@
   "title":"Detail obchodu | Tiplero",
   "user": {
     "isLogged": true,
+    "rewardsLink": "./user.html",
     "rewards": {
       "to_pay": "72,50 Kč"
     }

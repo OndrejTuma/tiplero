@@ -29,6 +29,7 @@
   "title": "Page title",
   "user": {
     "isLogged": true,
+    "rewardsLink": "link to user page",
     "rewards": {
       "to_pay": "72,50 Kč"
     }
@@ -188,6 +189,7 @@ The only difference is that here, it does not have defined `logo` parameter
   "user": {
     "isLogged": true,
     "name": "User full name",
+    "rewardsLink": "link to user page",
     "rewards": {
       "to_pay": "72,50 Kč",
       "registered": "12,50 Kč",

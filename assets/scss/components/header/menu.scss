@@ -9,8 +9,14 @@
         @extend .list--plain;
     }
 
-    .reward .highlight {
-        margin-left: 5px;
+    .reward {
+        a {
+            font-weight: 400;
+            text-decoration: none;
+        }
+        .highlight {
+            margin-left: 5px;
+        }
     }
     .user {
         .opener {
