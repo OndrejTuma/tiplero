@@ -1,6 +1,6 @@
 <div class="heading-with-tabs">
     <div class="grid--stripe">
-        <h2>{{ title }}</h2>
+        <h{{ hLevel is defined ? hLevel : 2 }} class="heading-with-tabs__heading">{{ title }}</h{{ hLevel is defined ? hLevel : 2 }}>
         {% include "tabs/tabs.twig" with {items: items} only %}
     </div>
 </div>

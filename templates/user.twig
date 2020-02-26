@@ -57,7 +57,7 @@
         <hr/>
         <div class="container inner--margin user__container">
             <div class="grid--stripe">
-                {% include "components/heading-with-tabs.twig" with {title: 'Přehled odměn', items: [
+                {% include "components/heading-with-tabs.twig" with {title: 'Přehled odměn', hLevel: 3, items: [
                     {label: 'Všechny odměny', active: true, targetId: 'tab_all_rewards'},
                     {label: 'Čekající odměny', targetId: 'tab_waiting_rewards'},
                     {label: 'Potvrzené odměny', targetId: 'tab_confirmed_rewards'},

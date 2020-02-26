@@ -9,7 +9,7 @@
     @include media(desktop) {
         margin-bottom: 35px;
 
-        h2 {
+        &__heading {
             margin-bottom: 0;
         }
     }
