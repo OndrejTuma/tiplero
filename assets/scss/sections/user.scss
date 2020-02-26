@@ -91,12 +91,13 @@
                 header {
                     align-items: center;
                     display: flex;
+                    justify-content: space-between;
                     margin-bottom: 15px;
                     padding-left: 30px;
                     padding-right: 15px;
 
                     strong {
-                        margin-right: 15px;
+                        white-space: nowrap;
                     }
                 }
                 ul {

@@ -1,5 +1,5 @@
 .heading-with-tabs {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 
     .tabs {
         align-items: flex-end;
@@ -7,7 +7,7 @@
     }
 
     @include media(desktop) {
-        margin-bottom: 60px;
+        margin-bottom: 35px;
 
         h2 {
             margin-bottom: 0;

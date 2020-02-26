@@ -67,7 +67,7 @@
         }
 
         .secondary {
-            margin-left: 50px;
+            margin-left: 55px;
 
             .opener {
                 &--active:after {
@@ -79,6 +79,9 @@
                     content: '';
                     display: inline-block;
                 }
+            }
+            li + li {
+                margin-left: 40px;
             }
             svg {
                 display: none;
@@ -150,7 +153,7 @@
             display: inline-block;
 
             & + li {
-                margin-left: 25px;
+                margin-left: 20px;
             }
         }
         ul {
