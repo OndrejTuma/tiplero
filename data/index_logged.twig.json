@@ -8,9 +8,9 @@
     }
   },
   "slides": [
-    {"img": "https://picsum.photos/1200/300", "logo": "./images/dummy/logo_booking.png", "title": "Víkendové lyžování. Až 15 % zpět ", "text": "Exkluzivně, jen přes Tiplero.com", "url": "./shop_detail.html"},
-    {"img": "https://picsum.photos/1200/400", "logo": "./images/dummy/logo_aliexpress.png", "title": "Nová sleva. Až 20 % zpět", "text": "Exkluzivně, jen přes Tiplero.com", "url": "./shop_detail.html"},
-    {"img": "https://picsum.photos/1200/500", "logo": "./images/dummy/logo_footshop.png", "title": "Tenisky skoro zadarmo. Až 10 % zpět", "text": "Exkluzivně, jen přes Tiplero.com", "url": "./shop_detail.html"}
+    {"img": "./images/dummy/carousel.jpg", "url": "./shop_detail.html"},
+    {"img": "./images/dummy/carousel.jpg", "url": "./shop_detail.html"},
+    {"img": "./images/dummy/carousel.jpg", "url": "./shop_detail.html"}
   ],
   "discounts": {
     "top": {

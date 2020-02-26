@@ -28,10 +28,10 @@ Carousel.prototype.run = function (options) {
     this._setActiveSlide(this.options.activeSlide);
     this._connectNavigation();
 
+    this._paint();
+
     if (this.options.autoplay) {
         this.interval = setInterval(this._slide.bind(this), this.options.timeout);
-    } else {
-        this._paint();
     }
 };
 Carousel.prototype.stop = function () {

@@ -35,3 +35,13 @@ h5, h6 {
     font-size: $font-size-base;
     margin: 0 0 5px;
 }
+
+.heading {
+    &--hefty {
+        margin-bottom: 35px;
+
+        @include media(desktop) {
+            margin-bottom: 60px;
+        }
+    }
+}

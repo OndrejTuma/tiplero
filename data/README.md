@@ -92,7 +92,7 @@ or `info` with mandatory `who`, `where` and `amount` parameters
 ```json
 {
   "slides": [
-    {"img": "https://picsum.photos/1200/300", "logo": "./images/dummy/logo_booking.png", "title": "Víkendové lyžování. Až 15 % zpět ", "text": "Exkluzivně, jen přes Tiplero.com", "url": "#"}
+    {"img": "https://picsum.photos/1200/300", "url": "#"}
   ],
   "discounts": {
     "top": {
@@ -126,6 +126,11 @@ or `info` with mandatory `who`, `where` and `amount` parameters
 Discount item `discounts[name].items[]` have optional `img` parameter 
 
 `discounts[name].url` is for button that redirects to more discounts
+
+Old structure for slides data (in case you decide to use it):
+```json
+{"img": "https://picsum.photos/1200/300", "logo": "./images/dummy/logo_booking.png", "title": "Víkendové lyžování. Až 15 % zpět ", "text": "Exkluzivně, jen přes Tiplero.com", "url": "#"}
+```
 
 
 

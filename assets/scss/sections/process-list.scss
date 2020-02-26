@@ -1,4 +1,6 @@
 .process-list {
+    margin-top: 30px;
+
     li {
         margin-bottom: 0;
         padding-bottom: 50px;
@@ -43,6 +45,8 @@
     }
 
     @include media(desktop) {
+        margin-top: 60px;
+
         li {
             flex-grow: 1;
             padding-bottom: 0;

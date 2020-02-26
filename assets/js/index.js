@@ -57,6 +57,7 @@ const classes = {
 
     const carousel = new Carousel(d.getElementById('discount_carousel'), d.getElementById('discount_carousel_nav'), classes.carousel);
     carousel.run({
-        autoplay: false,
+        autoplay: true,
+        timeout: 5000,
     });
 })(window, document);

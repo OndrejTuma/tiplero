@@ -1,8 +1,17 @@
 .slide {
     background: 50% 50% / cover no-repeat $silver;
     border-radius: 20px;
+    box-sizing: border-box;
+    height: 270px;
     padding: 30px 20px 50px;
+    position: relative;
 
+    &__link {
+        @include square(100%);
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
     &__logo {
         display: block;
         margin-bottom: 18px;
@@ -21,6 +30,7 @@
     }
 
     @include media(desktop) {
+        height: 300px;
         padding: 40px 100px;
 
         &__logo {
