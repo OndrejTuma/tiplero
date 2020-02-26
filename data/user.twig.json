@@ -35,9 +35,9 @@
     ],
     "profile_completion": [
       {"label": "Osobní údaje", "done": true},
-      {"label": "Bankovní spojení", "done": false},
-      {"label": "Doporučte známému", "done": false},
-      {"label": "Proveďte první nákup", "done": false}
+      {"label": "Bankovní spojení", "done": true},
+      {"label": "Doporučte známému", "done": true},
+      {"label": "Proveďte první nákup", "done": true}
     ]
   },
   "menu": {
