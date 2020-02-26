@@ -2,11 +2,14 @@
 
 {% block content %}
 
-    <div class="container inner--narrow">
+    <div class="container inner--margin">
+        {% if breadcrumbs is defined %}
+            {% include "components/breadcrumbs.twig" with {breadcrumbs: breadcrumbs} only %}
+        {% endif %}
         {% include "components/shop-detail/claim.twig" with {claim: shop} only %}
     </div>
-    <div class="container inner">
-        <h2>Slevy a slevové kupóny na {{shop.title}}</h2>
+    <div class="container inner--margin">
+        <h3>Slevy a slevové kupóny na {{shop.title}}</h3>
         <div class="grid">
             {% for discount in discounts %}
                 {% include "components/discount.twig" with {discount: discount} only %}
@@ -16,14 +19,14 @@
             {% include "components/buttons/button.twig" with {url: '#', label: 'Další slevy', outline: true} only %}
         </p>
     </div>
-    <div class="wrapper--gray">
-        <div class="container inner">
-            <h2>Cashback nabídky</h2>
+    <div class="wrapper--gray pt pb">
+        <div class="container inner--margin">
+            <h3>Cashback nabídky</h3>
             {% include "components/cashbacks.twig" with {cashbacks: cashbacks} only %}
         </div>
         <hr/>
-        <div class="container inner">
-            <h2>Podobné obchody</h2>
+        <div class="container inner--margin">
+            <h3>Podobné obchody</h3>
             <ul class="list--stripe list--stripe--inner">
                 {% for shop in related_shops %}
                     <li>
@@ -33,8 +36,8 @@
             </ul>
         </div>
         <hr/>
-        <div class="container inner">
-            <h2>O obchodu</h2>
+        <div class="container inner--margin">
+            <h3>O obchodu</h3>
             <div class="white-board shop-info">
                 {% for item in shop_intro %}
                     {% set id = "shop_intro_" ~ loop.index %}

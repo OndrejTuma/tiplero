@@ -23,7 +23,7 @@
 
         &__menu {
             background-color: $white;
-            border-radius: 20px;
+            border-radius: 20px 30px 20px 20px;
             box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
             display: block;
             width: 250px;
@@ -55,14 +55,14 @@
                 p {
                     margin: 0;
                     color: $rolling-stone;
-                    font-size: $font-size-base-small;
+                    font-size: $font-size-small;
                 }
                 strong {
                     display: block;
                 }
             }
             &__main {
-                font-size: $font-size-base-small;
+                font-size: $font-size-small;
                 padding-bottom: 20px;
                 padding-top: 30px;
 
@@ -85,7 +85,7 @@
             }
             &__profile-completion {
                 @include background('dot.png', 0 0 repeat-x);
-                font-size: $font-size-base-small;
+                font-size: $font-size-small;
                 padding: 30px 0 20px;
 
                 header {

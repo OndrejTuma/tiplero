@@ -21,11 +21,6 @@
 
 <!-- MAIN -->
 <main>
-    {% if breadcrumbs is defined %}
-        <div class="container inner--narrow">
-            {% include "../components/breadcrumbs.twig" with {breadcrumbs: breadcrumbs} only %}
-        </div>
-    {% endif %}
     {% block content %}
 
     {% endblock %}

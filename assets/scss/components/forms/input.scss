@@ -5,7 +5,7 @@
 
     &__error {
         color: $guardsman-red;
-        font-size: $font-size-base-tiny;
+        font-size: $font-size-tiny;
         display: block;
         margin-top: 4px;
         padding: 0 20px;
@@ -15,7 +15,7 @@
         border-radius: 4px;
         box-sizing: border-box;
         font-family: $font-family-base;
-        font-size: $font-size-base-small;
+        font-size: $font-size-small;
         height: 42px;
         padding: 0 20px;
         transition: border-color .5s;
