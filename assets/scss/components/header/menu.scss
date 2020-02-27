@@ -95,13 +95,13 @@
             padding-top: $font-size-base;
             position: absolute;
             right: 0;
-            top: 80%;
+            top: 100%;
 
             a {
                 font-weight: 400;
             }
             li + li {
-                margin-left: 10px;
+                margin-left: 15px;
             }
             ul {
                 display: flex;
