@@ -1,3 +1,4 @@
+import Fetch from './Fetch';
 /*
  * =========== FAVORITE BUTTON PROTOTYPE ===========
  */
@@ -41,3 +42,5 @@ FavoriteButton.prototype._error = function (data) {
 FavoriteButton.prototype._final = function () {
     this.button.classList.remove(this.classes.busy);
 };
+
+export default FavoriteButton;

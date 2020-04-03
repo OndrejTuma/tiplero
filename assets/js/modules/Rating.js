@@ -44,3 +44,5 @@ Rating.prototype._getStarsPercentsArray = function (percents) {
         return 0;
     });
 };
+
+export default Rating;

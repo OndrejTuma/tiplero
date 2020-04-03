@@ -37,3 +37,5 @@ Fetch.prototype._stringifyParams = function (params) {
     }).join('&');
      */
 };
+
+export default Fetch;
