@@ -13,9 +13,7 @@ var gulp = require('gulp'),
     fs = require('fs'),
     svgo = require('gulp-svgo'),
     svgSymbols = require('gulp-svg-symbols'),
-    imagemin = require('gulp-imagemin'),
-    babel = require('gulp-babel'),
-    uglify = require('gulp-uglify');
+    imagemin = require('gulp-imagemin');
 /*
  * Directories here
  */
@@ -23,8 +21,6 @@ var paths = {
     build: './build/',
     sass: './assets/scss/',
     css: './build/css/',
-    js: './build/js/',
-    jsSrc: './assets/js/',
     data: './data/',
     templates: './templates/',
     svgSrc: './assets/svg/',
@@ -101,9 +97,9 @@ gulp.task('rebuild', ['twig'], function () {
     browserSync.reload();
 });
 /**
- * Wait for twig, js and sass tasks, then launch the browser-sync Server
+ * Wait for twig and sass tasks, then launch the browser-sync Server
  */
-gulp.task('browser-sync', ['sass', 'js', 'svgs', 'svg-symbols', 'images', 'twig'], function () {
+gulp.task('browser-sync', ['sass', 'svgs', 'svg-symbols', 'images', 'twig'], function () {
     browserSync({
         server: {
             baseDir: paths.build
@@ -142,27 +138,10 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(paths.css));
 });
 /**
- * Compile .js files into build js directory With app.min.js
- */
-gulp.task('js', function(){
-    return gulp.src(paths.jsSrc + '**/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(babel({ presets: ['@babel/env'] }))
-        .pipe(uglify())
-        .pipe(concat('script.min.js'))
-        .on('error', function (err) {
-            console.log(err.toString());
-            this.emit('end');
-        })
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(paths.js));
-});
-/**
  * Watch scss files for changes & recompile
  * Watch .twig files run twig-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch(paths.jsSrc + '**/*.js', ['js', browserSync.reload]);
     gulp.watch(paths.sass + '**/*.scss', ['sass', browserSync.reload]);
     gulp.watch(paths.svgSrc + '**/*.svg', ['svgs', 'svg-symbols', browserSync.reload]);
     gulp.watch(paths.imgSrc + '**/*', ['images', browserSync.reload]);

@@ -80,3 +80,5 @@ Carousel.prototype._slideTo = function (i) {
     this._setActiveSlide(i);
     this._paint();
 };
+
+export default Carousel;

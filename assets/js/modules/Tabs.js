@@ -38,3 +38,5 @@ Tabs.prototype.displayContainer = function (elm, display) {
         elm.style.display = display;
     }
 };
+
+export default Tabs;

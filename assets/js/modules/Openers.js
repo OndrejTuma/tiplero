@@ -45,3 +45,5 @@ Openers.prototype.close = function (opener, target) {
     opener && opener.classList.remove(this.classes.active);
     target && target.classList.remove(this.classes.targetActive);
 };
+
+export default Openers;
