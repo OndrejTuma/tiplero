@@ -16,8 +16,17 @@
   },
   "footer": {
     "links": [
-      {"label": "All links in footer", "url": "#"}
-    ]
+      [
+        {"label": "All links for first column", "url": "#"}
+      ],
+      [
+        {"label": "All links for second column", "url": "#"}
+      ],
+      [
+        {"label": "All links for third column", "url": "#"}
+      ]
+    ],
+    "infoText": "<p>Napište nám na <a href=\"mailto:moje@tiplero.cz\">moje@tiplero.cz</a></p><p>Copyright &copy; 2020 Tiplero. Všechna práva vyhrazena.</p>"
   }
 }
 ```
@@ -36,8 +45,17 @@
   },
   "footer": {
     "links": [
-      {"label": "All links in footer", "url": "#"}
-    ]
+      [
+        {"label": "All links for first column", "url": "#"}
+      ],
+      [
+        {"label": "All links for second column", "url": "#"}
+      ],
+      [
+        {"label": "All links for third column", "url": "#"}
+      ]
+    ],
+    "infoText": "<p>Napište nám na <a href=\"mailto:moje@tiplero.cz\">moje@tiplero.cz</a></p><p>Copyright &copy; 2020 Tiplero. Všechna práva vyhrazena.</p>"
   },
   "menu": {
     "user": [
