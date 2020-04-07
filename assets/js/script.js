@@ -4,8 +4,6 @@ import Openers from './modules/Openers';
 import Rating from './modules/Rating';
 import Tabs from './modules/Tabs';
 
-import './modules/Material';
-
 const FAVORITE_ENDPOINT_URL = 'https://private-ecdfec-promo6.apiary-mock.com/tiplero';
 const classes = {
     carousel: {

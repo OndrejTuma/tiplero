@@ -43,10 +43,5 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
-  },
-  "dependencies": {
-    "@material/checkbox": "^5.1.0",
-    "@material/form-field": "^5.1.0",
-    "@material/textfield": "^5.1.0"
   }
 }
