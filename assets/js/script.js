@@ -1,5 +1,6 @@
 import Carousel from './modules/Carousel';
 import FavoriteButton from './modules/FavoriteButton';
+import Forms from './modules/Forms';
 import Openers from './modules/Openers';
 import Rating from './modules/Rating';
 import Tabs from './modules/Tabs';
@@ -15,6 +16,12 @@ const classes = {
     favBtn: {
         active: 'claim__favorite--is-favorite',
         busy: 'claim__favorite--busy',
+    },
+    forms: {
+        wrapper: 'form__element--validate',
+        error: 'input--error',
+        errorMessage: 'input__error',
+        form: 'form--validate',
     },
     header: {
         active: 'header--menu-open',
@@ -66,4 +73,7 @@ const classes = {
         autoplay: true,
         timeout: 5000,
     });
+
+    const forms = new Forms(classes.forms);
+    forms.listen(d);
 })(window, document);

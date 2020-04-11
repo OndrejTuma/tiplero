@@ -15,8 +15,10 @@
                     {% include "components/buttons/button.twig" with {url: './index_logged.html', label: 'Přihlásit přes Google', outline: true, icon: 'google'} only %}
                 </div>
                 <div class="sign-board__login__register">
-                    {% include "components/forms/input.twig" with {type: 'email', label: 'Zadejte Váš e-mail'} only %}
-                    {% include "components/buttons/button.twig" with {label: 'Založit účet zdarma'} only %}
+                    <form action="/" class="form--validate">
+                        {% include "components/forms/input.twig" with {type: 'email', label: 'Zadejte Váš e-mail', validation: {type: 'email', message: 'Neplatný email'}} only %}
+                        {% include "components/buttons/button.twig" with {label: 'Založit účet zdarma', type: 'submit'} only %}
+                    </form>
                     <p>Registrací souhlasíte s <a href="#">podmínkami užití a zpracováním osobních údajů</a>.</p>
                 </div>
             </div>

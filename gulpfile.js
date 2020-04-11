@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
     plumber = require('gulp-plumber'),
-    concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync'),
     fs = require('fs'),
@@ -90,25 +89,6 @@ gulp.task('twig', function () {
         .pipe(gulp.dest(paths.build));
 });
 /**
- * Recompile .twig files and live reload the browser
- */
-gulp.task('rebuild', ['twig'], function () {
-    // BrowserSync Reload
-    browserSync.reload();
-});
-/**
- * Wait for twig and sass tasks, then launch the browser-sync Server
- */
-gulp.task('browser-sync', ['sass', 'svgs', 'svg-symbols', 'images', 'twig'], function () {
-    browserSync({
-        server: {
-            baseDir: paths.build
-        },
-        notify: false,
-        browser:"google chrome"
-    });
-});
-/**
  * Compile .scss files into build css directory With autoprefixer no
  * need for vendor prefixes then live reload the browser.
  */
@@ -138,26 +118,42 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(paths.css));
 });
 /**
+ * Wait for twig and sass tasks, then launch the browser-sync Server
+ */
+gulp.task('browser-sync', gulp.series('sass', 'svgs', 'svg-symbols', 'images', 'twig', function () {
+    browserSync({
+        server: {
+            baseDir: paths.build
+        },
+        notify: false,
+        browser:"google chrome"
+    });
+}));
+// BrowserSync Reload
+function browserSyncReload(done) {
+    browserSync.reload();
+    done();
+}
+/**
  * Watch scss files for changes & recompile
  * Watch .twig files run twig-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch(paths.sass + '**/*.scss', ['sass', browserSync.reload]);
-    gulp.watch(paths.svgSrc + '**/*.svg', ['svgs', 'svg-symbols', browserSync.reload]);
-    gulp.watch(paths.imgSrc + '**/*', ['images', browserSync.reload]);
+    gulp.watch(paths.sass + '**/*.scss', gulp.series('sass', browserSyncReload));
+    gulp.watch(paths.svgSrc + '**/*.svg', gulp.series('svgs', 'svg-symbols', browserSyncReload));
+    gulp.watch(paths.imgSrc + '**/*', gulp.series('images', browserSyncReload));
     gulp.watch([
             paths.templates + '**/*.twig',
             paths.data + '**/*.twig.json'
         ],
-        {cwd:'./'},
-        ['rebuild']
+        gulp.series('twig', browserSyncReload)
     );
 });
 // Build task compile sass and twig.
-gulp.task('build', ['sass', 'svgs', 'svg-symbols', 'images', 'twig']);
+gulp.task('build', gulp.series('sass', 'svgs', 'svg-symbols', 'images', 'twig'));
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the project site, launch BrowserSync then watch
  * files for changes
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', gulp.parallel('browser-sync', 'watch'));
