@@ -1,52 +1,34 @@
 {
-  "title":"Homepage | Tiplero",
+  "title":"Detail obchodu | Tiplero",
   "user": {
     "isLogged": true,
-    "name": "Tomáš Hlaváček",
-    "image": "",
     "rewardsLink": "./user.html",
     "rewards": {
-      "registered": "12,50 Kč",
-      "bonus": "0,50 Kč",
-      "total_gain": "3740,61 Kč",
-      "overview": {
-        "confirmed": [
-          {"reward": "3740,61 Kč", "bank_account": "4917760237/0100", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020"},
-          {"reward": "120,10 Kč", "bank_account": "4917760237/0100", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020"},
-          {"reward": "10 Kč", "bank_account": "4917760237/0100", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020"},
-          {"reward": "673,50 Kč", "bank_account": "4917760237/0100", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020"}
-        ],
-        "waiting": [
-          {"reward": "223,50 Kč", "bank_account": "4917760237/0100", "registered": "27. 1. 2020", "to_be_payed": "27. 1. 2020"},
-          {"reward": "12,31 Kč", "bank_account": "4917760237/0100", "registered": "27. 1. 2020", "to_be_payed": "27. 1. 2020"}
-        ]
-      }
-    },
-    "menu": [
-      {"url": "#", "icon": "wallet", "label": "Odměny a výhody"},
-      {"url": "#", "icon": "card", "label": "Výplaty odměn", "active": true},
-      {"url": "./user_profile.html", "icon": "settings", "label": "Nastavení účtu"},
-      {"url": "#", "icon": "star", "label": "Moje hodnocení"},
-      {"url": "#", "icon": "logout", "label": "Odhlásit se"}
-    ],
-    "profile_completion": [
-      {"label": "Osobní údaje", "done": true},
-      {"label": "Bankovní spojení", "done": true},
-      {"label": "Doporučte známému", "done": true},
-      {"label": "Proveďte první nákup", "done": true}
-    ],
-    "related_shops": [
-      {"logo": "./images/dummy/logo_expert.png", "title": "Expert", "url": "shop_detail.html", "discount": 1.5},
-      {"logo": "./images/dummy/logo_expert.png", "title": "Expert", "url": "shop_detail.html", "discount": 1.5},
-      {"logo": "./images/dummy/logo_expert.png", "title": "Expert", "url": "shop_detail.html", "discount": 1.5},
-      {"logo": "./images/dummy/logo_expert.png", "title": "Expert", "url": "shop_detail.html", "discount": 1.5}
-    ]
+      "to_pay": "72,50 Kč"
+    }
   },
+  "breadcrumbs": [
+    {"url": "#", "label": "Obchody"}
+  ],
+  "shops": [
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5},
+    {"logo": "./images/dummy/logo_expert.png", "title": "Knihy Dobrovský", "url": "shop_detail.html", "discount": 1.5}
+  ],
   "menu": {
     "user": [
       {"url": "./user.html", "icon": "wallet", "label": "Odměny a výhody"},
-      {"url": "./user_bonuses.html", "icon": "card", "label": "Výplaty odměn"},
-      {"url": "./user_profile.html", "icon": "settings", "label": "Nastavení účtu"},
+      {"url": "./user.html", "icon": "card", "label": "Výplaty odměn"},
+      {"url": "./user.html", "icon": "settings", "label": "Nastavení účtu"},
       {"url": "./user.html", "icon": "star", "label": "Moje hodnocení"},
       {"url": "./user.html", "icon": "logout", "label": "Odhlásit se"}
     ],

@@ -1,0 +1,24 @@
+{% extends "layouts/default.twig" %}
+
+{% block content %}
+
+    <div class="container inner--margin">
+        {% if breadcrumbs is defined %}
+            {% include "components/breadcrumbs.twig" with {breadcrumbs: breadcrumbs} only %}
+        {% endif %}
+    </div>
+    <div class="container inner--margin">
+        <h3>Obchody, kde získáte odměny</h3>
+        <ul class="list--stripe list--stripe--inner">
+            {% for shop in shops %}
+                <li>
+                    {% include "components/shop-tile.twig" with {tile: shop} only %}
+                </li>
+            {% endfor %}
+        </ul>
+        <p class="tac">
+            {% include "components/buttons/button.twig" with {url: '#', label: 'Další obchody', outline: true} only %}
+        </p>
+    </div>
+
+{% endblock %}

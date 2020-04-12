@@ -51,7 +51,7 @@
     "secondary": [
       {"url": "#", "icon": "basket", "label": "Obchody",
         "submenu": [
-          {"url": "#", "label": "Všechny obchody"},
+          {"url": "./shops.html", "label": "Všechny obchody"},
           {"url": "#", "label": "Art/Photo/Music"},
           {"url": "#", "label": "Beauty"},
           {"url": "#", "label": "Clothing/Apparel"},
