@@ -6,7 +6,7 @@
         {{ label }}
     </a>
 {% else %}
-    <button class="button{{ outline ? " button--outline" }}{{ white ? " button--white" }}{{ class ? " " ~ class }}" type="{{ type is defined ? type : "button" }}">
+    <button class="button{{ outline ? " button--outline" }}{{ white ? " button--white" }}{{ class ? " " ~ class }}" type="{{ type is defined ? type : "button" }}"{{ disabled ? " disabled" }}>
         {% if icon %}
             {% include "../../../build/svg/" ~ icon ~ ".svg" %}
         {% endif %}

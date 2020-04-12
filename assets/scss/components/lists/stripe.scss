@@ -19,12 +19,21 @@
     }
 
     @include media(desktop) {
+        flex-flow: row wrap;
         overflow: visible;
 
         &--inner {
-            margin-left: 0;
-            margin-right: 0;
+            margin-left: -15px;
+            margin-right: -15px;
             padding-left: 0;
+        }
+
+        li {
+            margin: 15px;
+
+            & + li {
+                margin-left: 15px;
+            }
         }
     }
 }

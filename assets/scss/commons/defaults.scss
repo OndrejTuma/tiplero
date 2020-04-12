@@ -50,3 +50,10 @@
         margin-bottom: 40px;
     }
 }
+.margin-top {
+    margin-top: 30px;
+
+    @include media(desktop) {
+        margin-top: 40px;
+    }
+}

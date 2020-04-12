@@ -28,7 +28,7 @@
     },
     "menu": [
       {"url": "#", "icon": "wallet", "label": "Odměny a výhody", "active": true},
-      {"url": "#", "icon": "card", "label": "Výplaty odměn"},
+      {"url": "./user_bonuses.html", "icon": "card", "label": "Výplaty odměn"},
       {"url": "./user_profile.html", "icon": "settings", "label": "Nastavení účtu"},
       {"url": "#", "icon": "star", "label": "Moje hodnocení"},
       {"url": "#", "icon": "logout", "label": "Odhlásit se"}
@@ -43,7 +43,7 @@
   "menu": {
     "user": [
       {"url": "./user.html", "icon": "wallet", "label": "Odměny a výhody"},
-      {"url": "./user.html", "icon": "card", "label": "Výplaty odměn"},
+      {"url": "./user_bonuses.html", "icon": "card", "label": "Výplaty odměn"},
       {"url": "./user_profile.html", "icon": "settings", "label": "Nastavení účtu"},
       {"url": "./user.html", "icon": "star", "label": "Moje hodnocení"},
       {"url": "./user.html", "icon": "logout", "label": "Odhlásit se"}

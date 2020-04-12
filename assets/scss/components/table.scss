@@ -1,0 +1,41 @@
+.table {
+    background-color: $white;
+    border-radius: 20px;
+    font-size: $font-size-small;
+    flex-grow: 1;
+
+    &__empty {
+        margin: 0;
+        padding: 30px 40px;
+    }
+    &__header {
+        color: $rolling-stone;
+
+        & > div {
+            box-sizing: border-box;
+            height: 65px;
+        }
+    }
+
+    li {
+        display: table-row;
+        height: 60px;
+
+        & + li > div {
+            border-top: 1px solid $gallery;
+        }
+        & > div {
+            display: table-cell;
+            padding: 15px 20px;
+            vertical-align: middle;
+        }
+    }
+    ul {
+        @extend .list--plain;
+        box-sizing: border-box;
+        display: table;
+        margin: 0;
+        padding: 0 30px 25px;
+        width: 100%;
+    }
+}

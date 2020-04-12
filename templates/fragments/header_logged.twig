@@ -10,7 +10,7 @@
                     <li>
                         <a href="{{ user.rewardsLink }}">
                             {% include "../../build/svg/wallet.svg" %}
-                            Moje odměna: <strong class="highlight">{{ user.rewards.to_pay }}</strong>
+                            Moje odměna: <strong class="highlight">{{ user.rewards.to_pay is defined ? user.rewards.to_pay : 0 }}</strong>
                         </a>
                     </li>
                 </ul>
@@ -69,7 +69,7 @@
                     <li class="item--with-icon reward">
                         <a href="{{ user.rewardsLink }}">
                             {% include "../../build/svg/wallet.svg" %}
-                            Moje odměna: <strong class="highlight">{{ user.rewards.to_pay }}</strong>
+                            Moje odměna: <strong class="highlight">{{ user.rewards.to_pay is defined ? user.rewards.to_pay : 0 }}</strong>
                         </a>
                     </li>
                     <li class="user-menu">

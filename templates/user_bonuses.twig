@@ -1,0 +1,161 @@
+{% extends "layouts/default.twig" %}
+
+{% block content %}
+
+    <div class="wrapper--gray hit-top user">
+        <div class="container pr inner--margin">
+            <div class="user__menu">
+                <header class="user__menu__header">
+                    <div class="user__menu__header__info">
+                        <strong>{{ user.name }}</strong>
+                        <figure>
+                            {% if user.image is defined and user.image %}
+                                <img src="{{ user.image }}" alt="{{ user.name }}"/>
+                            {% else %}
+                                {% include "../build/svg/user-anonymous.svg" %}
+                            {% endif %}
+                        </figure>
+                    </div>
+                    {% if user.rewards.total_gain %}
+                        <p><strong class="highlight">{{ user.rewards.total_gain }}</strong> Celkem získáno</p>
+                    {% endif %}
+                </header>
+                <ul class="user__menu__main">
+                    {% for item in user.menu %}
+                        <li class="{{ item.active ? 'user__menu__main__item--active' }}">
+                            {% include "components/item.twig" with item %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% if user.profile_completion is defined and user.profile_completion %}
+                    {% set filledItems = 0 %}
+                    {% for item in user.profile_completion %}
+                        {% if item.done %}
+                            {% set filledItems = filledItems + 1 %}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="user__menu__profile-completion">
+                        <header>
+                            <strong>Váš profil je vyplněn z</strong>
+                            {% include "components/progress-ring.twig" with {percents: (filledItems / user.profile_completion|length * 100)|round} only %}
+                        </header>
+                        <ul>
+                            {% for item in user.profile_completion %}
+                                <li>
+                                    {% include "components/item.twig" with {url: item.url, label: item.label, icon: item.done ? 'circle-check' : 'circle', inactive: not item.done} only %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="container inner--narrow user__container">
+
+            <div class="user__bonuses">
+                <h2>Výplaty odměn</h2>
+                <div class="white-board margin-bottom">
+                    <div class="grid grid--oneline">
+                        {% if user.rewards.to_pay is defined %}
+                            <div>
+                                <p>K dnešnímu dni máte k vyplacení:</p>
+                            </div>
+                            <div>
+                                <p>
+                                    <strong class="highlight--xl">{{ user.rewards.to_pay }}</strong>
+                                </p>
+                            </div>
+                            <div class="tar">
+                                {% include "components/buttons/button.twig" with {label: 'Vyplatit odměnu', url: '#'} only %}
+                            </div>
+                        {% else %}
+                            <div>
+                                <p>Nemáte žádné potvrzené odměny k vyplacení.</p>
+                            </div>
+                            <div class="tar">
+                                {% include "components/buttons/button.twig" with {label: 'Vyplatit odměnu', disabled: true} only %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                {% if user.related_shops is defined and user.related_shops %}
+                    <div class="margin-bottom">
+                        <h3>Odměny získáte za nákup v těchto obchodech…</h3>
+                        <ul class="list--stripe list--stripe--inner">
+                            {% for shop in user.related_shops %}
+                                <li>
+                                    {% include "components/shop-tile.twig" with {tile: shop} only %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <p class="tac">
+                            {% include "components/buttons/button.twig" with {label: 'Zobrazit všechny obchody', url: '#'} only %}
+                        </p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <hr/>
+        <div class="container inner--margin user__container">
+            <h3>Žádosti čekající na vyplacení</h3>
+            <p>Toto je seznam žádostí o vyplacení odměn, které čekají na potvrzení. Schválení žádosti netrvá bvykle déle než 2 pracovní dny.</p>
+
+            <div class="list--stripe list--stripe--inner">
+                <div class="table">
+                    {% if user.rewards.overview.waiting is defined and user.rewards.overview.waiting %}
+                        <ul>
+                            <li class="table__header">
+                                <div>Výše výplaty</div>
+                                <div>Čislo účtu</div>
+                                <div>Datum registrace</div>
+                                <div>Předpokládané datum vyplacení</div>
+                            </li>
+                            {% for reward in user.rewards.overview.waiting %}
+                                <li>
+                                    <div><strong class="highlight--blue">{{ reward.reward }}</strong></div>
+                                    <div>{{ reward.bank_account }}</div>
+                                    <div>{{ reward.registered }}</div>
+                                    <div>{{ reward.to_be_payed }}</div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="table__empty">Nemáte žádné žádosti o vyplacení odměn.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="container inner--margin user__container">
+            <h3>Přehled vyplacených odměn</h3>
+
+            <div class="list--stripe list--stripe--inner">
+                <div class="table">
+                    {% if user.rewards.overview.confirmed is defined and user.rewards.overview.confirmed %}
+                        <ul>
+                            <li class="table__header">
+                                <div>Výše výplaty</div>
+                                <div>Čislo účtu</div>
+                                <div>Datum registrace</div>
+                                <div>Datum potvrzení</div>
+                            </li>
+                            {% for reward in user.rewards.overview.confirmed %}
+                                <li>
+                                    <div><strong class="highlight--blue">{{ reward.reward }}</strong></div>
+                                    <div>{{ reward.bank_account }}</div>
+                                    <div>{{ reward.registered }}</div>
+                                    <div>{{ reward.confirmed }}</div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="table__empty">Nemáte žádné vyplacené odměny.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <span class="clear"></span>
+    </div>
+
+{% endblock %}

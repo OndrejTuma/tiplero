@@ -22,7 +22,10 @@
             }
         }
     }
-
+    &--oneline {
+        align-items: center;
+        margin-bottom: 0;
+    }
     &--stripe {
         @include media(desktop) {
             align-items: stretch;

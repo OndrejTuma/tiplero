@@ -20,6 +20,10 @@
     &:hover {
         background-color: $salem;
     }
+    &[disabled] {
+        background-color: $rolling-stone;
+        cursor: not-allowed;
+    }
 
     &--fb {
         $color: #4267b2;

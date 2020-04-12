@@ -2,4 +2,13 @@
     color: $green-haze;
     font-weight: 700;
     font-size: 20px;
+
+    &--xl {
+        @extend .highlight;
+        font-size: 32px;
+    }
+    &--blue {
+        @extend .highlight;
+        color: $tiber;
+    }
 }

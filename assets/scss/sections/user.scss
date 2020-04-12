@@ -16,6 +16,14 @@
     }
 
     @include media(desktop) {
+        &__bonuses {
+            .grid p {
+                margin-bottom: 0;
+            }
+            .white-board {
+                padding: 25px 35px;
+            }
+        }
         &__container {
             box-sizing: border-box;
             padding-left: 300px;
