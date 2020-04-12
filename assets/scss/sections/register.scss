@@ -1,0 +1,98 @@
+.register {
+    padding-bottom: 50px;
+
+    &__board {
+        margin-bottom: 40px;
+        padding: 0;
+
+        &__form {
+            @include background('dot.png', 0 100% repeat-x);
+            padding: 20px;
+            text-align: center;
+
+            .button,
+            .input {
+                margin-bottom: 20px;
+            }
+
+            form {
+                margin: auto;
+                max-width: 280px;
+            }
+            p {
+                font-size: $font-size-tiny;
+            }
+        }
+        &__header {
+            @include background('dot.png', 0 100% repeat-x);
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+
+            h3 {
+                margin: 0;
+            }
+        }
+        &__points {
+            padding: 20px;
+
+            ol {
+                margin-top: 30px;
+
+                li {
+                    margin-bottom: 30px;
+                    padding-top: 8px;
+
+                    &:before {
+                        background-color: $alto;
+                        color: $tiber;
+                        font-size: $font-size-big;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        &__separator {
+            margin: 10px 0 30px;
+        }
+    }
+    &__info {
+        text-align: center;
+    }
+
+    @include media(desktop) {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0;
+
+        &__board {
+            flex-shrink: 0;
+            width: 740px;
+
+            &__content {
+                display: flex;
+
+                & > div {
+                    flex-basis: 0;
+                    flex-grow: 1;
+                }
+            }
+            &__form {
+                @include background('dot.png', 100% 0 repeat-y);
+                padding-top: 30px;
+            }
+            &__header {
+                height: 60px;
+            }
+            &__points {
+                padding: 30px;
+            }
+        }
+        &__info {
+            flex-shrink: 0;
+            width: 280px;
+        }
+    }
+}

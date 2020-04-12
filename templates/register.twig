@@ -1,0 +1,44 @@
+{% extends "layouts/default.twig" %}
+
+{% block content %}
+
+    <div class="sign-board hit-top">
+        <div class="inner--narrow container register">
+            <div class="register__board white-board">
+                <div class="register__board__header">
+                    <h3>Začněte hned teď získávat odměny s TIPLERO</h3>
+                </div>
+
+                <div class="register__board__content">
+                    <div class="register__board__form">
+                        <form action="/" class="form--validate">
+                            {% include "components/forms/input.twig" with {type: 'email', label: 'E-mail', validation: {type: 'email', message: 'Neplatný email'}} only %}
+                            {% include "components/forms/input.twig" with {type: 'password', label: 'Heslo', validation: {type: 'required', message: 'Zadejte heslo'}} only %}
+                            <p>Registrací souhlasíte s <a href="#">podmínkami užití a zpracováním osobních údajů</a>.</p>
+                            {% include "components/buttons/button.twig" with {label: 'Registrovat se zdarma', type: 'submit'} only %}
+                        </form>
+                        <p class="register__board__separator">- nebo -</p>
+                        {% include "components/buttons/button.twig" with {url: './index_logged.html', label: 'Přihlásit přes Facebook', icon: 'facebook', class: 'button--fb'} only %}
+                        {% include "components/buttons/button.twig" with {url: './index_logged.html', label: 'Přihlásit přes Google', outline: true, icon: 'google'} only %}
+                    </div>
+
+                    <div class="register__board__points">
+                        <h4>Proč vyzkoušet TIPLERO?</h4>
+                        <ol class="list--ordered">
+                            <li>Cashback s největší odměnou</li>
+                            <li>Výplata odměn od 1 Kč</li>
+                            <li>Garance spokojenosti</li>
+                            <li>Množství slev a kupónů</li>
+                            <li>Prémiové členství</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="register__info">
+                <h3>Máte už účet na Tiplero.cz?</h3>
+                {% include "components/buttons/button.twig" with {label: 'Přihlaste se', url: './login.html'} only %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

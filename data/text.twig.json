@@ -4,8 +4,8 @@
     "isLogged": false
   },
   "menu": [
-    {"url": "./index_logged.html", "label": "Registrovat"},
-    {"url": "./index_logged.html", "label": "Přihlásit se"}
+    {"url": "./register.html", "label": "Registrovat"},
+    {"url": "./login.html", "label": "Přihlásit se"}
   ],
   "footer": {
     "links": [
