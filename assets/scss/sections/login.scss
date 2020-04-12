@@ -1,0 +1,81 @@
+.login {
+    padding-bottom: 50px;
+
+    &__board {
+        margin-bottom: 40px;
+        padding: 0;
+
+        &__buttons {
+            @include background('dot.png', 0 100% repeat-x);
+            padding: 20px 20px 30px;
+
+            .button + .button {
+                margin-top: 20px;
+            }
+        }
+        &__form {
+            padding: 20px;
+            text-align: center;
+
+            .button,
+            .input {
+                margin-bottom: 20px;
+            }
+
+            form {
+                margin: auto;
+                max-width: 280px;
+            }
+        }
+        &__header {
+            @include background('dot.png', 0 100% repeat-x);
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 60px;
+            padding: 20px;
+            text-align: center;
+
+            h3 {
+                margin: 0;
+            }
+        }
+    }
+    &__info {
+        text-align: center;
+    }
+
+    @include media(desktop) {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0;
+
+        &__board {
+            flex-shrink: 0;
+            width: 740px;
+
+            &__buttons {
+                @include background('dot.png', 100% 0 repeat-y);
+                align-content: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            &__content {
+                display: flex;
+
+                & > div {
+                    flex-basis: 0;
+                    flex-grow: 1;
+                }
+            }
+            &__form {
+                padding-top: 30px;
+            }
+        }
+        &__info {
+            flex-shrink: 0;
+            width: 280px;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{% extends "layouts/default.twig" %}
+
+{% block content %}
+
+    <div class="sign-board hit-top">
+        <div class="inner--narrow container login">
+            <div class="login__board white-board">
+                <div class="login__board__header">
+                    <h3>Přihlašte se ke svému účtu</h3>
+                </div>
+
+                <div class="login__board__content">
+                    <div class="login__board__buttons">
+                        {% include "components/buttons/button.twig" with {url: './index_logged.html', label: 'Přihlásit přes Facebook', icon: 'facebook', class: 'button--fb'} only %}
+                        {% include "components/buttons/button.twig" with {url: './index_logged.html', label: 'Přihlásit přes Google', outline: true, icon: 'google'} only %}
+                    </div>
+
+                    <div class="login__board__form">
+                        <form action="/" class="form--validate">
+                            {% include "components/forms/input.twig" with {type: 'email', label: 'E-mail', validation: {type: 'email', message: 'Neplatný email'}} only %}
+                            {% include "components/forms/input.twig" with {type: 'password', label: 'Heslo', validation: {type: 'required', message: 'Zadejte heslo'}} only %}
+                            {% include "components/buttons/button.twig" with {label: 'Přihlásit se', type: 'submit'} only %}
+                        </form>
+                        <p>Zapomněli jste heslo? <a href="#">Klikněte zde</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="login__info">
+                <h3>Nemáte ještě účet na Tiplero.cz?</h3>
+                {% include "components/buttons/button.twig" with {label: 'Založit účet zdarma', url: './register.html'} only %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

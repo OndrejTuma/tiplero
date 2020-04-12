@@ -25,8 +25,8 @@
     {"arrow": "right", "name": "Josef R.", "text": "Tipli používám k nákupům v mnoha oblíbených obchodech jako jsou <strong>Aliexpress, Booking, BonPrix</strong> a mnoho dalších"}
   ],
   "menu": [
-    {"url": "./index_logged.html", "label": "Registrovat"},
-    {"url": "./index_logged.html", "label": "Přihlásit se"}
+    {"url": "./register.html", "label": "Registrovat"},
+    {"url": "./login.html", "label": "Přihlásit se"}
   ],
   "footer": {
     "links": [

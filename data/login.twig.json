@@ -1,0 +1,42 @@
+{
+  "title":"Homepage | Tiplero",
+  "user": {
+    "isLogged": false
+  },
+  "menu": [
+    {"url": "./index_logged.html", "label": "Registrovat"},
+    {"url": "./index_logged.html", "label": "Přihlásit se"}
+  ],
+  "footer": {
+    "links": [
+      [
+        {"label": "Obchody", "url": "./text.html"},
+        {"label": "Jak to funguje?", "url": "./text.html"},
+        {"label": "Pravidla cashbacku", "url": "./text.html"},
+        {"label": "Nejčastějsí otázky", "url": "./text.html"},
+        {"label": "Novinky", "url": "./text.html"},
+        {"label": "Akce", "url": "./text.html"},
+        {"label": "Kontakt", "url": "./text.html"}
+      ],
+      [
+        {"label": "Obchody", "url": "./text.html"},
+        {"label": "Jak to funguje?", "url": "./text.html"},
+        {"label": "Pravidla cashbacku", "url": "./text.html"},
+        {"label": "Nejčastějsí otázky", "url": "./text.html"},
+        {"label": "Novinky", "url": "./text.html"},
+        {"label": "Akce", "url": "./text.html"},
+        {"label": "Kontakt", "url": "./text.html"}
+      ],
+      [
+        {"label": "Obchody", "url": "./text.html"},
+        {"label": "Jak to funguje?", "url": "./text.html"},
+        {"label": "Pravidla cashbacku", "url": "./text.html"},
+        {"label": "Nejčastějsí otázky", "url": "./text.html"},
+        {"label": "Novinky", "url": "./text.html"},
+        {"label": "Akce", "url": "./text.html"},
+        {"label": "Kontakt", "url": "./text.html"}
+      ]
+    ],
+    "infoText": "<p>Napište nám na <a href=\"mailto:moje@tiplero.cz\">moje@tiplero.cz</a></p><p>Copyright &copy; 2020 Tiplero. Všechna práva vyhrazena.</p>"
+  }
+}
