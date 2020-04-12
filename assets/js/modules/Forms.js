@@ -2,15 +2,19 @@
  * =========== FORMS PROTOTYPE ===========
  */
 
+import bankAccount from './validations/bankAccount';
 import email from './validations/email';
 import minLength from './validations/minLength';
+import required from './validations/required';
 
 const Forms = function (classes) {
     this.classes = classes;
 
     this.validations = {
+        bankAccount,
         email,
         minLength,
+        required,
     };
     this.validationForms = [];
     this.validationElements = [];

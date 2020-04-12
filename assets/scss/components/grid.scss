@@ -4,6 +4,25 @@
     justify-content: space-between;
     margin-bottom: 20px;
 
+    &__item {
+        margin-bottom: 20px;
+    }
+
+    &--equal {
+        @include media(desktop) {
+            display: flex;
+            flex-flow: row nowrap;
+
+            & > div {
+                flex-grow: 1;
+                flex-basis: 0;
+            }
+            & > div + div {
+                margin-left: 20px;
+            }
+        }
+    }
+
     &--stripe {
         @include media(desktop) {
             align-items: stretch;

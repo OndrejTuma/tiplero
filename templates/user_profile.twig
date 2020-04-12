@@ -1,0 +1,147 @@
+{% extends "layouts/default.twig" %}
+
+{% block content %}
+
+    <div class="wrapper--gray hit-top user">
+        <div class="container pr inner--margin">
+            <div class="user__menu">
+                <header class="user__menu__header">
+                    <div class="user__menu__header__info">
+                        <strong>{{ user.name }}</strong>
+                        <figure>
+                            {% if user.image is defined and user.image %}
+                                <img src="{{ user.image }}" alt="{{ user.name }}"/>
+                            {% else %}
+                                {% include "../build/svg/user-anonymous.svg" %}
+                            {% endif %}
+                        </figure>
+                    </div>
+                    {% if user.rewards.total_gain %}
+                        <p><strong class="highlight">{{ user.rewards.total_gain }}</strong> Celkem získáno</p>
+                    {% endif %}
+                </header>
+                <ul class="user__menu__main">
+                    {% for item in user.menu %}
+                        <li class="{{ item.active ? 'user__menu__main__item--active' }}">
+                            {% include "components/item.twig" with item %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% if user.profile_completion is defined and user.profile_completion %}
+                    {% set filledItems = 0 %}
+                    {% for item in user.profile_completion %}
+                        {% if item.done %}
+                            {% set filledItems = filledItems + 1 %}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="user__menu__profile-completion">
+                        <header>
+                            <strong>Váš profil je vyplněn z</strong>
+                            {% include "components/progress-ring.twig" with {percents: (filledItems / user.profile_completion|length * 100)|round} only %}
+                        </header>
+                        <ul>
+                            {% for item in user.profile_completion %}
+                                <li>
+                                    {% include "components/item.twig" with {url: item.url, label: item.label, icon: item.done ? 'circle-check' : 'circle', inactive: not item.done} only %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="container inner--narrow user__container">
+
+            <h2>Nastavení účtu</h2>
+            <div class="white-board margin-bottom">
+                <form action="" class="form--validate">
+                    <div class="grid--equal">
+                        <div>
+                            <div class="grid__item">
+                                {% include "components/forms/input.twig" with {label: 'Jméno', validation: {type: 'required', message: 'Povinné pole'}} only %}
+                            </div>
+                            <div class="grid__item">
+                                {% include "components/forms/input.twig" with {label: 'Datum narození', validation: {type: 'required', message: 'Povinné pole'}} only %}
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid__item">
+                                {% include "components/forms/input.twig" with {label: 'Příjmení', validation: {type: 'required', message: 'Povinné pole'}} only %}
+                            </div>
+                            <div class="grid__item">
+                                {% include "components/forms/input.twig" with {label: 'Telefon', validation: {type: 'required', message: 'Povinné pole'}} only %}
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid__item">
+                                {% include "components/forms/radio.twig" with {name: 'gender', items: [
+                                    {label: 'Muž', id: 'gender_male', checked: true},
+                                    {label: 'Žena', id: 'gender_female'},
+                                ]} only %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="tar mbn">
+                        {% include "components/buttons/button.twig" with {label: 'Uložit změny', type: 'submit'} only %}
+                    </p>
+                </form>
+            </div>
+
+            <h2>Bankovní spojení</h2>
+            <div class="white-board margin-bottom">
+                <form action="" class="form--validate">
+                    <div class="grid--equal">
+                        <div class="grid__item">
+                            {% include "components/forms/input.twig" with {label: 'Číslo účtu', validation: {type: 'bankAccount', message: 'Špatný formát bankovního účtu'}} only %}
+                        </div>
+                        <div class="tar">
+                            {% include "components/buttons/button.twig" with {label: 'Aktualizovat', type: 'submit'} only %}
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <h2>Změna hesla</h2>
+            <div class="white-board margin-bottom">
+                <form action="" class="form--validate">
+                    <div class="grid--equal">
+                        <div class="grid__item">
+                            {% include "components/forms/input.twig" with {label: 'Staré heslo', validation: {type: 'required', message: 'Povinné pole'}} only %}
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="grid--equal">
+                        <div class="grid__item">
+                            {% include "components/forms/input.twig" with {label: 'Nové heslo', validation: {type: 'required', message: 'Povinné pole'}} only %}
+                        </div>
+                        <div class="grid__item">
+                            {% include "components/forms/input.twig" with {label: 'Nové heslo znovu', validation: {type: 'required', message: 'Povinné pole'}} only %}
+                        </div>
+                        <div></div>
+                    </div>
+
+                    <p class="tar mbn">
+                        {% include "components/buttons/button.twig" with {label: 'Změnit', type: 'submit'} only %}
+                    </p>
+                </form>
+            </div>
+
+            <h2>Přihlášení k odběru</h2>
+            <div class="white-board margin-bottom">
+                <form action="" class="form--validate">
+                    {% include "components/forms/checkbox.twig" with {label: 'Newsletter', id: 'subscribe_news', checked: true} only %}
+                    {% include "components/forms/checkbox.twig" with {label: 'Notifikace', id: 'subscribe_notify', checked: true} only %}
+                    {% include "components/forms/checkbox.twig" with {label: 'Pravidelné tipy/rady', id: 'subscribe_tips', checked: true} only %}
+
+                    <p class="tar mbn">
+                        {% include "components/buttons/button.twig" with {label: 'Změnit', type: 'submit'} only %}
+                    </p>
+                </form>
+            </div>
+        </div>
+        <span class="clear"></span>
+    </div>
+
+{% endblock %}

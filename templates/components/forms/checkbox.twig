@@ -1,5 +1,8 @@
 <div class="input{{ error ? ' input--error'}}{{ validation is defined ? ' form__element--validate' }}"{{ validation.type is defined ? " data-validation=\"" ~ validation.type ~"\"" }}{{ validation.params is defined ? " data-validation-params='" ~ validation.params|json_encode() ~"'" }}>
-    <input class="input__input" type="{{ type }}" placeholder="{{ label }}" name="{{ name }}">
+    <div class="input__checkbox">
+        <input id="{{ id }}" type="checkbox" name="{{ name }}"{{ checked ? " checked" }}>
+        <label for="{{ id }}">{{ label }}</label>
+    </div>
     {% if validation.message is defined %}
         <span style="display: none" class="input__error">{{ validation.message }}</span>
     {% endif %}

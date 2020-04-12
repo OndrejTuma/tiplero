@@ -43,3 +43,10 @@
 .tar {
     text-align: right;
 }
+.margin-bottom {
+    margin-bottom: 30px;
+
+    @include media(desktop) {
+        margin-bottom: 40px;
+    }
+}

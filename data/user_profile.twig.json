@@ -9,27 +9,12 @@
       "to_pay": "72,50 Kč",
       "registered": "12,50 Kč",
       "bonus": "0,50 Kč",
-      "total_gain": "3740,61 Kč",
-      "overview": {
-        "all": [
-          {"logo": "./images/dummy/logo_notino.png", "reward": "0 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": false, "tooltip": "Něco nevyšlo"},
-          {"logo": "./images/dummy/logo_aliexpress.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
-          {"logo": "./images/dummy/logo_drmax.png", "reward": "3740,61 Kč", "info": "Bonus za doporučení (Jakub Hlaváček)", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
-          {"logo": "./images/dummy/logo_footshop.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
-          {"logo": "./images/dummy/logo_zezula.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true},
-          {"logo": "./images/dummy/logo_booking.png", "reward": "3740,61 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true}
-        ],
-        "waiting": [
-          {"logo": "./images/dummy/logo_notino.png", "reward": "0 Kč", "info": "Odměna za nákup", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": false, "tooltip": "Něco nevyšlo"},
-          {"logo": "./images/dummy/logo_drmax.png", "reward": "3740,61 Kč", "info": "Bonus za doporučení (Jakub Hlaváček)", "registered": "27. 1. 2020", "confirmed": "27. 1. 2020", "success": true}
-        ],
-        "confirmed": []
-      }
+      "total_gain": "3740,61 Kč"
     },
     "menu": [
-      {"url": "#", "icon": "wallet", "label": "Odměny a výhody", "active": true},
+      {"url": "#", "icon": "wallet", "label": "Odměny a výhody"},
       {"url": "#", "icon": "card", "label": "Výplaty odměn"},
-      {"url": "./user_profile.html", "icon": "settings", "label": "Nastavení účtu"},
+      {"url": "#", "icon": "settings", "label": "Nastavení účtu", "active": true},
       {"url": "#", "icon": "star", "label": "Moje hodnocení"},
       {"url": "#", "icon": "logout", "label": "Odhlásit se"}
     ],
@@ -44,7 +29,7 @@
     "user": [
       {"url": "./user.html", "icon": "wallet", "label": "Odměny a výhody"},
       {"url": "./user.html", "icon": "card", "label": "Výplaty odměn"},
-      {"url": "./user_profile.html", "icon": "settings", "label": "Nastavení účtu"},
+      {"url": "./user.html", "icon": "settings", "label": "Nastavení účtu"},
       {"url": "./user.html", "icon": "star", "label": "Moje hodnocení"},
       {"url": "./user.html", "icon": "logout", "label": "Odhlásit se"}
     ],
